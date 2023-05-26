@@ -112,10 +112,10 @@ lines 1-9/9 (END)
  ﮊ   /home/fz3r0  took  5s  with   ✘ INT 
 ````
 
-3. Ejecutar `ProxyChains` en `Firefox`:
+3. Ejecutar `ProxyChains` en `Firefox` _(salir de modo root)_:
 
 ````sh
-
+proxychains firefox
 ````
 
 ## Recursos
