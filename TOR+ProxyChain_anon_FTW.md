@@ -4,6 +4,8 @@
 
 ## To the point
 
+- Lanzar `Firefox` _(u otro explorador)_ con `Tor` + `ProxyChains`
+
 ````sh
 1. Iniciar servicio tor
 service tor start
@@ -19,7 +21,13 @@ service tor stop
 1. Cambiar MAC aleatorio
 macchanger -r eth0
 
+---
+
+1. Lanzar proxuchains con firefox
+proxychains firefox
 ````
+
+- Lanzar `nmap` con `Tor` + `ProxyChains`
 
 ## Instalación de TOR y Config ProxyChains
 
