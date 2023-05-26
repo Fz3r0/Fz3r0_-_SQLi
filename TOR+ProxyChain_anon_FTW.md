@@ -2,6 +2,25 @@
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/9b85cc34-8e4d-4850-8299-8042638b0167)
 
+## To the point
+
+````sh
+1. Iniciar servicio tor
+service tor start
+
+2. Reiniciar servicio tor (cambiar IP pública)
+service tor restart
+
+3. Detener servicio tor
+service tor stop
+
+---
+
+1. Cambiar MAC aleatorio
+macchanger -r eth0
+
+````
+
 ## Instalación de TOR y Config ProxyChains
 
 1. TOR
@@ -63,7 +82,26 @@ service tor start
 2. Revisar servicio:
 
 ````sh
-service tor sttus
+service tor status
+````
+
+- Se debe mostrar success como a continuación:
+
+````sh
+❯ service tor start
+❯ service tor status
+● tor.service - Anonymizing overlay network for TCP (multi-instance-master)
+     Loaded: loaded (/lib/systemd/system/tor.service; disabled; preset: disabled)
+     Active: active (exited) since Thu 2023-05-25 23:01:03 EST; 3s ago
+    Process: 2590 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 2590 (code=exited, status=0/SUCCESS)
+        CPU: 595us
+
+May 25 23:01:03 Fz3r0-D00M systemd[1]: Starting tor.service - Anonymizing overlay network for TCP (mu>
+May 25 23:01:03 Fz3r0-D00M systemd[1]: Finished tor.service - Anonymizing overlay network for TCP (mu>
+lines 1-9/9 (END)
+
+ ﮊ   /home/fz3r0  took  5s  with   ✘ INT 
 ````
 
 3. Ejecutar `ProxyChains` en `Firefox`:
