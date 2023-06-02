@@ -92,12 +92,8 @@ dynamic_chain  <<<<---------------||||| :)
 # meanwile
 # defaults set to "tor"
 
-# socks4 	127.0.0.1 9050
-# socks5 	127.0.0.1 9050
-
-
-
-
+socks4 	127.0.0.1 9050
+socks5 	127.0.0.1 9050
 ````
 
 Para usar proxychains correctamente, debe completar su archivo proxychains.conf con proxies válidos. La razón por la que recibe la respuesta `!!!!need more proxys!!!` es porque no hay proxies en el archivo `proxychains.conf` o los que están configurados ya no están disponibles.
@@ -109,6 +105,18 @@ Para usar proxychains correctamente, debe completar su archivo proxychains.conf 
 - https://privatevpn.com/serverlist/
 - https://linuxhint.com/proxychains-tutorial/
 
+### Fz3r0 Proxy Example
+
+````java
+
+[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+
+socks4 	127.0.0.1 9050
+socks5 	127.0.0.1 9050
+````
 
 ## Ejecución del servicio `TOR`
 
