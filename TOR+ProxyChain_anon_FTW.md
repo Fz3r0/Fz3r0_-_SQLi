@@ -7,41 +7,30 @@
 - Lanzar `Firefox` _(u otro explorador)_ con `Tor` + `ProxyChains`
 
 ````sh
-1. Iniciar servicio tor
+## 1. Iniciar servicio tor
 service tor start
 
-2. Reiniciar servicio tor (cambiar IP pública)
+## 2. Reiniciar servicio tor (cambiar IP pública)
 service tor restart
 
-3. Detener servicio tor
+## 3. Detener servicio tor
 service tor stop
 
 ---
 
-1. Opcion1: Cambiar MAC aleatorio
+## 1. Opcion1: Cambiar MAC aleatorio
+ifconfig eth0 down
 macchanger -r eth0
+ifconfig eth0 up
 
-2. Opcion2: Cambiar MAC manual
-
-# Busar Lista de OUI de MACs por nombre (ej. Ruckus)
-macchanger -l | grep "Ruckus"
-
-# Hacer MAC Spoofing (cambiar MAC). OJO! Apagar Interfaz primero
-ifconfig wlan0mon down
-macchanger --mac=c4:10:8a:f0:f0:f0 wlan0mon
-ifconfig wlan0mon up
-
-# MAC Changer triple interface
-ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down
-macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon
-ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up
-
-# One-Liner: MAC Changer triple interface
-ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up; 
+## 2. Opcion2: Cambiar MAC manual
+ifconfig eth0 down
+macchanger --mac=f0:f0:f0:f0:f0:f0 eth0
+ifconfig eth0 up
 
 ---
 
-1. Lanzar proxuchains con firefox
+## 1. Lanzar proxuchains con firefox
 proxychains firefox
 ````
 
