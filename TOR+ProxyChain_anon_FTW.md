@@ -32,6 +32,17 @@ ifconfig eth0 up
 
 ## 1. Lanzar proxuchains con firefox
 proxychains firefox
+
+---
+
+## Verificar Funcionamiento
+proxychains curl ifconfig.me/ip
+
+## Verificar via web:
+
+    ## ipchicken.com 
+    ## dnsleaktest.com
+
 ````
 
 - Lanzar `nmap` con `Tor` + `ProxyChains`
