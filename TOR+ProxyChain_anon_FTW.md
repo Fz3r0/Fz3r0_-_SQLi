@@ -47,15 +47,13 @@ proxychains curl ifconfig.me/ip
 
 - Lanzar `nmap` con `Tor` + `ProxyChains`
 
-## Instalación de TOR y Config ProxyChains
-
-1. TOR
+## Instalación de TOR 
 
 ````sh
 apt-get install tor
 ````
 
-2. Configurar ProxyChains
+## Configurar ProxyChains
 
 ````sh
 subl /etc/proxychains.conf
@@ -93,9 +91,24 @@ dynamic_chain  <<<<---------------||||| :)
 # add proxy here ...
 # meanwile
 # defaults set to "tor"
-socks4 	127.0.0.1 9050
-socks5 	127.0.0.1 9050
+
+# socks4 	127.0.0.1 9050
+# socks5 	127.0.0.1 9050
+
+
+
+
 ````
+
+Para usar proxychains correctamente, debe completar su archivo proxychains.conf con proxies válidos. La razón por la que recibe la respuesta `!!!!need more proxys!!!` es porque no hay proxies en el archivo `proxychains.conf` o los que están configurados ya no están disponibles.
+
+**`IMPORTANTE`: Usar de Proxys alguno de las siguentes listas:**
+
+- https://hidemy.name/en/proxy-list/
+- https://vpnoverview.com/privacy/anonymous-browsing/free-proxy-servers/
+- https://privatevpn.com/serverlist/
+- https://linuxhint.com/proxychains-tutorial/
+
 
 ## Ejecución del servicio `TOR`
 
@@ -139,3 +152,4 @@ proxychains firefox
 ## Recursos
 
 - [Navegación Anónima con Tor y ProxyChains en Kali Linux](https://www.youtube.com/watch?v=3UA4Raqqu6I)
+- [ProxyChains Tutorial](https://linuxhint.com/proxychains-tutorial/)
