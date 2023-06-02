@@ -18,8 +18,26 @@ service tor stop
 
 ---
 
-1. Cambiar MAC aleatorio
+1. Opcion1: Cambiar MAC aleatorio
 macchanger -r eth0
+
+2. Opcion2: Cambiar MAC manual
+
+# Busar Lista de OUI de MACs por nombre (ej. Ruckus)
+macchanger -l | grep "Ruckus"
+
+# Hacer MAC Spoofing (cambiar MAC). OJO! Apagar Interfaz primero
+ifconfig wlan0mon down
+macchanger --mac=c4:10:8a:f0:f0:f0 wlan0mon
+ifconfig wlan0mon up
+
+# MAC Changer triple interface
+ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down
+macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon
+ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up
+
+# One-Liner: MAC Changer triple interface
+ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up; 
 
 ---
 
