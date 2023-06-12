@@ -23,6 +23,15 @@ No turning back now...<br>
 
 **Watch out. The gap in the door... It's a separate reality. The only me is me. Are you sure the only you is you?...**<br>
 
+I am the Lord of Darkness. <br>
+I require the solace of the shadows and the dark of the night. <br>
+Sunshine is my destroyer. <br>
+All this shall change. <br>
+
+**Tonight, the sun sets forever. There shall never be another dawn.<br>**
+
+**In the mist of the night you may see me come, where shadows move and demons lie... ...I am Fz3r0 and the Sun no longer rises...".** <br>
+
 ... You've been chosen...<br>
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/37bbc806-a74a-4d97-9812-a26f0c616f5d)
