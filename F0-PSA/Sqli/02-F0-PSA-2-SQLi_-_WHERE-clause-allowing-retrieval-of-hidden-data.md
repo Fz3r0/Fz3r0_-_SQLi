@@ -16,7 +16,9 @@ To solve the lab, perform a SQL injection attack that causes the application to 
 
 ---
 
-Explicación:
+### Explicación:
+
+El payload se inyecta en donde se pone el nombre del artículo o sección
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/0b35f1ca-3c73-4837-a0f8-b5be87e084bf)
 
@@ -28,6 +30,11 @@ En la vida real se vería más similar a esto, en lugar de usar en `*`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/837008ac-50fd-452b-86ff-5e0881daed0d)
 
+Debido a que el valor del nombre es donde yo puedo inyectar strings, es aquí donde debo poner el payload, en este caso quedaría:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/b0dfe131-415e-4d63-afea-1c43853733e0)
+
+- OJO! en consola se deben poner los `;`
 
 ## Solución:
 
