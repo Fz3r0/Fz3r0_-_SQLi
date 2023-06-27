@@ -89,6 +89,56 @@ select username,password from users where username = "Fz3r0" or username = "Ftw0
 
 ````
 
+### Resultados de Laboratiorio
+
+````python
+# Bases de datos:
+
+MariaDB [fz3r0_pwn]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| fz3r0_pwn          |
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+
+# DB=fz3r0_pwn | Tablas:
+
+MariaDB [fz3r0_pwn]> show tables;
++---------------------+
+| Tables_in_fz3r0_pwn |
++---------------------+
+| users               |
++---------------------+
+
+# DB=fz3r0_pwn | Tabla=users:
+
+MariaDB [fz3r0_pwn]> describe users;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| id           | int(11)     | NO   | PRI | NULL    | auto_increment |
+| username     | varchar(32) | YES  |     | NULL    |                |
+| password     | varchar(32) | YES  |     | NULL    |                |
+| subscription | varchar(32) | YES  |     | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+
+# DB=fz3r0_pwn | Tabla=users @ data:
+
+MariaDB [fz3r0_pwn]> select * from users;
++----+----------+---------------+--------------+
+| id | username | password      | subscription |
++----+----------+---------------+--------------+
+|  1 | Fz3r0    | p@ssw0rd123-0 | 1            |
+|  2 | F0n3     | p@ssw0rd123-1 | 1            |
+|  3 | Ftw0     | p@ssw0rd123-2 | 0            |
+|  4 | Fthr33   | p@ssw0rd123-3 | 0            |
+|  5 | Ff0ur    | p@ssw0rd123-4 | 1            |
+|  6 | Ff1v3    | p@ssw0rd123-5 | 0            |
++----+----------+---------------+--------------+
+````
 
 
 ## Recursos
