@@ -1,25 +1,43 @@
 
 ## Instalar MySQL Linux
 
+Todo se debe hacer con `root` o `sudo`:
+
 1. **Instalar MySQL**
 
-    - Esto es necesario para hostear el Web server del Captive Portal (**en realidad solo es necesario instalar `mariadb`**)
-    - [MySQL Install error fix](https://stackoverflow.com/questions/20259036/mysql-package-mysql-server-has-no-installation-candidate)
+    - En realidad solo es necesario instalar `mariadb`
  
 ````sh
 sudo apt-get install mariadb-server
 ````
 
-2. Habiliar `Apache Server` y `MySQL` para visualizar localhost /var/www/html
+2. Habiliar `Apache Server` y `MySQL` para visualizar localhost /var/www/html (opcional)
 
 ````sh
-# 1. Habilitar Apache y MySQL
+# - Habilitar Apache y MySQL
 service apache2 start && service mysql start  
-
-# 2. Ahora abrir un firefox (super+shift+f) y navegar a localhost
-localhost
-
-    # - Ahora ya se debe tener un portal con 2 campos de texto, pero marcan error si se ingresa cualquier cosa, es porque se necesita una DB MYSQL
-    # - Esto se hace con el archivo dbconnect.php muy útil para editar en caso de que se quieran más datos en la DB o hacerlo mas custom ;) 
-    # - HAcer un car dbconnect.php dice mas que mil palabras, en la parte superior está el nombre de la DB y las variables que se están guardando!!!!
 ````
+
+3. Ejecutar `mysql`
+
+````sh
+mysql
+````
+
+````sh
+❯ mysql
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 31
+Server version: 10.5.19-MariaDB-0+deb11u2 Debian 11
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+````
+
+## Crear Lab `Fz3r0-PSA-SQLi-DB.sql`
+
+
