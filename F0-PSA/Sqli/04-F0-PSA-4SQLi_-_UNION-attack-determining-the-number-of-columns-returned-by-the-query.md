@@ -32,6 +32,12 @@ OJO! port swigger no acepta numeros por eso marca error:
 
 PAra hacerlo funcionar se necesita poner NULL
 
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/419b752f-d2a3-4e30-9772-cb9c1bfd548a)
+
+Aunque en este caso no se ven los números en la pantalla, en realidad si pasa el laboratorio, esto debido al `NULL` y podemos saber que tenemos 3 columnas (eso pedía el lab después de todo)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/1c622ff2-4f1a-4e56-b3ff-42ab65c4887e)
+
 
 ## Solución:
 
