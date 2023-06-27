@@ -87,7 +87,7 @@ select * from users;
 select username,password from users;
 
 /* ## Query: seleccionar algo específico(username,password) de una tabla(users) con alguna condicional */
-select username,password from users where subscritpion = "1"; -- ejemplo 1
+select username,password from users where subscription = "1"; -- ejemplo 1
 select username,password from users where username = "Fz3r0" or username = "Ftw0"; -- ejemplo 2
 
 ````
