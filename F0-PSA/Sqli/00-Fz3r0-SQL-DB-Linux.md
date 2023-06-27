@@ -79,6 +79,17 @@ insert into users(username, password, subscription) values("Ftw0", "p@ssw0rd123-
 insert into users(username, password, subscription) values("Fthr33", "p@ssw0rd123-3", "0");
 insert into users(username, password, subscription) values("Ff0ur", "p@ssw0rd123-4", "1");
 insert into users(username, password, subscription) values("Ff1v3", "p@ssw0rd123-5", "0");
+
+/* ## Query: seleccionar todo(*) de una tabla(users) */
+select * from users;
+
+/* ## Query: seleccionar algo específico(username,password) de una tabla(users) */
+select username,password from users;
+
+/* ## Query: seleccionar algo específico(username,password) de una tabla(users) con alguna condicional */
+select username,password from users where subscritpion = "1"; -- ejemplo 1
+select username,password from users where username = "Fz3r0" or username = "Ftw0"; -- ejemplo 2
+
 ````
 
 
