@@ -26,7 +26,8 @@ Por ejemplo en una base de datos el query se vería similar a esto:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/c4e14787-7ed5-4ce9-b060-427c3c66f574)
 
-En la vida real se vería más similar a esto, en lugar de usar en `*`
+En la vida real se vería más similar a esto, en lugar de usar en `*`.
+Ojo como solo arroja un resultado, ya que es justo lo que se especifica en el query, ni mas, ni menos
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/837008ac-50fd-452b-86ff-5e0881daed0d)
 
