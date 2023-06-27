@@ -45,13 +45,12 @@ En este laboratorio solo se crea y utiliza una sola tabla de pruebas.
 - Copiar:
 
 ````sql
-/* ## Tabla:
+/*
 
-- users
-    - id(int)
-    - username(string)
-    - password(string)
-    - subscription(styring)
+###############################################
+#    Lab 1: `Fz3r0-PSA-SQLi-DB_-_tabla.sql`   #
+############################################### 
+
 */
 
 /* ## Query: crear db */
@@ -66,8 +65,14 @@ use fz3r0_pwn
 /* ## Query: crear tabla */
 create table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));
 
+/* ## Query: mostrar tablas */
+show tables;
+
+/* ## Query: describir tabla en particular */
+describe users;
+
 /* ## Query: insertar datos */
-create table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));
+insert into table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));
 ````
 
 
