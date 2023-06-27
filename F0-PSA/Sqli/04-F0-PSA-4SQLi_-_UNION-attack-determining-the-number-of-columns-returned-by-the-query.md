@@ -18,7 +18,10 @@ Si solo se pone una comilla da error, ya que el query se quedaría con una sola 
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/a79c49df-b0d6-47f3-90b8-0c0c9f0e8b1b)
 
-Ahora hay que buscar la manera que ya no regrese el error, como cerrar esa comilla extra.
+Ahora hay que buscar la manera de Fuzzear y contar.
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/a91df05f-15d9-4d60-a5c0-dc72550d5486)
+
 
 
 
