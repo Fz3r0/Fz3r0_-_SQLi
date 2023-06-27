@@ -16,8 +16,6 @@ To solve the lab, perform a SQL injection attack that causes the application to 
 
 ### Explicación:
 
-
-
 ### Query original:
 
 El payload se inyecta en donde se pone el nombre del artículo o sección:
@@ -47,6 +45,7 @@ select id,username from users where subscription = '1' and id = 5;
 ### Resultado final
 
 - Con el payload `or 1 = 1-- -'` o `or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
+- Es decir, con este payload le estpy pidiendo en la query que regrese el id=5 o todo donde sea 1=1 (true)... osea todo!!! muahaha!! ;)
 
 ````sql
 # Ejemplo Final: (ya con SQLi)
@@ -66,27 +65,7 @@ select id,username from users where subscription = '1' or 1 = 1;-- -' and id = 5
 +----+----------+
 ````
 
-
-
-
-
-
-Por ejemplo en una base de datos el query se vería similar a esto: 
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/c4e14787-7ed5-4ce9-b060-427c3c66f574)
-
-En la vida real se vería más similar a esto, en lugar de usar en `*`.
-Ojo como solo arroja un resultado, ya que es justo lo que se especifica en el query, ni mas, ni menos
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/837008ac-50fd-452b-86ff-5e0881daed0d)
-
-Debido a que el valor del nombre es donde yo puedo inyectar strings, es aquí donde debo poner el payload, en este caso quedaría:
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/b0dfe131-415e-4d63-afea-1c43853733e0)
-
-- OJO! en consola se deben poner los `;`
-
-Es decir: Le estpy pidiendo en la query que regrese todos los nombres "txhaca" o todo donde 1=1, osea todo ;)
+- OJO! en consola de `mysql` se deben poner los `;`, pero en web no.
 
 ## Solución:
 
