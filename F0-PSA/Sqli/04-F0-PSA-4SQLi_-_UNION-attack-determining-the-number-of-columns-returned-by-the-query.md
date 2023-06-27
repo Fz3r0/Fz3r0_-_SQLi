@@ -12,15 +12,21 @@ To solve the lab, determine the number of columns returned by the query by perfo
 
 ### Explicación:
 
+Si solo se pone una comilla da error, ya que el query se quedaría con una sola comilla, es decir, **Se encuentra un error!!!**
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/a46c0863-5d12-4127-9887-7d5d1ecd7a1f)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/a79c49df-b0d6-47f3-90b8-0c0c9f0e8b1b)
+
+Ahora hay que buscar la manera que ya no regrese el error, como cerrar esa comilla extra.
 
 
 
 ## Solución:
 
-1. Abrir laboratorio y buscar en donde me puedo autenticar
+1. En este caso la vulnerabilidad también está en categorías
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/dfe5453b-1098-4799-a0fd-a7a940683d9f)
-
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/8a87141b-dded-420f-b75f-05439d0def77)
 
 2. Aquí encuentro donde puedo hacer inputs de strings
 
