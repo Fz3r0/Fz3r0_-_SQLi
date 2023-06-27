@@ -45,13 +45,10 @@ En este laboratorio solo se crea y utiliza una sola tabla de pruebas.
 - Copiar:
 
 ````sql
-/*
 
 ################################################
 #    Lab 1: `Fz3r0-PSA-SQLi-DB_-_tabla.sql`    #
 ################################################ 
-
-*/
 
 /* ## Query: crear db */
 create database fz3r0_pwn;
