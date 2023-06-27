@@ -19,4 +19,5 @@
 ## Recursos
 
 - [SQL Injection (SQLI) - Explicado desde Cero](https://www.youtube.com/watch?v=C-FiImhUviM)
-- [](https://infosecmachines.io/)
+- [S4vitar Machines](https://infosecmachines.io/)
+- [PortSwigger: SQL injection](https://portswigger.net/web-security/sql-injection#what-is-the-impact-of-a-successful-sql-injection-attack)
