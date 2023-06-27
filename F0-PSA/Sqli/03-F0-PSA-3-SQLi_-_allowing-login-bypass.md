@@ -12,32 +12,13 @@ To solve the lab, perform a SQL injection attack that logs in to the application
 
 ### Explicación:
 
-El payload se inyecta en donde se pone el nombre del artículo o sección
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/0b35f1ca-3c73-4837-a0f8-b5be87e084bf)
-
-Por ejemplo en una base de datos el query se vería similar a esto: 
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/c4e14787-7ed5-4ce9-b060-427c3c66f574)
-
-En la vida real se vería más similar a esto, en lugar de usar en `*`.
-Ojo como solo arroja un resultado, ya que es justo lo que se especifica en el query, ni mas, ni menos
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/837008ac-50fd-452b-86ff-5e0881daed0d)
-
-Debido a que el valor del nombre es donde yo puedo inyectar strings, es aquí donde debo poner el payload, en este caso quedaría:
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/b0dfe131-415e-4d63-afea-1c43853733e0)
-
-- OJO! en consola se deben poner los `;`
-
-Es decir: Le estpy pidiendo en la query que regrese todos los nombres "txhaca" o todo donde 1=1, osea todo ;)
 
 ## Solución:
 
-1. Abrir laboratorio
+1. Abrir laboratorio y buscar en donde me puedo autenticar
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/a56c4773-50c8-41b7-82b7-94631079ad1c)
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/dfe5453b-1098-4799-a0fd-a7a940683d9f)
+
 
 2. Si filtro puedo empezar a ver el query desde la URL
 
