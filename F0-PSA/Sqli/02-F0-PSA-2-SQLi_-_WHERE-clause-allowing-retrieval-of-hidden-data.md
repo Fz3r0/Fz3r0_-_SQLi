@@ -37,6 +37,8 @@ Debido a que el valor del nombre es donde yo puedo inyectar strings, es aquí do
 
 - OJO! en consola se deben poner los `;`
 
+Es decir: Le estpy pidiendo en la query que regrese todos los nombres "txhaca" o todo donde 1=1, osea todo ;)
+
 ## Solución:
 
 1. Abrir laboratorio
