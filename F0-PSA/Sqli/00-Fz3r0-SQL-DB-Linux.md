@@ -47,9 +47,9 @@ En este laboratorio solo se crea y utiliza una sola tabla de pruebas.
 ````sql
 /*
 
-###############################################
-#    Lab 1: `Fz3r0-PSA-SQLi-DB_-_tabla.sql`   #
-############################################### 
+################################################
+#    Lab 1: `Fz3r0-PSA-SQLi-DB_-_tabla.sql`    #
+################################################ 
 
 */
 
@@ -76,9 +76,7 @@ insert into table users(id int auto_increment PRIMARY KEY, username varchar(32),
 ````
 
 
-````
-/* Ejemplo completo: */
-````
+
 ## Recursos
 
 - https://dev.mysql.com/doc/refman/8.0/en/comments.html
