@@ -80,6 +80,12 @@ Para Fuzzear lso numeros se debe poner algún string o algo entre cada NULL, en 
 https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?category=Lifestyle'  UNION SELECT NULL,'Fz3r0',NULL -- -
 ````
 
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/db8636b9-9c7d-4710-beeb-fd430198cf84)
+
+Ahora si puedo inyectar querys visibles en ese campo
+
+
+
 
 
 
