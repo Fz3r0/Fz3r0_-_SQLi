@@ -38,6 +38,9 @@ Aunque en este caso no se ven los números en la pantalla, en realidad si pasa e
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/1c622ff2-4f1a-4e56-b3ff-42ab65c4887e)
 
+Super ojito! También se pueden ingresar comandos ALV
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/d4b6d7e9-95c3-4132-bb31-5a806ce9f877)
 
 ## Solución:
 
