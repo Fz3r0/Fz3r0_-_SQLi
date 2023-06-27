@@ -72,7 +72,13 @@ show tables;
 describe users;
 
 /* ## Query: insertar datos */
-insert into table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));
+insert into users() values(); -- Base del insert
+insert into users(username, password, subscription) values("Fz3r0", "p@ssw0rd123-0", "1");
+insert into users(username, password, subscription) values("F0n3", "p@ssw0rd123-1", "1");
+insert into users(username, password, subscription) values("Ftw0", "p@ssw0rd123-2", "0");
+insert into users(username, password, subscription) values("Fthr33", "p@ssw0rd123-3", "0");
+insert into users(username, password, subscription) values("Ff0ur", "p@ssw0rd123-4", "1");
+insert into users(username, password, subscription) values("Ff1v3", "p@ssw0rd123-5", "0");
 ````
 
 
