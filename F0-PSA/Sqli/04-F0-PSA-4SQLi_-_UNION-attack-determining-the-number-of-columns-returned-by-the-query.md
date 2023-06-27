@@ -42,6 +42,10 @@ Super ojito! También se pueden ingresar comandos ALV
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/d4b6d7e9-95c3-4132-bb31-5a806ce9f877)
 
+A eso se le llama SQLi RC
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/64a6367d-2cf8-4a45-9a75-eae6cf429776)
+
 ## Solución:
 
 1. En este caso la vulnerabilidad también está en categorías
