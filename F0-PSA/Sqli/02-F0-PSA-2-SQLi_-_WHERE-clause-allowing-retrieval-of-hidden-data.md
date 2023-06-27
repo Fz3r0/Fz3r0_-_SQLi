@@ -44,7 +44,7 @@ select id,username from users where subscription = '1' and id = 5;
 
 ### Resultado final
 
-- Con el payload `' or 1 = 1;-- -` o `' or 1 = 1-- -'` o `' or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
+- Con el payload `' or 1 = 1-- -` o `' or 1 = 1-- -'` o `' or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
 - Es decir, con este payload le estoy pidiendo en la query que regrese el `id=5` (osea solo `Ff0ur`) o todo donde sea `1=1` (osea `true`)... osea todo!!! porque todo es true!!!!!! muahaha!! ;)
 
 ````sql
@@ -69,15 +69,9 @@ select id,username from users where subscription = '1' or 1 = 1;-- - and id = 5 
 
 ## Solución:
 
-1. Abrir laboratorio
+1. Importante ir a un directorio donde sea vulnerable _(en este caso son las secciones)_
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/a56c4773-50c8-41b7-82b7-94631079ad1c)
-
-2. Si filtro puedo empezar a ver el query desde la URL
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/4349813d-9f17-4542-9695-ed2d23113a01)
-
-3. Query que usé
+2. Query que usé
 
 ````sql
 'or 1=1-- -
