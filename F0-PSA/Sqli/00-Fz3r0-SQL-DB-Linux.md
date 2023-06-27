@@ -38,6 +38,50 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]>
 ````
 
-## Crear Lab `Fz3r0-PSA-SQLi-DB.sql`
+## Crear Lab 1: `Fz3r0-PSA-SQLi-DB_-_tabla.sql`
+
+En este laboratorio solo se crea y utiliza una sola tabla de pruebas.
+
+- Copiar:
+
+````sql
+/* ## Tabla:
+
+- users
+    - id(int)
+    - username(string)
+    - password(string)
+    - subscription(styring)
+*/
+
+/* ## Query: crear db */
+create database fz3r0_pwn;
+
+/* ## Query: mostrar db */
+show databases;
+
+/* ## Query: usar db */
+use fz3r0_pwn
+
+/* ## Query: crear tabla */
+create table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));
+
+/* ## Query: insertar datos */
+create table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));
+````
 
 
+````
+/* Ejemplo completo: */
+````
+## Recursos
+
+- https://dev.mysql.com/doc/refman/8.0/en/comments.html
+
+
+
+## Biblia de bolsillo MySQl
+
+create table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar32(), subscription varchar(32));
+
+show databases
