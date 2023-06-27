@@ -84,6 +84,8 @@ https://0aff002b034894bd8089e9e3001100a0.web-security-academy.net/filter?categor
 
 Ahora si puedo inyectar querys visibles en ese campo
 
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/64c795c2-687a-423e-b58e-5f69cca10a2d)
+
 
 
 
