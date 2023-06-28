@@ -16,7 +16,9 @@ To solve the lab, perform a **SQL injection UNION attack** that retrieves all us
 
 - En este laboratorio ya se acerca a un escenario "real" donde a partir del SQLi debo exfiltrar datos que contengan un `username` y `password`
 - Para hacer esto, en realidad ya debo **enumerar** la base de datos o `database schema`, incluyendo `data bases`, `tables`, `columns` y `data`.
-- Aquí es donde ya se pueden comenzar a hacer `DIOS - Dump In One Shot` y ese tipo de travesuras.  
+- Aquí es donde ya se pueden comenzar a hacer `DIOS - Dump In One Shot` y ese tipo de travesuras.
+- A travez de `querys SQL` es como debo manipular las consultas para arrojar la información que yo necesite para enumerar la `database`.
+- En caso que haya `WAF - Web Application Firewall` las querys se deben manipular con diferentes tecnicas de `ofuscation`, `encoding`, etc. para lograr hacer `bypass` de ese `WAF`. _(En este laboratiorio no hay WAF)_ 
 
 #### Query original:
 
