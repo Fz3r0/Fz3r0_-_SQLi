@@ -29,11 +29,11 @@
 
 ### Tabla de relaciones entre `productos` y `categorías`:
 
-Esta tabla permite establecer una relación muchos a muchos entre productos y categorías.
-Un producto puede pertenecer a múltiples categorías y una categoría puede tener múltiples productos.
-Utiliza las claves externas (foreign keys) "product_id" y "category_id" para referenciar los productos y categorías respectivamente.
-La clave primaria compuesta (primary key) "product_id, category_id" garantiza la unicidad de las relaciones.
-La estructura de la base de datos creada busca simplificar el diseño al combinar información relacionada en la tabla de usuarios y proporcionar una estructura para manejar pedidos, productos y categorías de manera eficiente y coherente.
+- Esta tabla permite establecer una relación muchos a muchos entre productos y categorías.
+- Un producto puede pertenecer a múltiples categorías y una categoría puede tener múltiples productos.
+- Utiliza las claves externas (foreign keys) "product_id" y "category_id" para referenciar los productos y categorías respectivamente.
+- La clave primaria compuesta (primary key) "product_id, category_id" garantiza la unicidad de las relaciones.
+- La estructura de la base de datos creada busca simplificar el diseño al combinar información relacionada en la tabla de usuarios y proporcionar una estructura para manejar pedidos, productos y categorías de manera eficiente y coherente.
 
 ## Crear DB
 
