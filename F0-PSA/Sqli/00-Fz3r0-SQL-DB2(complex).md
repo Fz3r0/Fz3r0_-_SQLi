@@ -95,6 +95,8 @@ CREATE TABLE orders (
   FOREIGN KEY (user_id) REFERENCES users(id),
   FOREIGN KEY (product_category_id) REFERENCES product_categories(product_category_id)
 );
+
+
 ````
 
 ## Insertar Datos en Tablas de DB
