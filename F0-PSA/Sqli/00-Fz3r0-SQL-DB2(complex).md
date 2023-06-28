@@ -55,6 +55,7 @@ CREATE TABLE orders (
   user_id INT,
   product_name VARCHAR(64),
   quantity INT,
+  order_date DATE,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
@@ -102,46 +103,35 @@ VALUES
   ('kate.clark', 'passwordeg5', 'basic', 'Kate Clark', '369 Fir St', '555-8901');
 
 -- Insertar datos en la tabla de pedidos
-INSERT INTO orders (user_id, product_name, quantity)
+INSERT INTO orders (user_id, product_id, quantity, order_date)
 VALUES
-  (1, 'Product A', 2),
-  (1, 'Product B', 1),
-  (2, 'Product C', 3),
-  (2, 'Product A', 2),
-  (3, 'Product B', 1),
-  (3, 'Product C', 4),
-  (4, 'Product A', 3),
-  (4, 'Product B', 2),
-  (5, 'Product C', 1),
-  (5, 'Product A', 2);
+  (1, 1, 2, '2023-06-27 10:15:00'),
+  (2, 3, 1, '2023-06-27 11:30:00'),
+  (1, 6, 3, '2023-06-27 14:45:00'),
+  (3, 4, 1, '2023-06-27 16:20:00'),
+  (2, 8, 2, '2023-06-27 18:05:00');
 
 -- Insertar datos en la tabla de productos
 INSERT INTO products (name, description, price)
 VALUES
-  ('Product A', 'Description of Product A', 9.99),
-  ('Product B', 'Description of Product B', 14.99),
-  ('Product C', 'Description of Product C', 19.99),
-  ('Product D', 'Description of Product D', 24.99),
-  ('Product E', 'Description of Product E', 29.99),
-  ('Product F', 'Description of Product F', 34.99),
-  ('Product G', 'Description of Product G', 39.99),
-  ('Product H', 'Description of Product H', 44.99),
-  ('Product I', 'Description of Product I', 49.99),
-  ('Product J', 'Description of Product J', 54.99);
+  ('Manzana', 'Manzana fresca y jugosa', 1.99),
+  ('Martillo', 'Martillo de acero resistente', 9.99),
+  ('Camiseta', 'Camiseta de algodón suave', 14.99),
+  ('Teléfono móvil', 'Teléfono inteligente de última generación', 499.99),
+  ('Pera', 'Pera madura y dulce', 1.49),
+  ('Destornillador', 'Destornillador magnético', 4.99),
+  ('Jeans', 'Pantalones vaqueros de estilo moderno', 29.99),
+  ('Portátil', 'Ordenador portátil de alto rendimiento', 999.99),
+  ('Naranja', 'Naranja jugosa y refrescante', 1.29),
+  ('Taladro', 'Taladro inalámbrico de gran potencia', 49.99);
 
 -- Insertar datos en la tabla de categorías
 INSERT INTO categories (name)
 VALUES
-  ('Category 1'),
-  ('Category 2'),
-  ('Category 3'),
-  ('Category 4'),
-  ('Category 5'),
-  ('Category 6'),
-  ('Category 7'),
-  ('Category 8'),
-  ('Category 9'),
-  ('Category 10');
+  ('Frutas'),
+  ('Herramientas'),
+  ('Ropa'),
+  ('Electrónicos');
 
 -- Insertar datos en la tabla de relaciones entre productos y categorías
 INSERT INTO product_categories (product_id, category_id, product_name, category_name)
