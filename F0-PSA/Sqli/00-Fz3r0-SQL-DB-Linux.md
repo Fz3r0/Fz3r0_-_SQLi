@@ -92,9 +92,6 @@ select * from users LIMIT = 1; -- Devuelve solo la primer linea
 select * from users LIMIT = 2; -- Devuelve las primeras 2 lineas
 select * from users LIMIT = 5; -- Devuelve las primeras 3 lineas
 
-/* ## Query: seleccionar algo específico o general, pero limitando resultados para número de lineas, modificando a placer */
-select * from users LIMIT = 1;
-
 /* Al cambiar la consulta a "LIMIT 1,1", se fuerza a la consulta a omitir el primer resultado, y luego "LIMIT 2,1" omitirá los primeros dos resultados, y así sucesivamente.
 Debes recordar que el primer número indica a la base de datos cuántos resultados deseas omitir, y el segundo número indica a la base de datos cuántas filas devolver. */
 select * from users LIMIT 1,1; -- Omite el primer resultado, devuelve el siguiente resultado (2do)
