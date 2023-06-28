@@ -59,39 +59,41 @@ CREATE TABLE users (
   phone_number VARCHAR(16)
 );
 
--- Tabla de pedidos
-CREATE TABLE orders (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT,
-  product_name VARCHAR(64),
-  quantity INT,
-  order_date DATE,
-  FOREIGN KEY (user_id) REFERENCES users(id)
-);
-
--- Tabla de productos
-CREATE TABLE products (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(64),
-  description VARCHAR(256),
-  price DECIMAL(10,2)
-);
-
--- Tabla de categorías
+-- Tabla de categorías con ID alfanumérico
 CREATE TABLE categories (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(64)
+  category_id VARCHAR(10) PRIMARY KEY,
+  category_name VARCHAR(50)
 );
 
--- Tabla de relaciones entre productos y categorías (tabla de muchos a muchos). No era necesario agregar los strings de nombres, pero es para hacerlo más comprensible.
+-- Tabla de productos con ID alfanumérico
+CREATE TABLE products (
+  product_id VARCHAR(10) PRIMARY KEY,
+  product_name VARCHAR(50),
+  category_id VARCHAR(10),
+  FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
+-- Tabla de relaciones entre productos y categorías con ID de pedido incremental
 CREATE TABLE product_categories (
-  product_id INT,
-  category_id INT,
+  product_category_id INT AUTO_INCREMENT PRIMARY KEY,
+  product_id VARCHAR(10),
+  category_id VARCHAR(10),
   product_name VARCHAR(50),
   category_name VARCHAR(50),
-  FOREIGN KEY (product_id) REFERENCES products(id),
-  FOREIGN KEY (category_id) REFERENCES categories(id),
-  PRIMARY KEY (product_id, category_id)
+  FOREIGN KEY (product_id) REFERENCES products(product_id),
+  FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
+-- Tabla de pedidos con ID de pedido incremental y prefijo
+CREATE TABLE orders (
+  order_id INT AUTO_INCREMENT PRIMARY KEY,
+  order_number VARCHAR(20),
+  user_id INT,
+  product_category_id INT,
+  quantity INT,
+  order_date DATETIME,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (product_category_id) REFERENCES product_categories(product_category_id)
 );
 ````
 
@@ -112,48 +114,28 @@ VALUES
   ('ryan.hall', 'passwordeg4', 'premium', 'Ryan Hall', '852 Sycamore St', '555-4567'),
   ('kate.clark', 'passwordeg5', 'basic', 'Kate Clark', '369 Fir St', '555-8901');
 
--- Insertar datos en la tabla de pedidos
-INSERT INTO orders (user_id, product_id, quantity, order_date)
+-- Inserción de datos en la tabla de categorías
+INSERT INTO categories (category_id, category_name)
 VALUES
-  (1, 1, 2, '2023-06-27 10:15:00'),
-  (2, 3, 1, '2023-06-27 11:30:00'),
-  (1, 6, 3, '2023-06-27 14:45:00'),
-  (3, 4, 1, '2023-06-27 16:20:00'),
-  (2, 8, 2, '2023-06-27 18:05:00');
+  ('CAT001', 'Frutas'),
+  ('CAT002', 'Herramientas'),
+  ('CAT003', 'Ropa'),
+  ('CAT004', 'Electrónicos');
 
--- Insertar datos en la tabla de productos
-INSERT INTO products (name, description, price)
+-- Inserción de datos en la tabla de productos
+INSERT INTO products (product_id, product_name, category_id)
 VALUES
-  ('Manzana', 'Manzana fresca y jugosa', 1.99),
-  ('Martillo', 'Martillo de acero resistente', 9.99),
-  ('Camiseta', 'Camiseta de algodón suave', 14.99),
-  ('Teléfono móvil', 'Teléfono inteligente de última generación', 499.99),
-  ('Pera', 'Pera madura y dulce', 1.49),
-  ('Destornillador', 'Destornillador magnético', 4.99),
-  ('Jeans', 'Pantalones vaqueros de estilo moderno', 29.99),
-  ('Portátil', 'Ordenador portátil de alto rendimiento', 999.99),
-  ('Naranja', 'Naranja jugosa y refrescante', 1.29),
-  ('Taladro', 'Taladro inalámbrico de gran potencia', 49.99);
+  ('PRD001', 'Manzana', 'CAT001'),
+  ('PRD002', 'Martillo', 'CAT002'),
+  ('PRD003', 'Camiseta', 'CAT003'),
+  ('PRD004', 'Teléfono móvil', 'CAT004');
 
--- Insertar datos en la tabla de categorías
-INSERT INTO categories (name)
+-- Inserción de datos en la tabla de pedidos
+INSERT INTO orders (order_number, user_id, product_category_id, quantity, order_date)
 VALUES
-  ('Frutas'),
-  ('Herramientas'),
-  ('Ropa'),
-  ('Electrónicos');
-
--- Insertar datos en la tabla de relaciones entre productos y categorías
-INSERT INTO product_categories (product_id, category_id, product_name, category_name)
-VALUES
-  (1, 1, 'Manzana', 'Frutas'),
-  (2, 2, 'Martillo', 'Herramientas'),
-  (3, 3, 'Camiseta', 'Ropa'),
-  (4, 4, 'Teléfono móvil', 'Electrónicos'),
-  (5, 1, 'Pera', 'Frutas'),
-  (6, 2, 'Destornillador', 'Herramientas'),
-  (7, 3, 'Jeans', 'Ropa'),
-  (8, 4, 'Portátil', 'Electrónicos'),
-  (9, 1, 'Naranja', 'Frutas'),
-  (10, 2, 'Taladro', 'Herramientas');
+  ('ORD001', 1, 1, 2, '2023-06-27 10:15:00'),
+  ('ORD002', 2, 3, 1, '2023-06-27 11:30:00'),
+  ('ORD003', 1, 4, 3, '2023-06-27 14:45:00'),
+  ('ORD004', 3, 2, 1, '2023-06-27 16:20:00'),
+  ('ORD005', 2, 4, 2, '2023-06-27 18:05:00');
 ````
