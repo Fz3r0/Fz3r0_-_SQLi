@@ -56,17 +56,34 @@ MariaDB [Fz3r0_Store]> select * from users;
 10 rows in set (0.000 sec)
 ````
 
-### Tabla de `pedidos`:
-
-- Registra los pedidos realizados por los usuarios.
-- Cada pedido se relaciona con un usuario específico a través de la clave externa (foreign key) "user_id".
-- Incluye información sobre el nombre del producto y la cantidad solicitada.
-
 ### Tabla de `productos`:
 
 - Almacena los detalles de los productos disponibles.
 - Incluye campos como nombre, descripción y precio.
 - Esta tabla permite mantener un catálogo de productos para su uso en los pedidos.
+
+````py
+MariaDB [Fz3r0_Store]> describe products;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| product_id   | varchar(10) | NO   | PRI | NULL    |       |
+| product_name | varchar(50) | YES  |     | NULL    |       |
+| category_id  | varchar(10) | YES  | MUL | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+3 rows in set (0.001 sec)
+
+MariaDB [Fz3r0_Store]> select * from products;
++------------+------------------+-------------+
+| product_id | product_name     | category_id |
++------------+------------------+-------------+
+| PRD001     | Manzana          | CAT001      |
+| PRD002     | Martillo         | CAT002      |
+| PRD003     | Camiseta         | CAT003      |
+| PRD004     | Teléfono móvil   | CAT004      |
++------------+------------------+-------------+
+4 rows in set (0.000 sec)
+````
 
 ### Tabla de `categorías`:
 
@@ -81,6 +98,12 @@ MariaDB [Fz3r0_Store]> select * from users;
 - Utiliza las claves externas (foreign keys) "product_id" y "category_id" para referenciar los productos y categorías respectivamente.
 - La clave primaria compuesta (primary key) "product_id, category_id" garantiza la unicidad de las relaciones.
 - La estructura de la base de datos creada busca simplificar el diseño al combinar información relacionada en la tabla de usuarios y proporcionar una estructura para manejar pedidos, productos y categorías de manera eficiente y coherente.
+
+### Tabla de `pedidos`:
+
+- Registra los pedidos realizados por los usuarios.
+- Cada pedido se relaciona con un usuario específico a través de la clave externa (foreign key) "user_id".
+- Incluye información sobre el nombre del producto y la cantidad solicitada.
 
 ## Crear DB
 
