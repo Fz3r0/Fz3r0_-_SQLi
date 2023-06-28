@@ -57,7 +57,7 @@ select id,username from users where subscription = '1' and id = 5;
 
 ### Resultado final
 
-- Con el payload `' or 1 = 1-- -` o `' or 1 = 1-- -'` o `' or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
+- Con el payload `' or 1 = 1 --` o`' or 1 = 1-- -` o `' or 1 = 1-- -'` o `' or 1 = 1'-- -` _(o alguna de sus variantes de comentarios)_ es como "romperé" el query:
 - Es decir, con este payload le estoy pidiendo en la query que regrese el `id=5` (osea solo `Ff0ur`) o todo donde sea `1=1` (osea `true`)... osea todo!!! porque todo es true!!!!!! muahaha!! ;)
 
 ````sql
