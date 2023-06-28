@@ -36,7 +36,7 @@ Pero MySQL es uno de los DBMS más populares, por lo que necesitamos tener un pa
 
 - En resumen, **para tener mejor compatibilidad entre todas las DBMS es mejor utilizar `-- -` en lugar de `-- `.** 
 
-### Entonces, ¿por qué existe `--+`? 
+### Entonces, ¿por qué existe `--+` y `--+-`? 
 
 Porque en la norma URL, el carácter de espacio se codifica como un signo de más `+`, por ejemplo, en `UTF-8 U+0020 SPACE` se codifica como `U+002B (+)`. Esto significa que al decodificar una URL, el signo `+` se decodificará como un espacio y transformará `--+` en `--<espacio>` (`-- `).
 
