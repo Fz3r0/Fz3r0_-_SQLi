@@ -27,7 +27,13 @@ select id,username,subscription from users where username = 'administrator' and 
 select id,username,subscription from users where username = 'administrator'--' and password = 'p@ssw0rd123-1';
 ````
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/4cd5611e-0aac-435f-a45d-4a254b669186)
+---
+
+### Explicación con Lab:
+
+1. Hago exactamente el mismo queary pero adaptado con un `username` de mi base de datos
+
+
 
 
 ## Solución:
