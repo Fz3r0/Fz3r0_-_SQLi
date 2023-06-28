@@ -87,8 +87,10 @@ select username,password from users;
 select username,password from users where subscription = "1"; -- ejemplo 1
 select username,password from users where username = "Fz3r0" or username = "Ftw0"; -- ejemplo 2
 
-/* ## Query: seleccionar algo específico o general, pero limitando resultados para número de lineas */
-select * from users LIMIT = 1;
+/* ## Query: seleccionar algo general (también puede ser específico), pero limitando resultados para número de lineas */
+select * from users LIMIT = 1; -- Devuelve solo la primer linea
+select * from users LIMIT = 2; -- Devuelve las primeras 2 lineas
+select * from users LIMIT = 5; -- Devuelve las primeras 3 lineas
 
 /* ## Query: seleccionar algo específico o general, pero limitando resultados para número de lineas, modificando a placer */
 select * from users LIMIT = 1;
