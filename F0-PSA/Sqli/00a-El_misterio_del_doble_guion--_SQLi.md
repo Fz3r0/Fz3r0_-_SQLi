@@ -10,7 +10,7 @@ Es posible que la entrada se inyecte al principio de la consulta o varias veces 
 
 - **Para evitar efectos secundarios incontrolados e inesperados en el query, un pentester desea finalizar su payload con un comentario para neutralizar y finalizar la consulta, de modo que el comportamiento sea más predecible.**
 
-## ¿Qué tipo de comentario?
+## ¿Qué tipo de comentario utilizar?
 
 Algunos sistemas de gestión de bases de datos (DBMS, por sus siglas en inglés) admiten comentarios en línea como `#` o `--`, otros admiten comentarios multilínea `/* */`, y también existen algunas sintaxis más extrañas e inusuales. 
 
