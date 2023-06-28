@@ -25,7 +25,7 @@ SELECT * FROM products WHERE category = 'Gifts' AND released = 1
 - Y al final se termina "rompiendo" así _(quitando esas condicionales muahaha!)_:
 
 ````sql
-SELECT * FROM products WHERE category = 'Gifts' or 1 = 1-- -' AND released = 1 (soy la noche :P)
+SELECT * FROM products WHERE category = 'Gifts' or 1 = 1 -- AND released = 1 (soy la noche :P)
 ````
 
 El payload se inyecta en donde se pone el nombre del artículo o sección:
