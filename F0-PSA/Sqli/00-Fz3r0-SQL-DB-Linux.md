@@ -156,6 +156,7 @@ MariaDB [fz3r0_pwn]> select * from users;
 
 - https://dev.mysql.com/doc/refman/8.0/en/comments.html
 - [SQL Injection (SQLI) - Explicado desde Cero](https://youtu.be/C-FiImhUviM)
+- https://tryhackme.com/room/sqlinjectionlm
 
 
 
