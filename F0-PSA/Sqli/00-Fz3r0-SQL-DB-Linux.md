@@ -53,6 +53,9 @@ En este laboratorio solo se crea y utiliza una sola tabla de pruebas.
 /* ## Query: crear db */
 create database fz3r0_pwn;
 
+/* ## Query: borrar db */
+drop database fz3r0_pwn;
+
 /* ## Query: mostrar db */
 show databases;
 
@@ -61,6 +64,9 @@ use fz3r0_pwn
 
 /* ## Query: crear tabla */
 create table users(id int auto_increment PRIMARY KEY, username varchar(32), password varchar(32), subscription varchar(32));
+
+/* ## Query: borrar tabla */
+drop table users;
 
 /* ## Query: mostrar tablas */
 show tables;
