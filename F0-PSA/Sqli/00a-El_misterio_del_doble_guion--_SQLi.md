@@ -30,19 +30,26 @@ MySQL (Oracle MySQL, MariaDB, Percona Server), Oracle Database, PostgreSQL, Micr
 
 - **`Extracto de instructivo MySQL`**: Desde una secuencia `--` hasta el final de la línea. En MySQL, el estilo de comentario `--` (doble guion) **requiere que el segundo guion sea seguido por al menos un espacio en blanco o un carácter de control** _(como un espacio, una tabulación, un salto de línea, etc.)_. Esta sintaxis difiere ligeramente de la sintaxis estándar de comentario SQL, como se discute en la sección 1.8.2.4, _`'--' como inicio de un comentario`_.
 
-Sí, MySQL requiere que los dos guiones sean seguidos por un carácter de espacio en blanco (espacio, tabulación, salto de línea, etc.). Pero la mayoría de las veces, las inyecciones SQL se explotan a través de HTTP desde una aplicación web. Esto significa que los navegadores web, los frameworks web, los backends de aplicaciones, los proxies, los lenguajes subyacentes, pueden eliminar los espacios en blanco al final, lo que significa que "--<espacio en blanco>" se transformará en "--" y MySQL lo considerará inválido.
+Sí, **MySQL requiere que los dos guiones sean seguidos por un carácter de espacio en blanco _(espacio, tabulación, salto de línea, etc.)_**. Pero la mayoría de las veces, **las inyecciones SQL se explotan a través de HTTP desde una aplicación web**. Esto significa que los navegadores web, los frameworks web, los backends de aplicaciones, los proxies, los lenguajes subyacentes, pueden eliminar los espacios en blanco al final, lo que significa que `--<espacio en blanco>` se transformará en `--` (sin espacio en blanco) y MySQL lo considerará inválido.
 
-Pero MySQL es uno de los DBMS más populares, por lo que necesitamos tener un payload genérico que funcione con él. Por eso a menudo se ve "-- -", agregando cualquier carácter después del espacio en blanco para que no sea un espacio en blanco final y no se elimine. Esto significa que "-- -" no es diferente de "-- a", "-- Z" o "-- !".
+Pero MySQL es uno de los DBMS más populares, por lo que necesitamos tener un payload genérico que funcione con él. Por eso a menudo se ve `-- -`, agregando cualquier carácter después del espacio en blanco para que no sea un espacio en blanco final y no se elimine. Esto significa que `-- -` no es diferente de `-- a`, `-- Z` o `-- !`.
 
-Entonces, ¿por qué existe "--+"? Porque en la norma URL, el carácter de espacio se codifica como un signo de más [5], por ejemplo, en UTF-8 U+0020 SPACE se codifica como U+002B (+). Esto significa que al decodificar una URL, el signo de más se decodificará como un espacio y transformará "--+" en "--<espacio>".
+- En resumen, **para tener mejor compatibilidad entre todas las DBMS es mejor utilizar `-- -` en lugar de `-- `.** 
 
-Nota: Por eso base64url (también conocido como base64 seguro para URL y seguro para nombres de archivo) utiliza el guion en lugar del signo de más y el guión bajo en lugar de la barra inclinada (/) (RFC 4648).
+### Entonces, ¿por qué existe `--+`? 
 
-Pero si "--+" está codificado (por ejemplo, codificado en URL) como "--%2B", cuando se decodifique, "--+" no se reconocerá como válido por MySQL, por eso es más seguro usar "--<espacio><cualquier_carácter>", como "-- -", porque si se codifica en URL como "--%20-", aún se decodificará como "---".
+Porque en la norma URL, el carácter de espacio se codifica como un signo de más `+`, por ejemplo, en `UTF-8 U+0020 SPACE` se codifica como `U+002B (+)`. Esto significa que al decodificar una URL, el signo `+` se decodificará como un espacio y transformará `--+` en `--<espacio>` (`-- `).
+
+Nota: Por eso `base64url` (también conocido como `base64` seguro para URL y seguro para nombres de archivo) utiliza el guion `-` en lugar del signo de más `+` y el guión bajo `_` en lugar de la barra inclinada `/` _(RFC 4648)_.
+
+Pero si `--+` está codificado (por ejemplo, codificado en URL) como `--%2B`, cuando se decodifique, `--+` no se reconocerá como válido por **MySQL**, por eso es más seguro usar `--<espacio><cualquier_carácter>`, como `-- -`, porque si se codifica en URL como `--%20-`, aún se decodificará como `---`.
+
+- En resumen, **para tener mejor compatibilidad entre todas las DBMS es mejor utilizar `-- -` en lugar de `--+`. Pero una opción también es utilizar `--+-`**
 
 ## Conclusión
 
 - **Uno podría querer utilizar `-- -` como el comentario SQL en línea más interoperable y seguro, ya que `--` no funciona con MySQL y `--+` se romperá si se codifica.**
+- **Ya sea `-- -` o `--+-`, serían las opciones más eficientes para enfrentar la mayoría de DBMS, incluyendo las más comunes como MySQL**
 
 ## Recursos
 
