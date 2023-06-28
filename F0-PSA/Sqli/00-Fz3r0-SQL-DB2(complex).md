@@ -72,10 +72,12 @@ CREATE TABLE categories (
   name VARCHAR(64)
 );
 
--- Tabla de relaciones entre productos y categorías (tabla de muchos a muchos)
+-- Tabla de relaciones entre productos y categorías (tabla de muchos a muchos). No era necesario agregar los strings de nombres, pero es para hacerlo más comprensible.
 CREATE TABLE product_categories (
   product_id INT,
   category_id INT,
+  product_name VARCHAR(50),
+  category_name VARCHAR(50),
   FOREIGN KEY (product_id) REFERENCES products(id),
   FOREIGN KEY (category_id) REFERENCES categories(id),
   PRIMARY KEY (product_id, category_id)
@@ -142,19 +144,16 @@ VALUES
   ('Category 10');
 
 -- Insertar datos en la tabla de relaciones entre productos y categorías
-INSERT INTO product_category (product_id, category_id)
+INSERT INTO product_categories (product_id, category_id, product_name, category_name)
 VALUES
-  (1, 1),
-  (1, 2),
-  (2, 2),
-  (2, 3),
-  (3, 3),
-  (4, 4),
-  (5, 5),
-  (6, 6),
-  (7, 7),
-  (8, 8),
-  (9, 9),
-  (10, 10);
-
+  (1, 1, 'Manzana', 'Frutas'),
+  (2, 2, 'Martillo', 'Herramientas'),
+  (3, 3, 'Camiseta', 'Ropa'),
+  (4, 4, 'Teléfono móvil', 'Electrónicos'),
+  (5, 1, 'Pera', 'Frutas'),
+  (6, 2, 'Destornillador', 'Herramientas'),
+  (7, 3, 'Jeans', 'Ropa'),
+  (8, 4, 'Portátil', 'Electrónicos'),
+  (9, 1, 'Naranja', 'Frutas'),
+  (10, 2, 'Taladro', 'Herramientas');
 ````
