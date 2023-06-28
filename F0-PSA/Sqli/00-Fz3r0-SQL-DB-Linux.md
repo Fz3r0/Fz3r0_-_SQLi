@@ -87,6 +87,18 @@ select username,password from users;
 select username,password from users where subscription = "1"; -- ejemplo 1
 select username,password from users where username = "Fz3r0" or username = "Ftw0"; -- ejemplo 2
 
+/* ## Query: seleccionar algo específico o general, pero limitando resultados para número de lineas */
+select * from users LIMIT = 1;
+
+/* ## Query: seleccionar algo específico o general, pero limitando resultados para número de lineas, modificando a placer */
+select * from users LIMIT = 1;
+
+/* Al cambiar la consulta a "LIMIT 1,1", se fuerza a la consulta a omitir el primer resultado, y luego "LIMIT 2,1" omitirá los primeros dos resultados, y así sucesivamente.
+Debes recordar que el primer número indica a la base de datos cuántos resultados deseas omitir, y el segundo número indica a la base de datos cuántas filas devolver. */
+select * from users LIMIT 1,1; -- Omite el primer resultado, devuelve el siguiente resultado (2do)
+select * from users LIMIT 2,1; -- Omite primer y segundo resultado, devuelve el siguiente resultado (3ro)
+select * from users LIMIT 1,2; -- Omite el primer resultado, devuelve los siguientes 2 resultados (2do & 3ro)
+select * from users LIMIT 2,3; -- Omite primer y segundo resultado, devuelve los siguientes 3 resultados (2do & 3ro & 4t0)
 ````
 
 ### Resultados de Laboratiorio
