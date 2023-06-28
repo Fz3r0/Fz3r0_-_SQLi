@@ -104,6 +104,20 @@ CREATE TABLE orders (
 ## Insertar Datos en Tablas de DB
 
 ````sql
+-- Insertar datos en la tabla de usuarios
+INSERT INTO users (username, password, subscription, full_name, address, phone_number)
+VALUES
+  ('john.doe', 'password123', 'premium', 'John Doe', '123 Main St', '555-1234'),
+  ('jane.smith', 'password456', 'basic', 'Jane Smith', '456 Elm St', '555-5678'),
+  ('mike.johnson', 'password789', 'premium', 'Mike Johnson', '789 Oak St', '555-9012'),
+  ('sara.wilson', 'passwordabc', 'basic', 'Sara Wilson', '321 Pine St', '555-3456'),
+  ('chris.brown', 'passworddef', 'premium', 'Chris Brown', '654 Maple St', '555-7890'),
+  ('emily.davis', 'passwordeg1', 'basic', 'Emily Davis', '987 Cedar St', '555-2345'),
+  ('alex.miller', 'passwordeg2', 'premium', 'Alex Miller', '159 Birch St', '555-6789'),
+  ('lisa.thomas', 'passwordeg3', 'basic', 'Lisa Thomas', '753 Walnut St', '555-0123'),
+  ('ryan.hall', 'passwordeg4', 'premium', 'Ryan Hall', '852 Sycamore St', '555-4567'),
+  ('kate.clark', 'passwordeg5', 'basic', 'Kate Clark', '369 Fir St', '555-8901');
+
 -- Inserción de datos en la tabla de categorías
 INSERT INTO categories (category_id, category_name)
 VALUES
