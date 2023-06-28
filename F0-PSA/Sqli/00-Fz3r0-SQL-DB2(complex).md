@@ -38,6 +38,16 @@
 ## Crear DB
 
 ````sql
+-- Crear DB
+create database Fz3r0_Store;
+
+-- Usar DB
+use Fz3r0_Store
+````
+
+## Crear Tablas en DB
+
+````sql
 -- Tabla de usuarios
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -85,7 +95,7 @@ CREATE TABLE product_categories (
 );
 ````
 
-## Insertar Datos en DB
+## Insertar Datos en Tablas de DB
 
 ````sql
 -- Insertar datos en la tabla de usuarios
