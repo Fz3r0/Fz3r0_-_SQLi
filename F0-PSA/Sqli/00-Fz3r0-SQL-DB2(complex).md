@@ -3,11 +3,58 @@
 
 - Una pequeña y bonita base de datos que contiene las siguientes tablas:
 
+````py
+MariaDB [Fz3r0_Store]> show tables;
++-----------------------+
+| Tables_in_Fz3r0_Store |
++-----------------------+
+| categories            |
+| orders                |
+| product_categories    |
+| products              |
+| users                 |
++-----------------------+
+5 rows in set (0.000 sec)
+````
+
 ### Tabla de `usuarios`:
 
 - Almacena la información básica de los usuarios, como su nombre de usuario, contraseña y suscripción.
 - También incluye campos adicionales como nombre completo, dirección y número de teléfono directamente en esta tabla.
 - Esta estructura permite almacenar todos los datos relacionados con un usuario en una sola entidad.
+
+````py
+MariaDB [Fz3r0_Store]> describe users;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int(11)      | NO   | PRI | NULL    | auto_increment |
+| username     | varchar(32)  | YES  |     | NULL    |                |
+| password     | varchar(32)  | YES  |     | NULL    |                |
+| subscription | varchar(32)  | YES  |     | NULL    |                |
+| full_name    | varchar(64)  | YES  |     | NULL    |                |
+| address      | varchar(128) | YES  |     | NULL    |                |
+| phone_number | varchar(16)  | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.001 sec)
+
+MariaDB [Fz3r0_Store]> select * from users;
++----+--------------+-------------+--------------+--------------+-----------------+--------------+
+| id | username     | password    | subscription | full_name    | address         | phone_number |
++----+--------------+-------------+--------------+--------------+-----------------+--------------+
+|  1 | john.doe     | password123 | premium      | John Doe     | 123 Main St     | 555-1234     |
+|  2 | jane.smith   | password456 | basic        | Jane Smith   | 456 Elm St      | 555-5678     |
+|  3 | mike.johnson | password789 | premium      | Mike Johnson | 789 Oak St      | 555-9012     |
+|  4 | sara.wilson  | passwordabc | basic        | Sara Wilson  | 321 Pine St     | 555-3456     |
+|  5 | chris.brown  | passworddef | premium      | Chris Brown  | 654 Maple St    | 555-7890     |
+|  6 | emily.davis  | passwordeg1 | basic        | Emily Davis  | 987 Cedar St    | 555-2345     |
+|  7 | alex.miller  | passwordeg2 | premium      | Alex Miller  | 159 Birch St    | 555-6789     |
+|  8 | lisa.thomas  | passwordeg3 | basic        | Lisa Thomas  | 753 Walnut St   | 555-0123     |
+|  9 | ryan.hall    | passwordeg4 | premium      | Ryan Hall    | 852 Sycamore St | 555-4567     |
+| 10 | kate.clark   | passwordeg5 | basic        | Kate Clark   | 369 Fir St      | 555-8901     |
++----+--------------+-------------+--------------+--------------+-----------------+--------------+
+10 rows in set (0.000 sec)
+````
 
 ### Tabla de `pedidos`:
 
