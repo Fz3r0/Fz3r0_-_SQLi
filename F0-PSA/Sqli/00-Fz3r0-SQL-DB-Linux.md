@@ -88,9 +88,9 @@ select username,password from users where subscription = "1"; -- ejemplo 1
 select username,password from users where username = "Fz3r0" or username = "Ftw0"; -- ejemplo 2
 
 /* ## Query: seleccionar algo general (también puede ser específico), pero limitando resultados para número de lineas */
-select * from users LIMIT = 1; -- Devuelve solo la primer linea
-select * from users LIMIT = 2; -- Devuelve las primeras 2 lineas
-select * from users LIMIT = 5; -- Devuelve las primeras 3 lineas
+select * from users LIMIT 1; -- Devuelve solo la primer linea
+select * from users LIMIT 2; -- Devuelve las primeras 2 lineas
+select * from users LIMIT 5; -- Devuelve las primeras 5 lineas
 
 /* Al cambiar la consulta a "LIMIT 1,1", se fuerza a la consulta a omitir el primer resultado, y luego "LIMIT 2,1" omitirá los primeros dos resultados, y así sucesivamente.
 Debes recordar que el primer número indica a la base de datos cuántos resultados deseas omitir, y el segundo número indica a la base de datos cuántas filas devolver. */
@@ -98,6 +98,13 @@ select * from users LIMIT 1,1; -- Omite el primer resultado, devuelve el siguien
 select * from users LIMIT 2,1; -- Omite primer y segundo resultado, devuelve el siguiente resultado (3ro)
 select * from users LIMIT 1,2; -- Omite el primer resultado, devuelve los siguientes 2 resultados (2do & 3ro)
 select * from users LIMIT 2,3; -- Omite primer y segundo resultado, devuelve los siguientes 3 resultados (2do & 3ro & 4t0)
+
+/* ## Query: seleccionar algo similar a... Es decir, puede empezar o terminar con alguna letra o string */
+select * from users where username like 'F%'; -- Empieza con "F"
+select * from users where username like 'Fz%'; -- Empieza con "Fz"
+select * from users where username like '%0'; -- Temrina con "0"
+select * from users where username like '%3'; -- Temrina con "3"
+
 ````
 
 ### Resultados de Laboratiorio
