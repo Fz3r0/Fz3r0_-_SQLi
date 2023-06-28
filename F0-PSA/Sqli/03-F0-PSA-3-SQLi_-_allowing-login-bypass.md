@@ -27,12 +27,6 @@ select id,username,subscription from users where username = 'F0n3' and password 
 select id,username,subscription from users where username = 'F0n3' -- and password = 'p@ssw0rd123-1';
 ````
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/49b83b5c-02a2-4733-a894-def831e0242b)
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/836a0bdb-2069-492c-b109-6dce5b4824e9)
-
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/32cf2b6f-58ef-4e79-8fc0-fe52d18b4d6d)
-
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/4cd5611e-0aac-435f-a45d-4a254b669186)
 
 
