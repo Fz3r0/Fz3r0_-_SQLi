@@ -1,6 +1,6 @@
 # SQLi: schema, schemata & DIOS
 
-## Fz3r0 SQLi: `schema` mini bible
+## Fz3r0 SQLi: `schema_name` (Databases) mini bible
 
 ````sql
 ## Schema Name AKA Databases Names Dump
