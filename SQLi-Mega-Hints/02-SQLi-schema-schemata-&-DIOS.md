@@ -25,6 +25,16 @@ SELECT CONCAT('Database PWNed : ',(schema_name)) FROM information_schema.schemat
 ---
 ````
 
+---
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
 ## Basics: `information schema`
 
 ### Query basic
@@ -120,7 +130,7 @@ select username,password from users where username = 'F0n3' union select 'izquie
 
 <br>
 
-## `schema_name`
+## `schema_name`: Databases Names Enum
 
 #### `Union Select` + `schema_name`
 
