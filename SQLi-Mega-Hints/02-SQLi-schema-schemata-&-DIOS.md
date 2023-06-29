@@ -25,7 +25,7 @@ SELECT CONCAT('Database PWNed : ',(schema_name)) FROM information_schema.schemat
 ---
 ````
 
-## `schema name` from `information schema`
+## Basics: `information schema`
 
 ### Query basic
 
@@ -81,7 +81,15 @@ SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemat
 
 ---
 
-### Union + Group Concat
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+## Query Basics: `Union` + `Group Concat`
 
 #### `Union Select` Progression:
 
@@ -104,7 +112,15 @@ select username,password from users where username = 'F0n3' union select 'izquie
 
 ---
 
-### `schema_name`
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+## `schema_name`
 
 #### `Union Select` + `schema_name`
 
