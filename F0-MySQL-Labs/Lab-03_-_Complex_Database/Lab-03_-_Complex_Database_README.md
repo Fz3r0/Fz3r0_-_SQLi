@@ -246,7 +246,83 @@ VALUES
 
 ````
 
-## Querys de Select para pruebas
+## Querys Select de pruebas: `Sencillas`
+
+### Top 10 Sencillas:
+
+````sql
+-- Consulta 1: Todos los usuarios
+SELECT * FROM usuarios;
+
+-- Consulta 2: Todos los productos con su precio
+SELECT nombre, precio FROM productos;
+
+-- Consulta 3: Total de productos en stock
+SELECT SUM(stock) AS total_stock FROM productos;
+
+-- Consulta 4: Últimas 5 ventas registradas
+SELECT * FROM ventas ORDER BY id DESC LIMIT 5;
+
+-- Consulta 5: Detalles de venta para la venta con ID 3
+SELECT * FROM detalles_venta WHERE venta_id = 3;
+
+-- Consulta 6: Proveedores y sus direcciones
+SELECT nombre_empresa, direccion FROM proveedores;
+
+-- Consulta 7: Categorías de productos
+SELECT * FROM categorias;
+
+-- Consulta 8: Productos con precio mayor a 1000
+SELECT * FROM productos WHERE precio > 1000;
+
+-- Consulta 9: Usuarios suscritos al tipo "premium"
+SELECT * FROM usuarios WHERE subscription_type = 'premium';
+
+-- Consulta 10: Última venta realizada
+SELECT * FROM ventas ORDER BY fecha_venta DESC LIMIT 1;
+
+
+````
+
+---
+
+### Top 10: `where`
+
+````sql
+-- Consulta 1: Usuarios con nombre "John"
+SELECT * FROM usuarios WHERE name = 'John';
+
+-- Consulta 2: Productos con stock mayor a 10
+SELECT * FROM productos WHERE stock > 10;
+
+-- Consulta 3: Ventas realizadas después de una fecha específica
+SELECT * FROM ventas WHERE fecha_venta > '2023-01-01';
+
+-- Consulta 4: Detalles de venta de un producto específico
+SELECT * FROM detalles_venta WHERE producto_id = 5;
+
+-- Consulta 5: Proveedores cuyo nombre de empresa contiene la palabra "Electronics"
+SELECT * FROM proveedores WHERE nombre_empresa LIKE '%Electronics%';
+
+-- Consulta 6: Categorías de productos con descripción vacía
+SELECT * FROM categorias WHERE descripcion = '';
+
+-- Consulta 7: Usuarios con suscripción básica o premium
+SELECT * FROM usuarios WHERE subscription_type IN ('basic', 'premium');
+
+-- Consulta 8: Productos con precio entre 50 y 100
+SELECT * FROM productos WHERE precio BETWEEN 50 AND 100;
+
+-- Consulta 9: Ventas realizadas por un usuario específico
+SELECT * FROM ventas WHERE usuario_id = 3;
+
+-- Consulta 10: Detalles de venta con cantidad mayor a 5
+SELECT * FROM detalles_venta WHERE cantidad > 5;
+
+
+````
+
+## Querys Select de pruebas: `Complex & Fun`
 
 ### Set 1:
 
@@ -356,3 +432,7 @@ FROM productos
 WHERE nombre = REVERSE(nombre);
 
 ````
+
+
+
+
