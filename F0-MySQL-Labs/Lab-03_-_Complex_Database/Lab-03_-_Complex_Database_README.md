@@ -4,7 +4,7 @@ La base de datos "Fz3r0_Corporations" es una base de datos diseñada para gestio
 
 Esta base de datos proporciona una estructura organizada para almacenar y administrar información esencial relacionada con usuarios, proveedores, productos, ventas y categorías en una corporación o empresa. Los datos almacenados en estas tablas permiten realizar consultas y análisis para obtener información significativa sobre el negocio y sus operaciones.
 
----
+## Tablas
 
 ### Tabla "usuarios":
 
@@ -46,6 +46,20 @@ Se utiliza para realizar un seguimiento preciso de los productos vendidos en cad
 Establece una relación entre los productos y las categorías a las que pertenecen.
 Permite asociar uno o más productos a una o más categorías, y viceversa.
 Se utiliza para organizar y realizar consultas relacionadas con la categorización de productos.
+
+## Ìndices
+
+Estos índices adicionales se seleccionaron según las columnas que se utilizan con mayor frecuencia en las consultas o que tienen un impacto significativo en el rendimiento de las consultas. Al crear índices en estas columnas, se mejora la velocidad de búsqueda y recuperación de datos, lo que a su vez contribuye a una mayor eficiencia de la base de datos.
+
+### INDEX idx_nombre_empresa (nombre_empresa): 
+
+Este índice se creó en la columna 'nombre_empresa' de la tabla 'proveedores'. Ayudará a acelerar las consultas que involucren la búsqueda de proveedores por su nombre de empresa. Al tener un índice en esta columna, la base de datos puede encontrar rápidamente los registros que coinciden con un valor específico de 'nombre_empresa', lo que mejora la eficiencia de las consultas.
+
+---
+
+### INDEX idx_categoria_id (categoria_id): 
+
+Se creó un índice en la columna 'categoria_id'. Esto permitirá una búsqueda más rápida de productos por categoría. Al utilizar este índice, las consultas que involucren la selección de productos basados en su categoría serán más eficientes y se reducirá el tiempo de ejecución de dichas consultas.
 
 ---
 
