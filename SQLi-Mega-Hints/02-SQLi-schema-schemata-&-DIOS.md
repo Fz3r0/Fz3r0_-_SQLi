@@ -121,6 +121,8 @@ select username,password from users where username = 'F0n3' UNION SELECT 1,schem
 select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 2;
 ````
 
+---
+
 #### `Group Concat` + `Union Select` + `schema_name`
 
 - `Recordatorio`: Group Concat no necesita `LIMIT` ya que se devuelve en una sola linea ;)
