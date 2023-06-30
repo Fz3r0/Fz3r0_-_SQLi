@@ -465,6 +465,8 @@ FROM cte;
 
 ````
 
+---
+
 ### `Consulta 2`: Análisis de correlación entre ventas y características del producto
 
 ````sql
@@ -499,3 +501,48 @@ Esta consulta realiza un análisis de correlación entre las características de
 Calcula la correlación entre la cantidad total vendida y el monto total de ventas para cada producto. La columna "correlation" muestra el valor de correlación, que indica la relación entre estas variables. Un valor cercano a 1 indica una correlación positiva, mientras que un valor cercano a -1 indica una correlación negativa.
 
 Estas consultas más complejas y largas demuestran cómo se pueden combinar múltiples funciones y técnicas de análisis para obtener información más detallada y profunda de los datos. 
+
+### `Consulta 3`: Análisis de precios y mercado - fórmula de demanda elástica de precios @ Alfred Marshall
+
+````sql
+SELECT
+  p.id AS product_id,
+  p.nombre AS product_name,
+  dv.cantidad AS quantity,
+  p.precio AS price,
+  (dv.cantidad / p.precio) * (p.precio / (SELECT AVG(precio) FROM productos)) AS demand_elasticity
+FROM productos p
+JOIN detalles_venta dv ON p.id = dv.producto_id
+ORDER BY demand_elasticity DESC;
+
+
+````
+
+La ecuación utilizada en este query se conoce como la fórmula de demanda elástica de precios y fue desarrollada por el economista Alfred Marshall. La fórmula se utiliza para calcular la elasticidad de la demanda en función de los cambios de precios y cantidades.
+
+En esta consulta, utilizamos la fórmula de demanda elástica de precios para calcular la elasticidad de la demanda para cada producto en función de la cantidad vendida y el precio. También incluimos el promedio de precios de todos los productos para tener una referencia comparativa.
+
+### Detalles
+
+Alfred Marshall fue un destacado economista británico, nacido el 26 de julio de 1842 en Londres y fallecido el 13 de julio de 1924 en Cambridge. Es ampliamente reconocido por su contribución a la teoría económica y se le considera uno de los fundadores de la economía neoclásica. Marshall fue profesor en la Universidad de Cambridge y autor de la influyente obra "Principios de Economía" publicada en 1890.
+
+La fórmula de demanda elástica de precios desarrollada por Alfred Marshall permite calcular la elasticidad de la demanda, que es una medida de la sensibilidad de la cantidad demandada de un producto ante cambios en su precio. La elasticidad de la demanda es importante en la determinación de la estrategia de precios y la respuesta del mercado.
+
+En el resultado de la consulta que proporcionaste:
+
+- "product_id" muestra el ID del producto.
+- "product_name" muestra el nombre del producto.
+- "quantity" muestra la cantidad vendida del producto.
+- "price" muestra el precio del producto.
+- "demand_elasticity" calcula la elasticidad de la demanda utilizando la fórmula de demanda elástica de precios.
+
+Los valores de "demand_elasticity" representan la elasticidad de la demanda para cada producto. Este valor indica cuánto cambiará la cantidad demandada en respuesta a un cambio porcentual en el precio. 
+
+- Una elasticidad mayor que 1 indica que la demanda es elástica, lo que significa que los cambios en el precio tienen un impacto significativo en la cantidad demandada.
+- Una elasticidad menor que 1 indica que la demanda es inelástica, lo que significa que los cambios en el precio tienen un impacto limitado en la cantidad demandada.
+
+### Resultados de Consulta
+
+En el resultado de la consulta, podemos observar que los productos tienen diferentes niveles de elasticidad de demanda. Por ejemplo, "Super Mario Bros." tiene una elasticidad de demanda de 0.0885, lo que indica que la cantidad demandada es relativamente sensible a los cambios en el precio. Por otro lado, "Sonic the Hedgehog" tiene una elasticidad de demanda de 0.0443, lo que indica una demanda menos sensible a los cambios de precio.
+
+Estos resultados pueden ser útiles para comprender la dinámica de la demanda de los productos y ayudar en la toma de decisiones relacionadas con estrategias de precios, promociones u otras acciones de marketing.
