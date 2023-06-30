@@ -1,4 +1,57 @@
+# `Lab`: Fz3r0 MySQL Database - Fz3r0_Corporations
 
+La base de datos "Fz3r0_Corporations" es una base de datos diseñada para gestionar información relacionada con una corporación o empresa. Está compuesta por varias tablas que almacenan datos específicos sobre diferentes aspectos del negocio. A continuación, proporciono una descripción más detallada de cada tabla:
+
+Esta base de datos proporciona una estructura organizada para almacenar y administrar información esencial relacionada con usuarios, proveedores, productos, ventas y categorías en una corporación o empresa. Los datos almacenados en estas tablas permiten realizar consultas y análisis para obtener información significativa sobre el negocio y sus operaciones.
+
+---
+
+### Tabla "usuarios":
+
+- Almacena información sobre los usuarios de la empresa, como su nombre de usuario, contraseña, nombre completo, dirección, número de teléfono y correo electrónico.
+- También registra el tipo de suscripción de cada usuario, que puede ser "basic" (básica) o "premium".
+
+### Tabla "proveedores":
+
+Contiene información detallada sobre los proveedores con los que la empresa trabaja.
+Registra el nombre de la empresa proveedora, su dirección, número de teléfono y correo electrónico.
+También guarda las fechas de creación y actualización de cada registro.
+
+### Tabla "productos":
+
+Almacena información sobre los productos que la empresa ofrece.
+Guarda datos como el nombre del producto, una descripción detallada, el precio y la cantidad disponible en el stock.
+Cada producto está asociado a un proveedor mediante el ID del proveedor correspondiente.
+
+### Tabla "categorias":
+
+Registra las categorías a las que pertenecen los productos.
+Almacena el nombre y una descripción de cada categoría.
+Se utiliza para organizar y clasificar los productos en función de sus características comunes.
+
+### Tabla "ventas":
+
+Contiene información sobre las ventas realizadas por la empresa.
+Registra la fecha y hora de cada venta, así como el total de la venta.
+Cada venta está asociada a un usuario específico mediante el ID del usuario.
+
+### Tabla "detalles_venta":
+
+Guarda los detalles específicos de cada venta realizada.
+Almacena el ID de la venta, el ID del producto vendido, la cantidad vendida y el precio unitario del producto en el momento de la venta.
+Se utiliza para realizar un seguimiento preciso de los productos vendidos en cada transacción.
+
+### Tabla "producto_categoria":
+
+Establece una relación entre los productos y las categorías a las que pertenecen.
+Permite asociar uno o más productos a una o más categorías, y viceversa.
+Se utiliza para organizar y realizar consultas relacionadas con la categorización de productos.
+
+---
+
+<br>
+<br>
+<br>
 
 ## Script
 
@@ -93,6 +146,12 @@ CREATE TABLE producto_categoria (
 
 
 ````
+
+---
+
+<br>
+<br>
+<br>
 
 ### Agregar datos de prueba
 
@@ -245,6 +304,12 @@ VALUES
 
 
 ````
+
+---
+
+<br>
+<br>
+<br>
 
 ## Querys Select de pruebas: `Sencillas`
 
