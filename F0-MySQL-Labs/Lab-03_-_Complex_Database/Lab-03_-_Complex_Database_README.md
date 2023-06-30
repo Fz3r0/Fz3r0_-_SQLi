@@ -502,6 +502,8 @@ Calcula la correlación entre la cantidad total vendida y el monto total de vent
 
 Estas consultas más complejas y largas demuestran cómo se pueden combinar múltiples funciones y técnicas de análisis para obtener información más detallada y profunda de los datos. 
 
+---
+
 ### `Consulta 3`: Análisis de precios y mercado - fórmula de demanda elástica de precios @ Alfred Marshall
 
 ````sql
