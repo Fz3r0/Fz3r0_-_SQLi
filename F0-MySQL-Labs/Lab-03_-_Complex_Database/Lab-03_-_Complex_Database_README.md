@@ -246,3 +246,113 @@ VALUES
 
 ````
 
+## Querys de Select para pruebas
+
+### Set 1:
+
+````sql
+-- Consulta 1: Productos disponibles
+SELECT nombre, precio, stock
+FROM productos
+WHERE stock > 0;
+
+-- Consulta 2: Ventas por usuario
+SELECT u.nombre AS usuario, COUNT(v.id) AS total_ventas
+FROM usuarios u
+JOIN ventas v ON u.id = v.usuario_id
+GROUP BY u.id, u.nombre;
+
+-- Consulta 3: Detalles de una venta específica
+SELECT p.nombre AS producto, dv.cantidad, dv.precio_unitario
+FROM detalles_venta dv
+JOIN productos p ON dv.producto_id = p.id
+WHERE dv.venta_id = 1;
+
+-- Consulta 4: Proveedores con sus productos
+SELECT pr.nombre AS proveedor, p.nombre AS producto
+FROM proveedores pr
+JOIN productos p ON pr.id = p.proveedor_id;
+
+-- Consulta 5: Ventas totales por mes
+SELECT DATE_FORMAT(v.fecha_venta, '%Y-%m') AS mes, SUM(v.total) AS total_ventas
+FROM ventas v
+GROUP BY DATE_FORMAT(v.fecha_venta, '%Y-%m');
+````
+
+---
+
+### Set2:
+
+````sql
+-- Consulta 1: Usuarios con sus productos comprados
+SELECT u.name AS usuario, p.nombre AS producto
+FROM usuarios u
+JOIN ventas v ON u.id = v.usuario_id
+JOIN detalles_venta dv ON v.id = dv.venta_id
+JOIN productos p ON dv.producto_id = p.id;
+
+-- Consulta 2: Ventas por categoría de producto
+SELECT c.nombre AS categoria, COUNT(v.id) AS total_ventas
+FROM categorias c
+JOIN producto_categoria pc ON c.id = pc.categoria_id
+JOIN productos p ON pc.producto_id = p.id
+JOIN detalles_venta dv ON p.id = dv.producto_id
+JOIN ventas v ON dv.venta_id = v.id
+GROUP BY c.id, c.nombre;
+
+-- Consulta 3: Usuarios con compras frecuentes
+SELECT u.name AS usuario, COUNT(v.id) AS total_compras
+FROM usuarios u
+JOIN ventas v ON u.id = v.usuario_id
+GROUP BY u.id, u.name
+HAVING COUNT(v.id) > 5;
+
+-- Consulta 4: Productos más vendidos
+SELECT p.nombre AS producto, SUM(dv.cantidad) AS total_vendido
+FROM productos p
+JOIN detalles_venta dv ON p.id = dv.producto_id
+GROUP BY p.id, p.nombre
+ORDER BY SUM(dv.cantidad) DESC
+LIMIT 5;
+
+-- Consulta 5: Ventas realizadas en el último mes
+SELECT v.id, v.fecha_venta, u.name AS usuario, SUM(dv.cantidad * dv.precio_unitario) AS total_venta
+FROM ventas v
+JOIN usuarios u ON v.usuario_id = u.id
+JOIN detalles_venta dv ON v.id = dv.venta_id
+WHERE v.fecha_venta >= CURDATE() - INTERVAL 1 MONTH
+GROUP BY v.id, v.fecha_venta, u.name;
+
+-- Consulta 6: Usuarios con sus ventas totales
+SELECT u.name AS usuario, SUM(v.total) AS total_ventas
+FROM usuarios u
+JOIN ventas v ON u.id = v.usuario_id
+GROUP BY u.id, u.name;
+
+-- Consulta 7: Productos en stock mínimo
+SELECT nombre, stock
+FROM productos
+WHERE stock <= 5;
+
+-- Consulta 8: Ventas realizadas en un rango de fechas
+SELECT v.id, v.fecha_venta, u.name AS usuario, SUM(dv.cantidad * dv.precio_unitario) AS total_venta
+FROM ventas v
+JOIN usuarios u ON v.usuario_id = u.id
+JOIN detalles_venta dv ON v.id = dv.venta_id
+WHERE v.fecha_venta BETWEEN '2023-01-01' AND '2023-06-30'
+GROUP BY v.id, v.fecha_venta, u.name;
+
+-- Consulta 9: Usuarios con sus productos más caros comprados
+SELECT u.name AS usuario, p.nombre AS producto, MAX(dv.precio_unitario) AS precio_maximo
+FROM usuarios u
+JOIN ventas v ON u.id = v.usuario_id
+JOIN detalles_venta dv ON v.id = dv.venta_id
+JOIN productos p ON dv.producto_id = p.id
+GROUP BY u.id, u.name, p.id, p.nombre;
+
+-- Consulta 10: Productos con nombres palindrómicos
+SELECT nombre
+FROM productos
+WHERE nombre = REVERSE(nombre);
+
+````
