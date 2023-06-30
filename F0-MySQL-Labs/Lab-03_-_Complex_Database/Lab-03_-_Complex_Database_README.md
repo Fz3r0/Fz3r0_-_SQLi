@@ -164,6 +164,73 @@ VALUES
 
 ````
 
+### Programa de Python para agregar datos coherentemente
+
+````py
+# Título del programa
+print("Fz3r0 - Generador de consultas para base de datos empresarial")
+
+# Solicitar la opción al usuario
+print("Seleccione una opción:")
+print("1. Agregar Usuarios")
+print("2. Agregar Productos")
+print("3. Realizar una Venta")
+opcion = input("Ingrese el número de la opción deseada: ")
+
+# Según la opción seleccionada, ejecutar la operación correspondiente
+if opcion == "1":
+    # Solicitar información del usuario
+    username = input("Ingrese el nombre de usuario: ")
+    password = input("Ingrese la contraseña: ")
+    name = input("Ingrese el nombre completo: ")
+    address = input("Ingrese la dirección: ")
+    phone = input("Ingrese el número de teléfono: ")
+    email = input("Ingrese la dirección de correo electrónico: ")
+    subscription_type = input("Ingrese el tipo de suscripción: ")
+
+    # Generar el query para insertar los datos del usuario
+    query = f"INSERT INTO usuarios (username, password, name, address, phone, mail, subscription_type) " \
+            f"VALUES ('{username}', '{password}', '{name}', '{address}', '{phone}', '{email}', '{subscription_type}')"
+
+    # Imprimir el query generado
+    print("Query generado:")
+    print(query)
+
+elif opcion == "2":
+    # Solicitar información del producto
+    nombre = input("Ingrese el nombre del producto: ")
+    descripcion = input("Ingrese la descripción del producto: ")
+    precio = float(input("Ingrese el precio del producto: "))
+    stock = int(input("Ingrese la cantidad en stock: "))
+    proveedor_id = int(input("Ingrese el ID del proveedor: "))
+
+    # Generar el query para insertar los datos del producto
+    query = f"INSERT INTO productos (nombre, descripcion, precio, stock, proveedor_id) " \
+            f"VALUES ('{nombre}', '{descripcion}', {precio}, {stock}, {proveedor_id})"
+
+    # Imprimir el query generado
+    print("Query generado:")
+    print(query)
+
+elif opcion == "3":
+    # Solicitar información de la venta
+    fecha_venta = input("Ingrese la fecha de la venta: ")
+    total = float(input("Ingrese el monto total de la venta: "))
+    usuario_id = int(input("Ingrese el ID del usuario: "))
+
+    # Generar el query para insertar los datos de la venta
+    query = f"INSERT INTO ventas (fecha_venta, total, usuario_id) " \
+            f"VALUES ('{fecha_venta}', {total}, {usuario_id})"
+
+    # Imprimir el query generado
+    print("Query generado:")
+    print(query)
+
+else:
+    print("Opción inválida. Por favor, seleccione una opción válida.")
+
+````
+
 ## Descripción
 
 La base de datos que hemos creado es un ejemplo de una base de datos para una empresa, con el propósito de gestionar usuarios, productos, proveedores y ventas. A continuación, te describo cómo funciona y su posible aplicación:
