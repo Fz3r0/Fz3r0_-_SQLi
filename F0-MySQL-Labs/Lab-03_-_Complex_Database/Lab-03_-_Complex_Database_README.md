@@ -4,7 +4,7 @@
 
 ````sql
 -- Creación de la base de datos
-CREATE DATABASE Fz3r0_Corporations CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS Fz3r0_Corporations CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Selección de la base de datos
 USE Fz3r0_Corporations;
@@ -19,8 +19,20 @@ CREATE TABLE usuarios (
   phone VARCHAR(20) NOT NULL,
   mail VARCHAR(100) NOT NULL,
   subscription_type ENUM('basic', 'premium') NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE INDEX idx_username (username)
+) ENGINE=InnoDB;
+
+-- Creación de la tabla 'proveedores'
+CREATE TABLE proveedores (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_empresa VARCHAR(100) NOT NULL,
+  direccion VARCHAR(200) NOT NULL,
+  telefono VARCHAR(20) NOT NULL,
+  correo_electronico VARCHAR(100) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
 
 -- Creación de la tabla 'productos'
 CREATE TABLE productos (
@@ -32,19 +44,18 @@ CREATE TABLE productos (
   proveedor_id INT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_proveedor_id (proveedor_id),
   FOREIGN KEY (proveedor_id) REFERENCES proveedores(id)
-);
+) ENGINE=InnoDB;
 
--- Creación de la tabla 'proveedores'
-CREATE TABLE proveedores (
+-- Creación de la tabla 'categorias'
+CREATE TABLE categorias (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre_empresa VARCHAR(100) NOT NULL,
-  direccion VARCHAR(200) NOT NULL,
-  telefono VARCHAR(20) NOT NULL,
-  correo_electronico VARCHAR(100) NOT NULL,
+  nombre VARCHAR(100) NOT NULL,
+  descripcion TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+) ENGINE=InnoDB;
 
 -- Creación de la tabla 'ventas'
 CREATE TABLE ventas (
@@ -53,8 +64,9 @@ CREATE TABLE ventas (
   total DECIMAL(10, 2) NOT NULL,
   usuario_id INT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_usuario_id (usuario_id),
   FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-);
+) ENGINE=InnoDB;
 
 -- Creación de la tabla 'detalles_venta'
 CREATE TABLE detalles_venta (
@@ -63,16 +75,22 @@ CREATE TABLE detalles_venta (
   cantidad INT NOT NULL,
   precio_unitario DECIMAL(10, 2) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (venta_id, producto_id),
+  INDEX idx_venta_id (venta_id),
+  INDEX idx_producto_id (producto_id),
   FOREIGN KEY (venta_id) REFERENCES ventas(id),
   FOREIGN KEY (producto_id) REFERENCES productos(id)
-);
+) ENGINE=InnoDB;
 
--- Creación de la tabla 'categorias'
-CREATE TABLE categorias (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  descripcion TEXT,
+-- Creación de la tabla 'producto_categoria'
+CREATE TABLE producto_categoria (
+  producto_id INT,
+  categoria_id INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_categoria_id (categoria_id),
+  FOREIGN KEY (producto_id) REFERENCES productos(id),
+  FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+) ENGINE=InnoDB;
+
 
 ````
 
