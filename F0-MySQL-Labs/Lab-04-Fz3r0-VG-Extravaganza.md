@@ -205,7 +205,7 @@ VALUES
   ('Super Mario All-Stars', 'Experience enhanced versions of the classic Mario games in one collection.', 9.99, 40, 1),
   ('Mega Man 2', 'Take on the evil Dr. Wily and his robot masters in this challenging platformer.', 6.99, 50, 1),
   ('Final Fight', 'Clean up the streets of Metro City as one of the street fighters.', 7.99, 45, 6),
-  ('Super Ghouls 'n Ghosts', 'Guide Arthur on his quest to rescue Princess Prin Prin from the clutches of evil.', 9.99, 35, 1),
+  ('Super Ghouls n Ghosts', 'Guide Arthur on his quest to rescue Princess Prin Prin from the clutches of evil.', 9.99, 35, 1),
   ('Mortal Kombat', 'Engage in intense battles and finish your opponents with brutal fatalities.', 7.99, 40, 3),
   ('Super Mario Bros. 2', 'Join Mario and his friends on a unique adventure in the dream world of Subcon.', 9.99, 30, 1),
   ('Mega Man 3', 'Continue the battle against Dr. Wily and his robot masters in this iconic platformer.', 6.99, 45, 1),
