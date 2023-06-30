@@ -7,7 +7,7 @@
 CREATE DATABASE Fz3r0_Corporations CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Selección de la base de datos
-USE mi_empresa;
+USE Fz3r0_Corporations;
 
 -- Creación de la tabla 'usuarios'
 CREATE TABLE usuarios (
