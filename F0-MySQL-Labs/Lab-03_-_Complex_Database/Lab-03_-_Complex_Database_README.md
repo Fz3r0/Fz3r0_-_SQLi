@@ -433,6 +433,69 @@ WHERE nombre = REVERSE(nombre);
 
 ````
 
+## Big Data & Analytics Querys
+
+### `Consulta 1`: Análisis de series de tiempo y predicción de ventas
+
+Esta consulta realiza un análisis de series de tiempo y predicción de ventas utilizando funciones analíticas avanzadas. Calcula el total de ventas mensuales y luego muestra información adicional:
+
+- La columna `moving_avg` calcula el promedio móvil de ventas de los últimos 3 meses.
+- La columna `previous_month_sales` muestra las ventas del mes anterior.
+- La columna `sales_growth` calcula el crecimiento de las ventas en comparación con el mes anterior.
+
+````sql
+WITH cte AS (
+  SELECT
+    YEAR(fecha_venta) AS year,
+    MONTH(fecha_venta) AS month,
+    SUM(total) AS total_sales
+  FROM ventas
+  GROUP BY YEAR(fecha_venta), MONTH(fecha_venta)
+  ORDER BY year, month
+)
+SELECT
+  year,
+  month,
+  total_sales,
+  AVG(total_sales) OVER (ORDER BY year, month ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg,
+  LAG(total_sales, 1) OVER (ORDER BY year, month) AS previous_month_sales,
+  total_sales - LAG(total_sales, 1) OVER (ORDER BY year, month) AS sales_growth
+FROM cte;
 
 
+````
 
+### `Consulta 2`: Análisis de correlación entre ventas y características del producto
+
+````sql
+WITH cte AS (
+  SELECT
+    p.id AS product_id,
+    p.nombre AS product_name,
+    p.precio AS price,
+    p.stock AS stock,
+    SUM(dv.cantidad) AS total_quantity,
+    v.total AS total_sales
+  FROM productos p
+  JOIN detalles_venta dv ON p.id = dv.producto_id
+  JOIN ventas v ON dv.venta_id = v.id
+  GROUP BY p.id, p.nombre, p.precio, p.stock, v.total
+)
+SELECT
+  product_name,
+  price,
+  stock,
+  total_quantity,
+  total_sales,
+  CORR(total_quantity, total_sales) AS correlation
+FROM cte
+GROUP BY product_name, price, stock, total_quantity, total_sales;
+
+
+````
+
+Esta consulta realiza un análisis de correlación entre las características del producto y las ventas utilizando la función CORR. 
+
+Calcula la correlación entre la cantidad total vendida y el monto total de ventas para cada producto. La columna "correlation" muestra el valor de correlación, que indica la relación entre estas variables. Un valor cercano a 1 indica una correlación positiva, mientras que un valor cercano a -1 indica una correlación negativa.
+
+Estas consultas más complejas y largas demuestran cómo se pueden combinar múltiples funciones y técnicas de análisis para obtener información más detallada y profunda de los datos. 
