@@ -99,6 +99,71 @@ ALTER TABLE usuarios ADD UNIQUE INDEX idx_username (username);
 
 ````
 
+### Agregar datos de prueba
+
+````sql
+-- Inserción de datos en la tabla 'usuarios'
+INSERT INTO usuarios (username, password, name, address, phone, mail, subscription_type)
+VALUES
+    ('mario', 'mushroom1', 'Mario Plumber', '123 Pipe St', '555-1234', 'mario@example.com', 'premium'),
+    ('luigi', 'green456', 'Luigi Bro', '456 Mansion Ave', '555-5678', 'luigi@example.com', 'basic'),
+    ('link', 'master123', 'Link Hero', '789 Hyrule Rd', '555-9876', 'link@example.com', 'basic'),
+    ('sonic', 'gottagofast', 'Sonic Hedgehog', '321 Speedy Ln', '555-2468', 'sonic@example.com', 'premium'),
+    ('megaman', 'bluebomber', 'Mega Man', '654 Pixel St', '555-1357', 'megaman@example.com', 'basic'),
+    ('samus', 'powersuit7', 'Samus Aran', '987 Bounty Rd', '555-7890', 'samus@example.com', 'basic'),
+    ('cloud', 'busterblade', 'Cloud Strife', '159 Mako Blvd', '555-3690', 'cloud@example.com', 'premium');
+
+-- Inserción de datos en la tabla 'proveedores'
+INSERT INTO proveedores (nombre_empresa, direccion, telefono, correo_electronico)
+VALUES
+    ('ACME Corp', '42 Main St', '555-1111', 'info@acmecorp.com'),
+    ('Stark Industries', '10880 Malibu Point', '555-2222', 'info@stark.com'),
+    ('Wayne Enterprises', '1007 Mountain Drive', '555-3333', 'info@wayneenterprises.com'),
+    ('Umbrella Corporation', '13 Raccoon St', '555-4444', 'info@umbrella.com'),
+    ('Aperture Science', '742 Evergreen Terrace', '555-5555', 'info@aperturescience.com'),
+    ('Weyland-Yutani Corp', '1401 Elm St', '555-6666', 'info@weyland-yutani.com'),
+    ('Wonka Industries', '16 Chocolate Factory', '555-7777', 'info@wonkaindustries.com');
+
+-- Inserción de datos en la tabla 'productos'
+INSERT INTO productos (nombre, descripcion, precio, stock, proveedor_id)
+VALUES
+    ('Super Mushroom', 'Grow in size with this power-up!', 10.99, 100, 1),
+    ('Master Sword', 'The legendary blade of evil''s bane', 99.99, 50, 2),
+    ('Plasma Blaster', 'Extraterrestrial energy weapon', 499.99, 10, 3),
+    ('T-Rex DNA Sample', 'Jurassic Park genetic material', 1999.99, 5, 4),
+    ('Portal Gun', 'Device that creates portals for teleportation', 299.99, 20, 5),
+    ('Lightsaber', 'Elegant weapon for a more civilized age', 499.99, 15, 6),
+    ('Nuka-Cola', 'The refreshing taste of the post-apocalypse', 1.99, 200, 7);
+
+-- Inserción de datos en la tabla 'ventas'
+INSERT INTO ventas (fecha_venta, total, usuario_id)
+VALUES
+    ('2023-06-01 10:30:00', 50.99, 1),
+    ('2023-06-02 14:45:00', 199.99, 2),
+    ('2023-06-03 09:15:00', 499.99, 1),
+    ('2023-06-04 11:30:00', 299.99, 3),
+    ('2023-06-05 15:20:00', 10.99, 4),
+    ('2023-06-06 16:45:00', 99.99, 5),
+    ('2023-06-07 14:10:00', 1.99, 6);
+
+-- Inserción de datos en la tabla 'detalles_venta'
+INSERT INTO detalles_venta (venta_id, producto_id, cantidad, precio_unitario)
+VALUES
+    (1, 1, 3, 10.99),
+    (1, 4, 1, 1999.99),
+    (2, 3, 1, 499.99),
+    (2, 5, 2, 299.99),
+    (3, 1, 2, 10.99),
+    (3, 6, 1, 99.99),
+    (4, 2, 1, 199.99),
+    (5, 4, 1, 1999.99),
+    (5, 7, 5, 1.99),
+    (6, 3, 1, 499.99),
+    (7, 1, 1, 10.99),
+    (7, 5, 1, 299.99);
+
+````
+
 ## Descripción
 
 La base de datos que hemos creado es un ejemplo de una base de datos para una empresa, con el propósito de gestionar usuarios, productos, proveedores y ventas. A continuación, te describo cómo funciona y su posible aplicación:
