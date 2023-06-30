@@ -1,5 +1,7 @@
 
 
+## Script
+
 ````sql
 -- Creación de la base de datos
 CREATE DATABASE mi_empresa CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -96,3 +98,57 @@ ALTER TABLE producto_categoria ADD INDEX idx_categoria_id (categoria_id);
 ALTER TABLE usuarios ADD UNIQUE INDEX idx_username (username);
 
 ````
+
+## Descripción
+
+La base de datos que hemos creado es un ejemplo de una base de datos para una empresa, con el propósito de gestionar usuarios, productos, proveedores y ventas. A continuación, te describo cómo funciona y su posible aplicación:
+
+Usuarios:
+
+Esta tabla almacena la información de los usuarios registrados en el sistema de la empresa.
+Los usuarios pueden iniciar sesión utilizando su nombre de usuario y contraseña.
+La tabla permite almacenar información personal de los usuarios, como su nombre, dirección, número de teléfono, correo electrónico y tipo de suscripción (básica o premium).
+Los usuarios pueden tener distintos privilegios o funcionalidades según su tipo de suscripción.
+La tabla utiliza un identificador único (id) como clave primaria para identificar a cada usuario.
+Productos:
+
+Esta tabla almacena información sobre los productos que la empresa ofrece.
+Cada producto tiene un nombre, una descripción, un precio y un stock disponible.
+Se registra el proveedor asociado a cada producto a través de la clave externa proveedor_id.
+La tabla utiliza un identificador único (id) como clave primaria para identificar cada producto.
+Los productos pueden estar asociados a una o varias categorías (a través de la tabla producto_categoria).
+Proveedores:
+
+Esta tabla almacena información sobre los proveedores que suministran productos a la empresa.
+Se registra el nombre de la empresa, la dirección, el número de teléfono y el correo electrónico de cada proveedor.
+La tabla utiliza un identificador único (id) como clave primaria para identificar a cada proveedor.
+Ventas:
+
+Esta tabla registra las ventas realizadas por la empresa.
+Cada venta tiene una fecha y hora de realización, un total (monto) y se asocia a un usuario que la ha realizado.
+La tabla utiliza un identificador único (id) como clave primaria para identificar cada venta.
+Se registra el usuario asociado a cada venta a través de la clave externa usuario_id.
+Detalles de venta:
+
+Esta tabla guarda los detalles de cada venta, incluyendo los productos vendidos y las cantidades correspondientes.
+Cada registro en esta tabla se asocia a una venta (a través de venta_id) y a un producto (a través de producto_id).
+Se registra la cantidad de productos vendidos y el precio unitario en cada venta.
+La combinación de venta_id y producto_id forma la clave primaria compuesta que identifica cada registro en esta tabla.
+
+### Indices
+
+¿Qué es un índice?
+
+Un índice es una estructura que se crea en una o más columnas de una tabla para acelerar la búsqueda y recuperación de datos.
+Un índice crea una copia ordenada de los valores de las columnas seleccionadas, lo que facilita la búsqueda rápida y eficiente de registros específicos.
+
+¿Por qué se utilizan los índices?
+
+Los índices mejoran el rendimiento de las consultas, ya que permiten que el motor de la base de datos encuentre los registros deseados de manera más eficiente.
+Al utilizar un índice, la base de datos no tiene que realizar una búsqueda secuencial completa en la tabla, sino que puede saltar directamente a los registros relevantes.
+
+Índices en nuestra base de datos:
+
+Hemos agregado varios índices en nuestra base de datos para mejorar el rendimiento en las consultas comunes.
+Por ejemplo, hemos agregado índices en los campos proveedor_id, usuario_id, producto_id, venta_id y categoria_id, ya que estas columnas son comúnmente utilizadas en consultas de búsqueda y relacionadas con otras tablas.
+Los índices aceleran la búsqueda de registros que coinciden con los valores específicos en estas columnas, reduciendo el tiempo necesario para ejecutar las consultas.
