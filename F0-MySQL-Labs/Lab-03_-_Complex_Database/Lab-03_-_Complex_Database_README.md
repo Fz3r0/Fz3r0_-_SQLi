@@ -110,7 +110,6 @@ VALUES
   ('ryu', 'ryu123', 'Ryu', 'Japan', '5678901234', 'ryu@example.com', 'basic'),
   ('ezio', 'ezio123', 'Ezio Auditore', 'Florence', '4321098765', 'ezio@example.com', 'premium'),
   ('jillvalentine', 'jillvalentine123', 'Jill Valentine', 'Raccoon City', '8765432109', 'jillvalentine@example.com', 'basic'),
-  ('mariokart', 'mariokart123', 'Mario Kart', 'Rainbow Road', '1098765432', 'mariokart@example.com', 'premium'),
   ('alyxvance', 'alyxvance123', 'Alyx Vance', 'City 17', '5432109876', 'alyxvance@example.com', 'basic');
 
 -- Inserción de datos en la tabla 'proveedores'
