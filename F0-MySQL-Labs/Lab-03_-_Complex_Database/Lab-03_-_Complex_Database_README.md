@@ -470,7 +470,20 @@ FROM cte;
 ### `Consulta 2`: Análisis de correlación entre ventas y características del producto
 
 ````sql
-WITH cte AS (
+SELECT
+  product_name,
+  price,
+  stock,
+  total_quantity,
+  total_sales,
+  (
+    (COUNT(*) * SUM(total_quantity * total_sales)) - (SUM(total_quantity) * SUM(total_sales))
+  ) / SQRT(
+    (COUNT(*) * SUM(total_quantity * total_quantity)) - (SUM(total_quantity) * SUM(total_quantity))
+  ) / SQRT(
+    (COUNT(*) * SUM(total_sales * total_sales)) - (SUM(total_sales) * SUM(total_sales))
+  ) AS correlation
+FROM (
   SELECT
     p.id AS product_id,
     p.nombre AS product_name,
@@ -482,17 +495,8 @@ WITH cte AS (
   JOIN detalles_venta dv ON p.id = dv.producto_id
   JOIN ventas v ON dv.venta_id = v.id
   GROUP BY p.id, p.nombre, p.precio, p.stock, v.total
-)
-SELECT
-  product_name,
-  price,
-  stock,
-  total_quantity,
-  total_sales,
-  CORR(total_quantity, total_sales) AS correlation
-FROM cte
+) AS cte
 GROUP BY product_name, price, stock, total_quantity, total_sales;
-
 
 ````
 
@@ -500,7 +504,11 @@ Esta consulta realiza un análisis de correlación entre las características de
 
 Calcula la correlación entre la cantidad total vendida y el monto total de ventas para cada producto. La columna "correlation" muestra el valor de correlación, que indica la relación entre estas variables. Un valor cercano a 1 indica una correlación positiva, mientras que un valor cercano a -1 indica una correlación negativa.
 
-Estas consultas más complejas y largas demuestran cómo se pueden combinar múltiples funciones y técnicas de análisis para obtener información más detallada y profunda de los datos. 
+Estas consultas más complejas y largas demuestran cómo se pueden combinar múltiples funciones y técnicas de análisis para obtener información más detallada y profunda de los datos.
+
+Esta consulta calcula la correlación entre las columnas "total_quantity" y "total_sales" utilizando la fórmula de correlación mencionada anteriormente. Los resultados mostrarán la correlación para cada producto en la base de datos.
+
+Es importante tener en cuenta que el cálculo de la correlación puede ser intensivo en recursos, especialmente si tienes un gran número de registros en tu base de datos. Además, ten en cuenta que la correlación no implica causalidad, simplemente indica la relación lineal entre las dos variables.
 
 ---
 
