@@ -49,7 +49,8 @@ CREATE TABLE consolas (
   descripcion TEXT,
   fabricante VARCHAR(100) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_fabricante (fabricante)
 ) ENGINE=InnoDB;
 
 -- Creación de la tabla 'categorias'
@@ -71,14 +72,17 @@ CREATE TABLE productos (
   proveedor_id INT,
   desarrollador_id INT,
   consola_id INT,
+  categoria_id INT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   INDEX idx_proveedor_id (proveedor_id),
   INDEX idx_desarrollador_id (desarrollador_id),
   INDEX idx_consola_id (consola_id),
+  INDEX idx_categoria_id (categoria_id),
   FOREIGN KEY (proveedor_id) REFERENCES proveedores(id),
   FOREIGN KEY (desarrollador_id) REFERENCES desarrolladores(id),
-  FOREIGN KEY (consola_id) REFERENCES consolas(id)
+  FOREIGN KEY (consola_id) REFERENCES consolas(id),
+  FOREIGN KEY (categoria_id) REFERENCES categorias(id)
 ) ENGINE=InnoDB;
 
 -- Creación de la tabla 'ventas'
@@ -138,11 +142,13 @@ CREATE TABLE juegos_retro (
   precio DECIMAL(10, 2) NOT NULL,
   stock INT NOT NULL,
   proveedor_id INT,
-  plataforma VARCHAR(50) NOT NULL,
+  consola_id INT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   INDEX idx_proveedor_id (proveedor_id),
-  FOREIGN KEY (proveedor_id) REFERENCES proveedores(id)
+  INDEX idx_consola_id (consola_id),
+  FOREIGN KEY (proveedor_id) REFERENCES proveedores(id),
+  FOREIGN KEY (consola_id) REFERENCES consolas(id)
 ) ENGINE=InnoDB;
 
 ````
