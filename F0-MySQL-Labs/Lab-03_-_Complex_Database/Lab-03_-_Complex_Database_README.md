@@ -73,29 +73,6 @@ CREATE TABLE categorias (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
   descripcion TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- Creación de la tabla 'producto_categoria'
-CREATE TABLE producto_categoria (
-  producto_id INT,
-  categoria_id INT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (producto_id, categoria_id),
-  FOREIGN KEY (producto_id) REFERENCES productos(id),
-  FOREIGN KEY (categoria_id) REFERENCES categorias(id)
-);
-
--- Creación de índices
-ALTER TABLE productos ADD INDEX idx_proveedor_id (proveedor_id);
-ALTER TABLE ventas ADD INDEX idx_usuario_id (usuario_id);
-ALTER TABLE detalles_venta ADD INDEX idx_producto_id (producto_id);
-ALTER TABLE detalles_venta ADD INDEX idx_venta_id (venta_id);
-ALTER TABLE producto_categoria ADD INDEX idx_categoria_id (categoria_id);
-
--- Creación de índice único en el campo 'username' de la tabla 'usuarios'
-ALTER TABLE usuarios ADD UNIQUE INDEX idx_username (username);
 
 ````
 
