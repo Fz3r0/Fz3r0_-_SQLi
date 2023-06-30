@@ -196,7 +196,7 @@ VALUES
   ('Teenage Mutant Ninja Turtles IV: Turtles in Time', 'Join the Ninja Turtles in a time-traveling adventure to defeat Shredder.', 9.99, 25, 1),
   ('Castlevania III: Dracula''s Curse', 'Join Trevor Belmont on his quest to defeat Dracula and save Transylvania.', 9.99, 30, 1),
   ('Super Mario Bros. 3', 'Embark on an epic platforming adventure to save the Mushroom Kingdom from Bowser.', 9.99, 60, 1),
-  ('Double Dragon', 'Fight your way through the streets as Billy and Jimmy Lee in this classic beat 'em up.', 6.99, 50, 6),
+  ('Double Dragon', 'Fight your way through the streets as Billy and Jimmy Lee in this classic beat em up.', 6.99, 50, 6),
   ('Ninja Turtles: The Hyperstone Heist', 'Battle against Shredder and the Foot Clan to rescue April and stop their evil plans.', 7.99, 40, 1),
   ('Secret of Mana', 'Discover a world of magic and adventure in this beloved action RPG.', 12.99, 20, 5),
   ('Kirby''s Adventure', 'Help Kirby defeat the evil King Dedede and restore Dream Land.', 8.99, 30, 1),
