@@ -464,6 +464,45 @@ VALUES
 ````
 
 
+````sql
+-- Insertar datos en la tabla consolas
+INSERT INTO consolas (nombre, fabricante, generacion, codigo, fecha_lanzamiento, costo, en_tienda_desde, stock) VALUES
+    ('Nintendo Entertainment System', 'Nintendo', 3, 'NES', '1983-07-15', 199.99, '1983-07-15', 50),
+    ('Super Nintendo Entertainment System', 'Nintendo', 4, 'SNES', '1990-11-21', 249.99, '1990-11-21', 40),
+    ('Nintendo 64', 'Nintendo', 5, 'N64', '1996-06-23', 199.99, '1996-06-23', 30),
+    ('Nintendo Switch', 'Nintendo', 8, 'Switch', '2017-03-03', 299.99, '2017-03-03', 20),
+    ('Sega Genesis', 'Sega', 4, 'Genesis', '1988-10-29', 189.99, '1988-10-29', 40),
+    ('Sega Saturn', 'Sega', 5, 'Saturn', '1994-11-22', 399.99, '1994-11-22', 30),
+    ('Sega Dreamcast', 'Sega', 6, 'Dreamcast', '1998-11-27', 199.99, '1998-11-27', 20),
+    ('PC', 'Varios', 8, 'PC', NULL, NULL, NULL, NULL),
+    ('PlayStation 3', 'Sony', 7, 'PS3', '2006-11-11', 299.99, '2006-11-11', 25),
+    ('PlayStation 4', 'Sony', 8, 'PS4', '2013-11-15', 399.99, '2013-11-15', 20),
+    ('PlayStation 5', 'Sony', 9, 'PS5', '2020-11-12', 499.99, '2020-11-12', 15),
+    ('Xbox', 'Microsoft', 6, 'Xbox', '2001-11-15', 299.99, '2001-11-15', 25),
+    ('Xbox 360', 'Microsoft', 7, 'Xbox360', '2005-11-22', 299.99, '2005-11-22', 20),
+    ('Xbox One', 'Microsoft', 8, 'XboxOne', '2013-11-22', 499.99, '2013-11-22', 15),
+    ('Xbox One X', 'Microsoft', 8, 'XboxOneX', '2017-11-07', 499.99, '2017-11-07', 10),
+    ('Xbox Series X', 'Microsoft', 9, 'XboxSeriesX', '2020-11-10', 499.99, '2020-11-10', 10),
+    ('Nintendo Game Boy', 'Nintendo', 4, 'GameBoy', '1989-04-21', 89.99, '1989-04-21', 30),
+    ('Sony PlayStation', 'Sony', 5, 'PS1', '1994-12-03', 299.99, '1994-12-03', 25),
+    ('Nintendo GameCube', 'Nintendo', 6, 'GameCube', '2001-09-14', 199.99, '2001-09-14', 20),
+    ('Nintendo Wii', 'Nintendo', 7, 'Wii', '2006-11-19', 249.99, '2006-11-19', 15),
+    ('Nintendo Wii U', 'Nintendo', 8, 'WiiU', '2012-11-18', 299.99, '2012-11-18', 10),
+    ('Nintendo 3DS', 'Nintendo', 8, '3DS', '2011-02-26', 199.99, '2011-02-26', 10),
+    ('Nintendo DS', 'Nintendo', 7, 'DS', '2004-11-21', 149.99, '2004-11-21', 15),
+    ('Sony PlayStation 2', 'Sony', 6, 'PS2', '2000-03-04', 299.99, '2000-03-04', 20),
+    ('Sony PlayStation Portable', 'Sony', 7, 'PSP', '2004-12-12', 199.99, '2004-12-12', 15),
+    ('Sony PlayStation Vita', 'Sony', 8, 'PSVita', '2011-12-17', 249.99, '2011-12-17', 10),
+    ('Microsoft Xbox One S', 'Microsoft', 8, 'XboxOneS', '2016-08-02', 299.99, '2016-08-02', 15),
+    ('Microsoft Xbox Series S', 'Microsoft', 9, 'XboxSeriesS', '2020-11-10', 299.99, '2020-11-10', 10),
+    ('Sega Game Gear', 'Sega', 4, 'GameGear', '1990-10-06', 149.99, '1990-10-06', 20),
+    ('Atari 2600', 'Atari', 2, 'Atari2600', '1977-09-11', 199.99, '1977-09-11', 30),
+    ('Neo Geo', 'SNK', 4, 'NeoGeo', '1990-04-26', 649.99, '1990-04-26', 10),
+    ('Commodore 64', 'Commodore', 3, 'C64', '1982-08-01', 595.99, '1982-08-01', 5);
+
+COMMIT;
+
+````
 
 
 
