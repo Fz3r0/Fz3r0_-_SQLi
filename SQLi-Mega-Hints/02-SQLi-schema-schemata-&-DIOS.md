@@ -1,5 +1,15 @@
 # SQLi: schema, schemata & DIOS
 
+## Introducción
+
+El esquema `information_schema` es **un esquema especial que se encuentra en la mayoría de los sistemas de gestión de bases de datos (DBMS)**, incluidos `MySQL`, `PostgreSQL`, `Oracle` y otros. Este esquema contiene información sobre los metadatos de la base de datos, como `tablas`, `columnas`, `restricciones`, `privilegios` y más.
+
+Dentro del esquema `information_schema`, la **tabla `schemata`** es una **tabla estándar que almacena información sobre los esquemas** (bases de datos) presentes en el sistema. La columna `schema_name` de esta tabla contiene los nombres de los esquemas. 
+
+Cuando se ejecuta el query `SELECT schema_name FROM information_schema.schemata;`, se está accediendo a esta tabla específica en el esquema `information_schema` y seleccionando la columna `schema_name`. Como esta tabla está presente en todos los DBMS compatibles con el estándar `information_schema`, **este query funciona en la mayoría de los casos para obtener una lista de los nombres de los esquemas en la base de datos.**
+
+Es importante tener en cuenta que la disponibilidad y el contenido exacto de la tabla `schemata` pueden variar ligeramente según el DBMS utilizado, pero en general, esta tabla se encuentra presente en la mayoría de los sistemas de gestión de bases de datos y proporciona información sobre los esquemas en la base de datos.
+
 ## 💀 Basics: `information schema`
 
 ### 💉 Query basic
