@@ -526,7 +526,7 @@ FROM
     information_schema.tables AS t2
 WHERE
     ((SELECT COUNT(*) FROM juegos) > 0 OR (SELECT COUNT(*) FROM consolas) > 0)
-LIMIT 100;
+LIMIT 500;
 
 DELETE FROM ventas
 WHERE juego_id IS NULL AND consola_id IS NULL;
