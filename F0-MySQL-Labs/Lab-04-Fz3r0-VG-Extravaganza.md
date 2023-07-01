@@ -570,10 +570,204 @@ select * from ventas;
 
 
 ````sql
-## Buscar todos los juegos de "rol" 
+-- Buscar todos usuarios con username que contenga el string "admin"
+SELECT * FROM usuarios WHERE username LIKE '%admin%';
+
+-- Buscar todos usuarios con username = "admin"
+SELECT * FROM usuarios WHERE username = 'admin';
+
+-- Consulta: Obtener el nombre y la dirección de todos los usuarios
+SELECT username,password,nombre,direccion FROM usuarios;
+
+-- Consulta: Contar la cantidad de juegos de acción
+SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción');
+
+-- Consulta: Filtrar las consolas de última generación
+SELECT * FROM consolas WHERE generacion = (SELECT MAX(generacion) FROM consolas);
+
+-- Consulta: Obtener el juego más reciente por fecha de lanzamiento
+SELECT * FROM juegos ORDER BY fecha_lanzamiento DESC LIMIT 1;
+
+-- Consulta: Calcular el precio máximo de los juegos
+SELECT MAX(costo) AS precio_maximo FROM juegos;
+
+-- Consulta: Obtener el nombre y el stock de las consolas ordenadas por nombre de forma ascendente
+SELECT nombre, stock FROM consolas ORDER BY nombre ASC;
+
+-- Consulta: Filtrar los juegos publicados por un desarrollador específico
+SELECT * FROM juegos WHERE desarrollador = 'Nombre del desarrollador';
+
+-- Consulta: Obtener la fecha de lanzamiento más antigua de todas las consolas
+SELECT MIN(fecha_lanzamiento) AS fecha_lanzamiento_mas_antigua FROM consolas;
+
+-- Consulta: Contar la cantidad de usuarios con cuenta premium
+SELECT COUNT(*) AS total_usuarios_premium FROM usuarios WHERE tipo_cuenta = 'premium';
+
+-- Consulta: Filtrar los juegos con stock agotado
+SELECT * FROM juegos WHERE stock = 0;
+
+-- Consulta: Promedio de precio de los juegos
+SELECT AVG(costo) AS promedio_precios FROM juegos;
+
+
+````
+
+---
+
+````sql
+-- Buscar todos los juegos de "rol" 
 SELECT j.*
 FROM juegos AS j
 INNER JOIN generos AS g ON j.genero_id = g.genero_id
 WHERE g.nombre = 'Rol';
+
+-- Obtener todas las ventas junto con los detalles del juego y el usuario
+SELECT v.*, j.nombre AS juego, u.username AS usuario
+FROM ventas AS v
+LEFT JOIN juegos AS j ON v.juego_id = j.juego_id
+INNER JOIN usuarios AS u ON v.usuario_id = u.usuario_id;
+
+-- Todos los juegos de rol comprados
+SELECT j.nombre AS juego
+FROM juegos j
+JOIN ventas v ON j.juego_id = v.juego_id
+WHERE j.genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Rol');
+
+-- Todos los juegos de rol comprados por el usuario "JohnCarmack"
+SELECT j.nombre AS juego
+FROM juegos j
+JOIN ventas v ON j.juego_id = v.juego_id
+JOIN usuarios u ON v.usuario_id = u.usuario_id
+WHERE j.genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Rol')
+  AND u.username = 'JohnCarmack';
+
+-- Número total de juegos de disparos comprados por cada usuario
+SELECT u.username, COUNT(*) AS total_juegos_disparos
+FROM juegos j
+JOIN ventas v ON j.juego_id = v.juego_id
+JOIN usuarios u ON v.usuario_id = u.usuario_id
+WHERE j.genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Disparos')
+GROUP BY u.username;
+
+-- Juegos más caros de cada género
+SELECT g.nombre AS genero, j.nombre AS juego, j.costo
+FROM juegos j
+JOIN generos g ON j.genero_id = g.genero_id
+WHERE j.costo = (SELECT MAX(costo) FROM juegos WHERE genero_id = g.genero_id);
+
+-- Total gastado por cada usuario en juegos de acción
+SELECT u.username, SUM(j.costo) AS total_gastado
+FROM juegos j
+JOIN ventas v ON j.juego_id = v.juego_id
+JOIN usuarios u ON v.usuario_id = u.usuario_id
+WHERE j.genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción')
+GROUP BY u.username;
+
+-- Juegos con stock <= 10 y disponibles desde hace más de 1 año
+SELECT nombre
+FROM juegos
+WHERE stock <= 10 AND en_tienda_desde <= DATE_SUB(NOW(), INTERVAL 1 YEAR);
+
+-- Usuarios que han comprado juegos de aventura y estrategia
+SELECT u.nombre
+FROM usuarios u
+JOIN ventas v ON u.usuario_id = v.usuario_id
+JOIN juegos j ON v.juego_id = j.juego_id
+JOIN generos g ON j.genero_id = g.genero_id
+WHERE g.nombre IN ('Aventura', 'Estrategia');
+
+-- Juegos publicados y desarrollados por la misma empresa
+SELECT nombre
+FROM juegos
+WHERE desarrollador = publicador;
+
+-- Cantidad total de juegos vendidos por consola
+SELECT c.nombre AS consola, SUM(IFNULL(v.juego_id, 0) + IFNULL(v.consola_id, 0)) AS total_juegos_vendidos
+FROM consolas c
+LEFT JOIN ventas v ON c.consola_id = v.consola_id
+GROUP BY c.consola_id;
+
+-- Juegos lanzados antes de la fecha de lanzamiento promedio de todos los juegos
+SELECT nombre
+FROM juegos
+WHERE fecha_lanzamiento < (SELECT AVG(fecha_lanzamiento) FROM juegos);
+
+````
+
+---
+
+````sql
+-- Top 5 usuarios que han gastado más en juegos
+SELECT u.username, SUM(j.costo) AS total_gastado
+FROM usuarios u
+JOIN ventas v ON u.usuario_id = v.usuario_id
+JOIN juegos j ON v.juego_id = j.juego_id
+GROUP BY u.usuario_id
+ORDER BY total_gastado DESC
+LIMIT 5;
+
+-- Cantidad promedio de juegos vendidos por usuario
+SELECT AVG(cantidad_juegos) AS promedio_juegos_vendidos
+FROM (SELECT COUNT(*) AS cantidad_juegos
+      FROM ventas
+      GROUP BY usuario_id) AS subquery;
+
+-- Juegos que han estado en tienda por más de 6 meses y todavía tienen stock
+SELECT nombre
+FROM juegos
+WHERE en_tienda_desde <= DATE_SUB(NOW(), INTERVAL 6 MONTH)
+  AND stock > 0;
+
+-- Cantidad de juegos vendidos por género y mes
+SELECT g.nombre AS genero, MONTH(v.fecha_venta) AS mes, COUNT(*) AS cantidad_juegos_vendidos
+FROM generos g
+JOIN juegos j ON g.genero_id = j.genero_id
+JOIN ventas v ON j.juego_id = v.juego_id
+GROUP BY g.genero_id, MONTH(v.fecha_venta)
+ORDER BY g.nombre, mes;
+
+-- Total de ventas por año y mes
+SELECT YEAR(fecha_venta) AS anio, MONTH(fecha_venta) AS mes, COUNT(*) AS total_ventas
+FROM ventas
+GROUP BY anio, mes
+ORDER BY anio, mes;
+
+-- Juegos con un precio superior al promedio de todos los juegos
+SELECT nombre, costo
+FROM juegos
+WHERE costo > (SELECT AVG(costo) FROM juegos);
+
+-- Número de ventas mensuales para cada consola en el año 2022
+SELECT c.nombre AS consola, MONTH(v.fecha_venta) AS mes, COUNT(*) AS total_ventas
+FROM consolas c
+JOIN ventas v ON c.consola_id = v.consola_id
+WHERE YEAR(v.fecha_venta) = 2022
+GROUP BY c.consola_id, mes
+ORDER BY c.nombre, mes;
+
+-- Total de ingresos por mes en el año 2021
+SELECT MONTH(fecha_venta) AS mes, SUM(j.costo) AS total_ingresos
+FROM ventas v
+JOIN juegos j ON v.juego_id = j.juego_id
+WHERE YEAR(fecha_venta) = 2021
+GROUP BY mes
+ORDER BY mes;
+
+-- Top 5 juegos más vendidos de todos los tiempos
+SELECT j.nombre AS juego, COUNT(*) AS total_ventas
+FROM juegos j
+JOIN ventas v ON j.juego_id = v.juego_id
+GROUP BY j.juego_id
+ORDER BY total_ventas DESC
+LIMIT 5;
+
+-- Usuarios que han comprado todos los juegos de un género específico
+SELECT u.username
+FROM usuarios u
+JOIN (SELECT usuario_id, COUNT(DISTINCT juego_id) AS total_juegos
+      FROM ventas
+      GROUP BY usuario_id) AS subquery ON u.usuario_id = subquery.usuario_id
+WHERE total_juegos = (SELECT COUNT(*) FROM juegos WHERE genero_id = 1);
+
 
 ````
