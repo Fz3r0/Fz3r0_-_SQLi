@@ -809,3 +809,40 @@ JOIN (
 
 
 ````
+
+
+---
+
+## Complejos
+
+### Cálculo Analítico
+
+- Este query calcula el promedio de gasto por usuario en juegos vendidos, considerando el stock de cada juego.
+- También incluye otras columnas como el nombre de usuario, el total de ventas, el total de stock y el nivel de stock (alto o bajo) basado en un límite de 100.
+- Los resultados están ordenados por promedio de gasto descendente y solo se incluyen los usuarios con más de 5 ventas.
+
+````sql
+SELECT
+    CONCAT(u.nombre, ' (', u.username, ')') AS usuario,
+    COUNT(DISTINCT v.venta_id) AS total_ventas,
+    SUM(j.stock) AS total_stock,
+    IF(SUM(j.stock) > 100, 'Alto', 'Bajo') AS nivel_stock,
+    CASE
+        WHEN u.tipo_cuenta = 'premium' THEN 'VIP'
+        ELSE 'Normal'
+    END AS tipo_cuenta,
+    ROUND(SUM(j.costo * j.stock) / COUNT(DISTINCT v.venta_id), 2) AS promedio_gasto
+FROM
+    usuarios u
+JOIN
+    ventas v ON u.usuario_id = v.usuario_id
+JOIN
+    juegos j ON v.juego_id = j.juego_id
+GROUP BY
+    u.usuario_id
+HAVING
+    total_ventas > 5
+ORDER BY
+    promedio_gasto DESC;
+
+````
