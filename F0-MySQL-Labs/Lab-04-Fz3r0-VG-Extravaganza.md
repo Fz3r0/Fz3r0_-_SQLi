@@ -229,6 +229,8 @@ VALUES
 
 
 
+
+
 ````
 
 ````sql
@@ -347,7 +349,48 @@ VALUES
     ('Contra: Hard Corps', 'Konami', 'Konami', 'Sega Genesis', '1994-09-15', 2, 1, 39.99, '1994-09-15', 40),
     ('Street Fighter II: Special Champion Edition', 'Capcom', 'Capcom', 'Sega Genesis', '1993-08-01', 2, 1, 49.99, '1993-08-01', 30),
     ('Mega Turrican', 'Factor 5', 'Data East', 'Sega Genesis', '1994-06-30', 1, 2, 39.99, '1994-06-30', 20),
-    ('Rocket Knight Adventures', 'Konami', 'Konami', 'Sega Genesis', '1993-08-05', 1, 2, 29.99, '1993-08-05', 30);
+    ('Rocket Knight Adventures', 'Konami', 'Konami', 'Sega Genesis', '1993-08-05', 1, 2, 29.99, '1993-08-05', 30),
+    ('Panzer Dragoon', 'Team Andromeda', 'Sega', 'Sega Saturn', '1995-03-10', 1, 7, 59.99, '1995-03-10', 50),
+    ('NiGHTS into Dreams...', 'Sonic Team', 'Sega', 'Sega Saturn', '1996-07-05', 1, 7, 49.99, '1996-07-05', 40),
+    ('Virtua Fighter 2', 'Sega AM2', 'Sega', 'Sega Saturn', '1995-08-01', 2, 1, 39.99, '1995-08-01', 30),
+    ('Resident Evil', 'Capcom', 'Capcom', 'Sega Saturn', '1997-07-31', 3, 7, 59.99, '1997-07-31', 20),
+    ('Sega Rally Championship', 'Sega AM5', 'Sega', 'Sega Saturn', '1995-12-29', 4, 2, 49.99, '1995-12-29', 30),
+    ('Guardian Heroes', 'Treasure', 'Sega', 'Sega Saturn', '1996-01-26', 1, 2, 39.99, '1996-01-26', 40),
+    ('Panzer Dragoon Saga', 'Team Andromeda', 'Sega', 'Sega Saturn', '1998-01-29', 1, 7, 149.99, '1998-01-29', 20),
+    ('Daytona USA', 'Sega AM2', 'Sega', 'Sega Saturn', '1995-11-22', 5, 7, 49.99, '1995-11-22', 30),
+    ('Burning Rangers', 'Sonic Team', 'Sega', 'Sega Saturn', '1998-02-26', 1, 7, 79.99, '1998-02-26', 20),
+    ('Shining Force III', 'Camelot Software Planning', 'Sega', 'Sega Saturn', '1997-12-11', 6, 2, 59.99, '1997-12-11', 40),
+    ('Sonic 3D Blast', 'Travellers Tales', 'Sega', 'Sega Saturn', '1996-11-20', 1, 7, 39.99, '1996-11-20', 50),
+    ('Street Fighter Alpha 2', 'Capcom', 'Capcom', 'Sega Saturn', '1996-05-03', 2, 1, 49.99, '1996-05-03', 30),
+    ('Dragon Force', 'Sega', 'Sega', 'Sega Saturn', '1996-06-21', 7, 2, 69.99, '1996-06-21', 40),
+    ('Shinobi Legions', 'Sega', 'Sega', 'Sega Saturn', '1995-08-04', 1, 2, 39.99, '1995-08-04', 20),
+    ('Mega Man 8', 'Capcom', 'Capcom', 'Sega Saturn', '1997-02-28', 2, 1, 59.99, '1997-02-28', 30),
+    ('Darius Gaiden', 'Taito', 'Acclaim', 'Sega Saturn', '1995-10-27', 1, 7, 49.99, '1995-10-27', 20),
+    ('Panzerspiel', 'Sega', 'Sega', 'Sega Saturn', '1996-03-22', 2, 1, 39.99, '1996-03-22', 30),
+    ('Astal', 'Sony Music Entertainment Japan', 'Sega', 'Sega Saturn', '1995-06-30', 1, 2, 49.99, '1995-06-30', 40),
+    ('Myst', 'Cyan', 'Sunsoft', 'Sega Saturn', '1995-06-30', 8, 1, 59.99, '1995-06-30', 20),
+    ('Clockwork Knight', 'Sega', 'Sega', 'Sega Saturn', '1994-12-16', 1, 2, 29.99, '1994-12-16', 30),
+    ('Sonic Adventure', 'Sonic Team', 'Sega', 'Dreamcast', '1998-12-23', 1, 7, 49.99, '1998-12-23', 50),
+    ('Resident Evil Code: Veronica', 'Capcom', 'Capcom', 'Dreamcast', '2000-02-03', 3, 7, 59.99, '2000-02-03', 40),
+    ('Crazy Taxi', 'Hitmaker', 'Sega', 'Dreamcast', '1999-01-24', 1, 2, 39.99, '1999-01-24', 30),
+    ('Shenmue', 'Sega AM2', 'Sega', 'Dreamcast', '1999-12-29', 1, 2, 49.99, '1999-12-29', 20),
+    ('Soulcalibur', 'Project Soul', 'Namco', 'Dreamcast', '1999-08-05', 2, 1, 49.99, '1999-08-05', 30),
+    ('Jet Set Radio', 'Smilebit', 'Sega', 'Dreamcast', '2000-06-29', 1, 7, 39.99, '2000-06-29', 40),
+    ('Grandia II', 'Game Arts', 'Ubisoft', 'Dreamcast', '2000-08-03', 6, 2, 59.99, '2000-08-03', 30),
+    ('Skies of Arcadia', 'Overworks', 'Sega', 'Dreamcast', '2000-12-22', 6, 2, 59.99, '2000-12-22', 40),
+    ('Marvel vs. Capcom 2: New Age of Heroes', 'Capcom', 'Capcom', 'Dreamcast', '2000-03-30', 2, 1, 59.99, '2000-03-30', 20),
+    ('Power Stone', 'Capcom', 'Capcom', 'Dreamcast', '1999-12-21', 1, 2, 39.99, '1999-12-21', 30),
+    ('Soul Reaver: Legacy of Kain', 'Crystal Dynamics', 'Eidos Interactive', 'Dreamcast', '1999-08-16', 7, 2, 49.99, '1999-08-16', 40),
+    ('Phantasy Star Online', 'Sonic Team', 'Sega', 'Dreamcast', '2000-12-21', 5, 1, 49.99, '2000-12-21', 30),
+    ('Crazy Taxi 2', 'Hitmaker', 'Sega', 'Dreamcast', '2001-05-28', 1, 2, 39.99, '2001-05-28', 40),
+    ('Street Fighter III: Third Strike', 'Capcom', 'Capcom', 'Dreamcast', '1999-08-30', 2, 1, 49.99, '1999-08-30', 20),
+    ('Skies of Arcadia Legends', 'Overworks', 'Sega', 'Dreamcast', '2002-01-27', 6, 2, 59.99, '2002-01-27', 30),
+    ('Resident Evil 3: Nemesis', 'Capcom', 'Capcom', 'Dreamcast', '2000-08-24', 3, 7, 59.99, '2000-08-24', 20),
+    ('Sonic Adventure 2', 'Sonic Team', 'Sega', 'Dreamcast', '2001-06-23', 1, 7, 49.99, '2001-06-23', 40),
+    ('Shenmue II', 'Sega AM2', 'Sega', 'Dreamcast', '2001-09-06', 1, 2, 49.99, '2001-09-06', 30),
+    ('Jet Grind Radio', 'Smilebit', 'Sega', 'Dreamcast', '2000-10-30', 1, 7, 39.99, '2000-10-30', 20),
+    ('Dead or Alive 2', 'Team Ninja', 'Tecmo', 'Dreamcast', '2000-03-30', 2, 1, 49.99, '2000-03-30', 30);
+
 
 ````
 
