@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS ventas (
 
 
 ````sql
-INSERT INTO usuarios (username, password, name, address, phone, mail, account_type, created_at)
+INSERT INTO usuarios (username, password, nombre, direccion, telefono, email, tipo_cuenta, creado_en)
 VALUES
 ('Mario', 'ItsaMeM@rio!', 'Mario', '123 Mushroom Kingdom', '555-1234', 'mario_plumber@nintendo.jp', 'premium', '1985-09-13'),
 ('Luigi', 'Lu1g1Time!', 'Luigi', '456 Mushroom Kingdom', '555-5678', 'luigi_plumber@nintendo.jp', 'normal', '1983-07-14'),
@@ -162,7 +162,46 @@ VALUES
 ('Leonardo', 'Turtl3P0w3r', 'Leonardo', '369 New York City', '555-4567', 'leo@ninjaturtles.com', 'premium', '1984-05-01'),
 ('Donatello', 'B01St@ff', 'Donatello', '741 New York City', '555-8901', 'don@ninjaturtles.com', 'normal', '1984-05-01'),
 ('Michelangelo', 'C0w@bung@', 'Michelangelo', '852 New York City', '555-2345', 'mikey@ninjaturtles.com', 'premium', '1984-05-01'),
-('Raphael', 'S@1@y0w', 'Raphael', '963 New York City', '555-6789', 'raph@ninjaturtles.com', 'normal', '1984-05-01');
+('Raphael', 'S@1@y0w', 'Raphael', '963 New York City', '555-6789', 'raph@ninjaturtles.com', 'normal', '1984-05-01'),
+('JohnMcLane', 'Y1p1k@y3y3', 'John McClane', 'Nakatomi Plaza', '555-1234', 'john.mcclane@example.com', 'premium', '1988-07-15'),
+('SarahConnor', 'N0F@t3', 'Sarah Connor', 'Los Angeles', '555-5678', 'sarah.connor@example.com', 'normal', '1984-10-26'),
+('AlanGrant', 'R@pt0rD1gg3r', 'Alan Grant', 'Jurassic Park', '555-9012', 'alan.grant@example.com', 'premium', '1993-06-11'),
+('MartyMcFly', 'FluXCapac1t0r', 'Marty McFly', 'Hill Valley', '555-3456', 'marty.mcfly@example.com', 'normal', '1985-10-26'),
+('Terminator', 'IllBeB@ck', 'The Terminator', 'Los Angeles', '555-7890', 'terminator@example.com', 'premium', '1984-10-26'),
+('RoboCop', 'D3tr01tJust1c3', 'RoboCop', 'Old Detroit', '555-2345', 'robocop@example.com', 'normal', '1987-07-17'),
+('Dutch', 'G3t0T3hCh0pp3r', 'Dutch', 'Val Verde', '555-6789', 'dutch@example.com', 'premium', '1987-06-12'),
+('EllenRipley', 'G3tAwayFromH3r!', 'Ellen Ripley', 'USCSS Nostromo', '555-0123', 'ripley@example.com', 'normal', '1979-05-25'),
+('JohnSpartan', 'D3m0liti0nM@n', 'John Spartan', 'San Angeles', '555-4567', 'john.spartan@example.com', 'premium', '1993-10-08'),
+('SimonPhoenix', 'P@ssw0rd123', 'Simon Phoenix', 'San Angeles', '555-8901', 'simon.phoenix@example.com', 'normal', '1993-10-08'),
+('IndianaJones', 'H0lyGr@il', 'Indiana Jones', 'Marshall College', '555-2345', 'indiana.jones@example.com', 'premium', '1981-06-12'),
+('EthanHunt', 'M1ss10nImp0ssibl3', 'Ethan Hunt', 'Langley', '555-6789', 'ethan.hunt@example.com', 'normal', '1996-05-22'),
+('Neo', 'Th3M@trix', 'Neo', 'Mega City', '555-0123', 'neo@example.com', 'premium', '1999-03-31'),
+('Trinity', 'R3dP1ll', 'Trinity', 'Mega City', '555-4567', 'trinity@example.com', 'normal', '1999-03-31'),
+('Morpheus', 'F0ll0wTh3Whit3R@bbit', 'Morpheus', 'Mega City', '555-8901', 'morpheus@example.com', 'premium', '1999-03-31'),
+('JohnWick', 'B@b@Y@g@', 'John Wick', 'New York City', '555-2345', 'john.wick@example.com', 'normal', '2014-10-24'),
+('Léon', 'Th3Pr0fessi0n@l', 'Léon', 'New York City', '555-6789', 'leon@example.com', 'premium', '1994-09-14'),
+('SimonTemplar', 'S@1nt', 'Simon Templar', 'London', '555-0123', 'simon.templar@example.com', 'normal', '1997-04-04'),
+('AceVentura', 'A11r1ghtyTh3n!', 'Ace Ventura', 'Miami', '555-4567', 'ace.ventura@example.com', 'premium', '1994-02-04'),
+('Maximus', 'Ar3Y0uN0t3nt3rt@1n3d?', 'Maximus', 'Rome', '555-8901', 'maximus@example.com', 'normal', '2000-05-01'),
+('TylerDurden', 'Th3Rul3s0fF1ghtClub', 'Tyler Durden', 'Wilmington', '555-2345', 'tyler.durden@example.com', 'premium', '1999-10-15'),
+('LloydChristmas', 'S@lm0n0fD3nn1s', 'Lloyd Christmas', 'Providence', '555-6789', 'lloyd.christmas@example.com', 'normal', '1994-12-16'),
+('HarryDunne', 'Ig0tN3wsF0ry0u', 'Harry Dunne', 'Providence', '555-0123', 'harry.dunne@example.com', 'premium', '1994-12-16'),
+('JohnnyUtah', 'R!d3Th3W@v3', 'Johnny Utah', 'Los Angeles', '555-4567', 'johnny.utah@example.com', 'normal', '1991-07-12'),
+('Bodhi', 'L1v3L1f3', 'Bodhi', 'Los Angeles', '555-8901', 'bodhi@example.com', 'premium', '1991-07-12'),
+('AlanParrish', 'Jum@nj1Jum@nj0', 'Alan Parrish', 'Brantford', '555-2345', 'alan.parrish@example.com', 'normal', '1995-12-15'),
+('SarahHarding', 'D1n0D0ct0r', 'Sarah Harding', 'Isla Sorna', '555-6789', 'sarah.harding@example.com', 'premium', '1997-05-23'),
+('FrankDrebin', 'P0l1c3Sq33ks!', 'Frank Drebin', 'Los Angeles', '555-0123', 'frank.drebin@example.com', 'normal', '1988-12-02'),
+('Darkman', 'F@c3L3ssH3r0', 'Darkman', 'New York City', '555-4567', 'darkman@example.com', 'premium', '1990-08-24'),
+('TonyMontana', 'SayH3ll0T0MyL1ttl3Fr13nd', 'Tony Montana', 'Miami', '555-8901', 'tony.montana@example.com', 'normal', '1983-12-09'),
+('RickDeckard', '1HuntReplicants', 'Rick Deckard', 'Los Angeles', '555-2345', 'rick.deckard@example.com', 'premium', '1982-06-25'),
+('SarahConnor2', 'N3v3rSt0pF1ght1ng', 'Sarah Connor', 'Los Angeles', '555-6789', 'sarah.connor2@example.com', 'normal', '1991-08-29'),
+('AxelFoley', 'B3v3rlyH1llsC0p', 'Axel Foley', 'Detroit', '555-0123', 'axel.foley@example.com', 'premium', '1984-11-30'),
+('HarryCallahan', 'G0Ahe@dMak3MyD@y', 'Harry Callahan', 'San Francisco', '555-4567', 'harry.callahan@example.com', 'normal', '1971-12-22'),
+('DrPeterVenkman', 'Wh0Y0uG0nn@C@ll?', 'Dr. Peter Venkman', 'New York City', '555-8901', 'peter.venkman@example.com', 'premium', '1984-06-08'),
+('JohnRambo', 'L!v3F0rN0th1ng0rD13F0rS0m3th1ng', 'John Rambo', 'Hope, Washington', '555-2345', 'john.rambo@example.com', 'normal', '1982-10-22'),
+('SnakePlissken', 'Ey3P@tcH3d3d', 'Snake Plissken', 'New York City', '555-6789', 'snake.plissken@example.com', 'premium', '1981-07-10'),
+('LisbethSalander', 'H@ck3rW1th@Dr@g0nT@tt00', 'Lisbeth Salander', 'Stockholm', '555-0123', 'lisbeth.salander@example.com', 'normal', '2009-02-27');
+
 
 
 ````
