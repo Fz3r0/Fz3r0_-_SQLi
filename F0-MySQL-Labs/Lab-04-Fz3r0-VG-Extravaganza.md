@@ -564,3 +564,16 @@ select * from tipos_juegos;
 select * from generos;
 select * from ventas;
 ````
+
+
+
+
+
+````sql
+## Buscar todos los juegos de "rol" 
+SELECT j.*
+FROM juegos AS j
+INNER JOIN generos AS g ON j.genero_id = g.genero_id
+WHERE g.nombre = 'Rol';
+
+````
