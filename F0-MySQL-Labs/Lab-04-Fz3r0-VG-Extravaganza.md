@@ -200,7 +200,32 @@ VALUES
 ('DrPeterVenkman', 'Wh0Y0uG0nn@C@ll?', 'Dr. Peter Venkman', 'New York City', '555-8901', 'peter.venkman@example.com', 'premium', '1984-06-08'),
 ('JohnRambo', 'L!v3F0rN0th1ng0rD13F0rS0m3th1ng', 'John Rambo', 'Hope, Washington', '555-2345', 'john.rambo@example.com', 'normal', '1982-10-22'),
 ('SnakePlissken', 'Ey3P@tcH3d3d', 'Snake Plissken', 'New York City', '555-6789', 'snake.plissken@example.com', 'premium', '1981-07-10'),
-('LisbethSalander', 'H@ck3rW1th@Dr@g0nT@tt00', 'Lisbeth Salander', 'Stockholm', '555-0123', 'lisbeth.salander@example.com', 'normal', '2009-02-27');
+('LisbethSalander', 'H@ck3rW1th@Dr@g0nT@tt00', 'Lisbeth Salander', 'Stockholm', '555-0123', 'lisbeth.salander@example.com', 'normal', '2009-02-27'),
+('ShigeruMiyamoto', 'Sup3rM@ri0', 'Shigeru Miyamoto', 'Kyoto', '555-0123', 'shigeru.miyamoto@example.com', 'premium', '1981-07-09'),
+('GusRodriguez', 'N1nt3nd0m@n14', 'Gus Rodriguez', 'Mexico City', '555-4567', 'gus.rodriguez@example.com', 'normal', '1995-01-01'),
+('HideoKojima', 'M3t@lG34rS0l1d', 'Hideo Kojima', 'Tokyo', '555-8901', 'hideo.kojima@example.com', 'premium', '1986-07-13'),
+('YujiNaka', 'S0n1cSp33d', 'Yuji Naka', 'Tokyo', '555-2345', 'yuji.naka@example.com', 'normal', '1991-06-23'),
+('GabeNewell', 'H@lfL1f3', 'Gabe Newell', 'Bellevue', '555-6789', 'gabe.newell@example.com', 'premium', '1996-08-24'),
+('JohnCarmack', 'IDTechEng1ne', 'John Carmack', 'Mesquite', '555-0123', 'john.carmack@example.com', 'normal', '1990-05-05'),
+('SidMeier', 'C1v1l1z@t10n', 'Sid Meier', 'Baltimore', '555-4567', 'sid.meier@example.com', 'premium', '1982-02-01'),
+('GordanFreeman', 'H@lfL1f33p1s0d3', 'Gordan Freeman', 'City 17', '555-8901', 'gordan.freeman@example.com', 'normal', '1998-11-19'),
+('TimSweeney', 'UnrealEng1ne', 'Tim Sweeney', 'Cary', '555-2345', 'tim.sweeney@example.com', 'premium', '1991-05-20'),
+('HironobuSakaguchi', 'F1n@lF@nt@sY', 'Hironobu Sakaguchi', 'Tokyo', '555-6789', 'hironobu.sakaguchi@example.com', 'normal', '1987-12-18'),
+('JohnRomero', 'D00M3d!', 'John Romero', 'San Mateo', '555-0123', 'john.romero@example.com', 'premium', '1993-12-10'),
+('GabeLogan', 'Syph3rF1lt3r', 'Gabe Logan', 'Washington, D.C.', '555-4567', 'gabe.logan@example.com', 'normal', '1999-02-02'),
+('ShuheiYoshida', 'Pl@yst@t10n', 'Shuhei Yoshida', 'Tokyo', '555-8901', 'shuhei.yoshida@example.com', 'premium', '1993-12-03'),
+('TetsuyaNomura', 'K1ngd0mH34rts', 'Tetsuya Nomura', 'Tokyo', '555-2345', 'tetsuya.nomura@example.com', 'normal', '1992-04-01'),
+('MasahiroSakurai', 'Sup3rSm4shBr0s', 'Masahiro Sakurai', 'Tokyo', '555-6789', 'masahiro.sakurai@example.com', 'premium', '1999-04-26'),
+('PhilSpencer', 'Xb0x1s1C0m1ng', 'Phil Spencer', 'Redmond', '555-0123', 'phil.spencer@example.com', 'normal', '1988-11-23'),
+('PeterMolyneux', 'G0dB0t', 'Peter Molyneux', 'Guildford', '555-4567', 'peter.molyneux@example.com', 'premium', '1984-01-01'),
+('KenKutaragi', 'Pl@ySt@t10n3', 'Ken Kutaragi', 'Tokyo', '555-8901', 'ken.kutaragi@example.com', 'normal', '1993-12-03'),
+('SatoruIwata', 'N1nt3nd0D1r3ct', 'Satoru Iwata', 'Kyoto', '555-2345', 'satoru.iwata@example.com', 'premium', '1980-07-01'),
+('DavidJaffe', 'Tw1st3dM3t@l', 'David Jaffe', 'San Diego', '555-6789', 'david.jaffe@example.com', 'normal', '1992-09-10'),
+('ShinjiMikami', 'R3s1d3nt3v1l', 'Shinji Mikami', 'Tokyo', '555-0123', 'shinji.mikami@example.com', 'premium', '1990-04-22'),
+('HidekiKamiya', 'B@y0n3tta', 'Hideki Kamiya', 'Osaka', '555-4567', 'hideki.kamiya@example.com', 'normal', '1998-09-11'),
+('SteveWozniak', 'Appl3C0f0und3r', 'Steve Wozniak', 'Los Gatos', '555-8901', 'steve.wozniak@example.com', 'premium', '1976-04-01'),
+('CliffBleszinski', 'G3@rS0fW@r', 'Cliff Bleszinski', 'Raleigh', '555-6789', 'cliff.bleszinski@example.com', 'premium', '1993-02-12'),
+('DavidPerry', 'E@rthw0rmJ1m', 'David Perry', 'San Francisco', '555-0123', 'david.perry@example.com', 'normal', '1987-06-01');
 
 
 
