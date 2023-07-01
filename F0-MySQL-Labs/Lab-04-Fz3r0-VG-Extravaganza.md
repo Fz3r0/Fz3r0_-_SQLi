@@ -550,6 +550,16 @@ select * from juegos;
 select * from tipos_juegos;
 select * from generos;
 select * from ventas;
+
+## Query: mostrar el esquema de creación de tablas
+SHOW CREATE TABLE usuarios;
+SHOW CREATE TABLE consolas;
+SHOW CREATE TABLE juegos;
+SHOW CREATE TABLE tipos_juegos;
+SHOW CREATE TABLE generos;
+SHOW CREATE TABLE ventas;
+
+
 ````
 
 
@@ -596,12 +606,26 @@ SELECT * FROM juegos WHERE stock = 0;
 -- Consulta: Promedio de precio de los juegos
 SELECT AVG(costo) AS promedio_precios FROM juegos;
 
+-- Promedio de costo de los juegos
+SELECT AVG(costo) AS promedio_costos FROM juegos;
+
+-- Estadísiticas sencillas de juegos
+SELECT
+    AVG(costo) AS promedio_costo,
+    MIN(costo) AS costo_minimo,
+    MAX(costo) AS costo_maximo,
+    SUM(costo) AS costo_total,
+    COUNT(*) AS total_juegos
+FROM
+    juegos;
+
 
 ````
 
 ---
 
 ````sql
+
 -- Buscar todos los juegos de "rol" 
 SELECT j.*
 FROM juegos AS j
