@@ -420,3 +420,42 @@ COMMIT;
 
 
 ````
+
+
+
+
+
+
+
+
+
+
+````sql
+## Query: mostrar db 
+show databases;
+
+## Query: usar db 
+use fz3r0_gaming_extravaganza
+
+## Query: borrar db 
+drop database fz3r0_gaming_extravaganza;
+
+## Query: mostrar tablas 
+show tables;
+
+## Query: describir tabla en particular
+describe usuarios;
+describe consolas;
+describe juegos;
+describe tipos_juegos;
+describe generos;
+describe ventas;
+
+## Query: mostrar todo(*) de tabla en particular 
+select * from usuarios;
+select * from consolas;
+select * from juegos;
+select * from tipos_juegos;
+select * from generos;
+select * from ventas;
+````
