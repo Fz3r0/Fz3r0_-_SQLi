@@ -6,150 +6,80 @@ CREATE DATABASE IF NOT EXISTS Fz3r0_Gaming_Extravaganza CHARACTER SET utf8mb4 CO
 -- Selección de la base de datos
 USE Fz3r0_Gaming_Extravaganza;
 
--- Creación de la tabla 'usuarios'
-CREATE TABLE usuarios (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+-- Tabla de Usuarios
+CREATE TABLE IF NOT EXISTS Usuarios (
+  usuario_id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(50) NOT NULL,
   password VARCHAR(255) NOT NULL,
   name VARCHAR(100) NOT NULL,
   address VARCHAR(200) NOT NULL,
   phone VARCHAR(20) NOT NULL,
-  mail VARCHAR(100) NOT NULL,
-  subscription_type ENUM('basic', 'premium') NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  account_type ENUM('normal', 'premium') NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  UNIQUE INDEX idx_username (username)
-) ENGINE=InnoDB;
+  INDEX idx_username (username)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Creación de la tabla 'proveedores'
-CREATE TABLE proveedores (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre_empresa VARCHAR(100) NOT NULL,
-  direccion VARCHAR(200) NOT NULL,
-  telefono VARCHAR(20) NOT NULL,
-  correo_electronico VARCHAR(100) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
+-- Tabla de Generos
+CREATE TABLE IF NOT EXISTS Generos (
+  genero_id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Creación de la tabla 'desarrolladores'
-CREATE TABLE desarrolladores (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre_empresa VARCHAR(100) NOT NULL,
-  direccion VARCHAR(200) NOT NULL,
-  telefono VARCHAR(20) NOT NULL,
-  correo_electronico VARCHAR(100) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
+-- Tabla de Tipos de Juegos
+CREATE TABLE IF NOT EXISTS TiposJuegos (
+  tipo_id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Creación de la tabla 'consolas'
-CREATE TABLE consolas (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  descripcion TEXT,
+-- Tabla de Juegos
+CREATE TABLE IF NOT EXISTS Juegos (
+  juego_id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  developer VARCHAR(100) NOT NULL,
+  publisher VARCHAR(100) NOT NULL,
+  platform VARCHAR(50) NOT NULL,
+  release_date DATE NOT NULL,
+  genero_id INT NOT NULL,
+  tipo_id INT NOT NULL,
+  cost DECIMAL(10, 2) NOT NULL,
+  in_store_since DATE NOT NULL,
+  stock INT NOT NULL,
+  FOREIGN KEY (genero_id) REFERENCES Generos(genero_id),
+  FOREIGN KEY (tipo_id) REFERENCES TiposJuegos(tipo_id),
+  INDEX idx_genero_id (genero_id),
+  INDEX idx_tipo_id (tipo_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Tabla de Consolas
+CREATE TABLE IF NOT EXISTS Consolas (
+  consola_id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
   fabricante VARCHAR(100) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  INDEX idx_fabricante (fabricante)
-) ENGINE=InnoDB;
-
--- Creación de la tabla 'categorias'
-CREATE TABLE categorias (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  descripcion TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
-
--- Creación de la tabla 'productos'
-CREATE TABLE productos (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  descripcion TEXT,
-  precio DECIMAL(10, 2) NOT NULL,
+  generation INT NOT NULL,
+  code VARCHAR(20) NOT NULL,
+  release_date DATE NOT NULL,
+  cost DECIMAL(10, 2) NOT NULL,
+  in_store_since DATE NOT NULL,
   stock INT NOT NULL,
-  proveedor_id INT,
-  desarrollador_id INT,
+  INDEX idx_fabricante (fabricante),
+  INDEX idx_generation (generation)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Tabla de Ventas
+CREATE TABLE IF NOT EXISTS Ventas (
+  venta_id INT PRIMARY KEY AUTO_INCREMENT,
+  usuario_id INT NOT NULL,
+  juego_id INT,
   consola_id INT,
-  categoria_id INT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  INDEX idx_proveedor_id (proveedor_id),
-  INDEX idx_desarrollador_id (desarrollador_id),
-  INDEX idx_consola_id (consola_id),
-  INDEX idx_categoria_id (categoria_id),
-  FOREIGN KEY (proveedor_id) REFERENCES proveedores(id),
-  FOREIGN KEY (desarrollador_id) REFERENCES desarrolladores(id),
-  FOREIGN KEY (consola_id) REFERENCES consolas(id),
-  FOREIGN KEY (categoria_id) REFERENCES categorias(id)
-) ENGINE=InnoDB;
-
--- Creación de la tabla 'ventas'
-CREATE TABLE ventas (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  fecha_venta DATETIME NOT NULL,
-  total DECIMAL(10, 2) NOT NULL,
-  usuario_id INT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  fecha_venta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
+  FOREIGN KEY (juego_id) REFERENCES Juegos(juego_id),
+  FOREIGN KEY (consola_id) REFERENCES Consolas(consola_id),
   INDEX idx_usuario_id (usuario_id),
-  FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-) ENGINE=InnoDB;
-
--- Creación de la tabla 'detalles_venta'
-CREATE TABLE detalles_venta (
-  venta_id INT,
-  producto_id INT,
-  cantidad INT NOT NULL,
-  precio_unitario DECIMAL(10, 2) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  INDEX idx_venta_id (venta_id),
-  INDEX idx_producto_id (producto_id),
-  FOREIGN KEY (venta_id) REFERENCES ventas(id),
-  FOREIGN KEY (producto_id) REFERENCES productos(id)
-) ENGINE=InnoDB;
-
--- Creación de la tabla 'pedidos'
-CREATE TABLE pedidos (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  fecha_pedido DATETIME NOT NULL,
-  total DECIMAL(10, 2) NOT NULL,
-  usuario_id INT,
-  direccion_entrega VARCHAR(200) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  INDEX idx_usuario_id (usuario_id),
-  FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-) ENGINE=InnoDB;
-
--- Creación de la tabla 'detalles_pedido'
-CREATE TABLE detalles_pedido (
-  pedido_id INT,
-  producto_id INT,
-  cantidad INT NOT NULL,
-  precio_unitario DECIMAL(10, 2) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  INDEX idx_pedido_id (pedido_id),
-  INDEX idx_producto_id (producto_id),
-  FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
-  FOREIGN KEY (producto_id) REFERENCES productos(id)
-) ENGINE=InnoDB;
-
--- Creación de la tabla 'juegos_retro'
-CREATE TABLE juegos_retro (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  descripcion TEXT,
-  precio DECIMAL(10, 2) NOT NULL,
-  stock INT NOT NULL,
-  proveedor_id INT,
-  consola_id INT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  INDEX idx_proveedor_id (proveedor_id),
-  INDEX idx_consola_id (consola_id),
-  FOREIGN KEY (proveedor_id) REFERENCES proveedores(id),
-  FOREIGN KEY (consola_id) REFERENCES consolas(id)
-) ENGINE=InnoDB;
+  INDEX idx_juego_id (juego_id),
+  INDEX idx_consola_id (consola_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 ````
 
