@@ -124,9 +124,15 @@ CREATE TABLE IF NOT EXISTS ventas (
 
 ````
 
+---
 
+<br>
 
+<br>
 
+<br>
+
+## Insertar Datos
 
 ````sql
 INSERT INTO usuarios (username, password, nombre, direccion, telefono, email, tipo_cuenta, creado_en)
@@ -228,10 +234,6 @@ VALUES
     ('DavidPerry', 'E@rthw0rmJ1m', 'David Perry', 'San Francisco', '555-0123', 'david.perry@example.com', 'normal', '1987-06-01'),
     ('Sonic', 'G0tt@GoF@st!', 'Sonic the Hedgehog', '147 Green Hill Zone', '555-0123', 'sonic@sega.com', 'premium', '1991-06-23');
 
-
-````
-
-````sql
 -- Insertar datos en la tabla tipos_juegos
 INSERT INTO tipos_juegos (nombre) VALUES
     ('Arcade'),
@@ -256,10 +258,6 @@ INSERT INTO generos (nombre) VALUES
     ('Puzzle'),
     ('Simulacion');
 
-````
-
-
-````sql
 -- Insertar juegos de NES
 INSERT INTO juegos (nombre, desarrollador, publicador, plataforma, fecha_lanzamiento, genero_id, tipo_id, costo, en_tienda_desde, stock)
 VALUES
@@ -459,12 +457,6 @@ VALUES
     ('Watch Dogs: Legion', 'Ubisoft Toronto', 'Ubisoft', 'Xbox Series X', '2020-10-29', 1, 2, 59.99, '2020-10-29', 30),
     ('Marvel''s Avengers', 'Crystal Dynamics', 'Square Enix', 'Xbox Series X', '2020-09-04', 1, 2, 59.99, '2020-09-04', 30);
 
-
-
-````
-
-
-````sql
 -- Insertar datos en la tabla consolas
 INSERT INTO consolas (nombre, fabricante, generacion, codigo, fecha_lanzamiento, costo, en_tienda_desde, stock) VALUES
     ('Nintendo Entertainment System', 'Nintendo', 3, 'NES', '1983-07-15', 199.99, '1983-07-15', 50),
@@ -501,6 +493,7 @@ INSERT INTO consolas (nombre, fabricante, generacion, codigo, fecha_lanzamiento,
     ('Commodore 64', 'Commodore', 3, 'C64', '1982-08-01', 595.99, '1982-08-01', 5);
 
 COMMIT;
+
 
 ````
 
