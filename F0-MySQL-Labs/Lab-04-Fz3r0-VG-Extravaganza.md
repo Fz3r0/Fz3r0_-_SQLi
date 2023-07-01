@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS ventas (
 ````sql
 INSERT INTO usuarios (username, password, nombre, direccion, telefono, email, tipo_cuenta, creado_en)
 VALUES
-('administrator', 'admin12345', 'Admin General del Sistema', 'Fz3r0 Gaming Extravaganza', '666-666-666', 'noob_admin@fz3r0_gaming.net', 'premium', '1998-07-11'),
+('admin', 'admin12345', 'Admin General del Sistema', 'Fz3r0 Gaming Extravaganza', '666-666-666', 'noob_admin@fz3r0_gaming.net', 'premium', '1998-07-11'),
 ('Mario', 'ItsaMeM@rio!', 'Mario', '123 Mushroom Kingdom', '555-1234', 'mario_plumber@nintendo.jp', 'premium', '1985-09-13'),
 ('Luigi', 'Lu1g1Time!', 'Luigi', '456 Mushroom Kingdom', '555-5678', 'luigi_plumber@nintendo.jp', 'normal', '1983-07-14'),
 ('Peach', 'Pr1nc3ssPeach', 'Princess Peach', '789 Mushroom Kingdom', '555-9012', 'peach@nintendo.jp', 'premium', '1985-09-13'),
