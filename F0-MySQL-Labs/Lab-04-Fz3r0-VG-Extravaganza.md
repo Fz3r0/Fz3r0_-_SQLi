@@ -23,19 +23,13 @@ service apache2 start && service mysql start
 mysql
 ````
 
-````sh
-❯ mysql
+---
 
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 31
-Server version: 10.5.19-MariaDB-0+deb11u2 Debian 11
+<br>
 
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+<br>
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-MariaDB [(none)]>
-````
+<br>
 
 ## Crear Database: Fz3r0
 
