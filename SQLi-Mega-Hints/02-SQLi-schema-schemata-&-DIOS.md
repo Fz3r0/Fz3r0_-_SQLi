@@ -10,6 +10,24 @@ Cuando se ejecuta el query `SELECT schema_name FROM information_schema.schemata;
 
 Es importante tener en cuenta que la disponibilidad y el contenido exacto de la tabla `schemata` pueden variar ligeramente según el DBMS utilizado, pero en general, esta tabla se encuentra presente en la mayoría de los sistemas de gestión de bases de datos y proporciona información sobre los esquemas en la base de datos.
 
+---
+
+- `information_schema` **NO** es una base de datos en sí misma, sino un esquema especial que se encuentra en la mayoría de los sistemas de gestión de bases de datos. Es un componente estándar que proporciona información sobre los metadatos de la base de datos.
+
+Dentro del esquema `information_schema`, hay varias tablas que almacenan información sobre diferentes aspectos de la base de datos, como `tablas`, `columnas`, `restricciones`, `privilegios`, `rutinas almacenadas`, etc. Estas tablas tienen nombres como `schemata`, `tables`, `columns`, `constraints`, `privileges`, entre otros:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/32909a84-ebfe-4ba7-87a4-42a708c6b8d5)
+
+---
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
 ## 💀 Basics: `information schema`
 
 ### 💉 Query basic
