@@ -519,8 +519,9 @@ LIMIT 500;
 DELETE FROM ventas
 WHERE juego_id IS NULL AND consola_id IS NULL;
 
-DELETE FROM ventas
-WHERE usuario_id = 'admin';
+DELETE FROM ventas WHERE usuario_id = 1;
+
+
 
 
 ````
