@@ -769,5 +769,43 @@ JOIN (SELECT usuario_id, COUNT(DISTINCT juego_id) AS total_juegos
       GROUP BY usuario_id) AS subquery ON u.usuario_id = subquery.usuario_id
 WHERE total_juegos = (SELECT COUNT(*) FROM juegos WHERE genero_id = 1);
 
+-- Cálculo del costo promedio de los juegos por género
+SELECT g.nombre AS genero, AVG(j.costo) AS costo_promedio
+FROM generos g
+JOIN juegos j ON g.genero_id = j.genero_id
+GROUP BY g.genero_id
+ORDER BY costo_promedio DESC;
+
+-- Consulta de los juegos más populares basados en el número de ventas
+SELECT j.nombre AS juego, COUNT(*) AS total_ventas
+FROM juegos j
+JOIN ventas v ON j.juego_id = v.juego_id
+GROUP BY j.juego_id
+ORDER BY total_ventas DESC
+LIMIT 5;
+
+-- Consulta de los usuarios con mayor número de compras
+SELECT u.username, COUNT(*) AS total_compras
+FROM usuarios u
+JOIN ventas v ON u.usuario_id = v.usuario_id
+GROUP BY u.usuario_id
+ORDER BY total_compras DESC
+LIMIT 5;
+
+-- Consulta de los juegos que tienen el mayor stock disponible
+SELECT j.nombre AS juego, j.stock
+FROM juegos j
+ORDER BY j.stock DESC
+LIMIT 5;
+
+-- Consulta de los juegos más recientes lanzados por cada desarrollador
+SELECT j.nombre AS juego, j.desarrollador, j.fecha_lanzamiento
+FROM juegos j
+JOIN (
+    SELECT desarrollador, MAX(fecha_lanzamiento) AS ultima_fecha
+    FROM juegos
+    GROUP BY desarrollador
+) AS ultimos ON j.desarrollador = ultimos.desarrollador AND j.fecha_lanzamiento = ultimos.ultima_fecha;
+
 
 ````
