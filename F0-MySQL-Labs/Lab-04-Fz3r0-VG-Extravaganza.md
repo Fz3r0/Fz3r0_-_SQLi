@@ -231,6 +231,33 @@ VALUES
 
 ````
 
+````sql
+-- Insertar datos en la tabla tipos_juegos
+INSERT INTO tipos_juegos (nombre) VALUES
+('Arcade'),
+('FPS'),
+('RPG'),
+('Estrategia'),
+('Deportes'),
+('Aventura'),
+('Plataformas'),
+('Puzzle'),
+('Simulacion');
+
+-- Insertar datos en la tabla generos
+INSERT INTO generos (nombre) VALUES
+('Acción'),
+('Aventura'),
+('Disparos'),
+('Estrategia'),
+('Rol'),
+('Deportes'),
+('Plataformas'),
+('Puzzle'),
+('Simulacion');
+
+````
+
 
 
 
