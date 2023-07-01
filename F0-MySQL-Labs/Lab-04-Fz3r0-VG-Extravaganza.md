@@ -1,81 +1,121 @@
+## Instalar MySQL Linux
+
+Todo se debe hacer con `root` o `sudo`:
+
+1. **Instalar MySQL**
+
+    - En realidad solo es necesario instalar `mariadb`
+ 
+````sh
+sudo apt-get install mariadb-server
+````
+
+2. Habiliar `Apache Server` y `MySQL` para visualizar localhost /var/www/html (opcional)
+
+````sh
+# - Habilitar Apache y MySQL
+service apache2 start && service mysql start  
+````
+
+3. Ejecutar `mysql`
+
+````sh
+mysql
+````
+
+````sh
+❯ mysql
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 31
+Server version: 10.5.19-MariaDB-0+deb11u2 Debian 11
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+````
+
+## Crear Database: Fz3r0
 
 ````sql
 -- Creación de la base de datos
-CREATE DATABASE IF NOT EXISTS Fz3r0_Gaming_Extravaganza CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS fz3r0_gaming_extravaganza CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Selección de la base de datos
-USE Fz3r0_Gaming_Extravaganza;
+USE fz3r0_gaming_extravaganza;
 
--- Tabla de Usuarios
-CREATE TABLE IF NOT EXISTS Usuarios (
+-- Tabla de usuarios
+CREATE TABLE IF NOT EXISTS usuarios (
   usuario_id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(50) NOT NULL,
   password VARCHAR(255) NOT NULL,
-  name VARCHAR(100) NOT NULL,
-  address VARCHAR(200) NOT NULL,
-  phone VARCHAR(20) NOT NULL,
+  nombre VARCHAR(100) NOT NULL,
+  direccion VARCHAR(200) NOT NULL,
+  telefono VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL,
-  account_type ENUM('normal', 'premium') NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  tipo_cuenta ENUM('normal', 'premium') NOT NULL,
+  creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   INDEX idx_username (username)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Tabla de Generos
-CREATE TABLE IF NOT EXISTS Generos (
+-- Tabla de géneros
+CREATE TABLE IF NOT EXISTS generos (
   genero_id INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Tabla de Tipos de Juegos
-CREATE TABLE IF NOT EXISTS TiposJuegos (
+-- Tabla de tipos de juegos
+CREATE TABLE IF NOT EXISTS tipos_juegos (
   tipo_id INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Tabla de Juegos
-CREATE TABLE IF NOT EXISTS Juegos (
+-- Tabla de juegos
+CREATE TABLE IF NOT EXISTS juegos (
   juego_id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(100) NOT NULL,
-  developer VARCHAR(100) NOT NULL,
-  publisher VARCHAR(100) NOT NULL,
-  platform VARCHAR(50) NOT NULL,
-  release_date DATE NOT NULL,
+  nombre VARCHAR(100) NOT NULL,
+  desarrollador VARCHAR(100) NOT NULL,
+  publicador VARCHAR(100) NOT NULL,
+  plataforma VARCHAR(50) NOT NULL,
+  fecha_lanzamiento DATE NOT NULL,
   genero_id INT NOT NULL,
   tipo_id INT NOT NULL,
-  cost DECIMAL(10, 2) NOT NULL,
-  in_store_since DATE NOT NULL,
+  costo DECIMAL(10, 2) NOT NULL,
+  en_tienda_desde DATE NOT NULL,
   stock INT NOT NULL,
-  FOREIGN KEY (genero_id) REFERENCES Generos(genero_id),
-  FOREIGN KEY (tipo_id) REFERENCES TiposJuegos(tipo_id),
+  FOREIGN KEY (genero_id) REFERENCES generos(genero_id),
+  FOREIGN KEY (tipo_id) REFERENCES tipos_juegos(tipo_id),
   INDEX idx_genero_id (genero_id),
   INDEX idx_tipo_id (tipo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Tabla de Consolas
-CREATE TABLE IF NOT EXISTS Consolas (
+-- Tabla de consolas
+CREATE TABLE IF NOT EXISTS consolas (
   consola_id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(100) NOT NULL,
+  nombre VARCHAR(100) NOT NULL,
   fabricante VARCHAR(100) NOT NULL,
-  generation INT NOT NULL,
-  code VARCHAR(20) NOT NULL,
-  release_date DATE NOT NULL,
-  cost DECIMAL(10, 2) NOT NULL,
-  in_store_since DATE NOT NULL,
+  generacion INT NOT NULL,
+  codigo VARCHAR(20) NOT NULL,
+  fecha_lanzamiento DATE NOT NULL,
+  costo DECIMAL(10, 2) NOT NULL,
+  en_tienda_desde DATE NOT NULL,
   stock INT NOT NULL,
   INDEX idx_fabricante (fabricante),
-  INDEX idx_generation (generation)
+  INDEX idx_generacion (generacion)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Tabla de Ventas
-CREATE TABLE IF NOT EXISTS Ventas (
+-- Tabla de ventas
+CREATE TABLE IF NOT EXISTS ventas (
   venta_id INT PRIMARY KEY AUTO_INCREMENT,
   usuario_id INT NOT NULL,
   juego_id INT,
   consola_id INT,
   fecha_venta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
-  FOREIGN KEY (juego_id) REFERENCES Juegos(juego_id),
-  FOREIGN KEY (consola_id) REFERENCES Consolas(consola_id),
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
+  FOREIGN KEY (juego_id) REFERENCES juegos(juego_id),
+  FOREIGN KEY (consola_id) REFERENCES consolas(consola_id),
   INDEX idx_usuario_id (usuario_id),
   INDEX idx_juego_id (juego_id),
   INDEX idx_consola_id (consola_id)
