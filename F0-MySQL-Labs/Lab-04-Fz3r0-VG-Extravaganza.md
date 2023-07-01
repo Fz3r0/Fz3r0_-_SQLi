@@ -582,6 +582,9 @@ SELECT * FROM usuarios WHERE username = 'admin';
 -- Consulta: Obtener el nombre y la dirección de todos los usuarios
 SELECT username,password,nombre,direccion FROM usuarios;
 
+-- Consulta por un username y password en particular
+SELECT username,password,nombre,direccion FROM usuarios WHERE username = 'JohnMcLane' AND password = 'Y1p1k@y3y3';
+
 -- Consulta: Contar la cantidad de juegos de acción
 SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción');
 
