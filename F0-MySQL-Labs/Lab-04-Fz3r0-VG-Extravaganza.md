@@ -846,3 +846,33 @@ ORDER BY
     promedio_gasto DESC;
 
 ````
+
+---
+
+### Calculo 2 
+
+- Este query busca usuarios que hayan realizado ventas de juegos del género con ID 1 y que hayan comprado consolas del fabricante "Sony". Se agrupan los resultados por usuario y se calcula el total de ventas, el total gastado y el promedio de gasto.
+- Luego, se filtran aquellos usuarios cuyo total gastado sea mayor a 100 y se ordenan los resultados por el total de ventas en orden descendente.
+
+````sql
+SELECT
+    u.nombre AS usuario,
+    COUNT(DISTINCT v.venta_id) AS total_ventas,
+    SUM(j.costo) AS total_gastado,
+    AVG(j.costo) AS promedio_gasto
+FROM
+    usuarios u
+    LEFT JOIN ventas v ON u.usuario_id = v.usuario_id
+    LEFT JOIN juegos j ON v.juego_id = j.juego_id
+    LEFT JOIN consolas c ON v.consola_id = c.consola_id
+WHERE
+    j.genero_id = 1
+    AND c.fabricante = 'Sony'
+GROUP BY
+    u.usuario_id
+HAVING
+    total_gastado > 100
+ORDER BY
+    total_ventas DESC;
+
+````
