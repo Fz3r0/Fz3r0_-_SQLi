@@ -2,6 +2,8 @@
 
 ## Introducción
 
+## Esquema `information_schema`
+
 El esquema `information_schema` es **un esquema especial que se encuentra en la mayoría de los sistemas de gestión de bases de datos (DBMS)**, incluidos `MySQL`, `PostgreSQL`, `Oracle` y otros. Este esquema contiene información sobre los metadatos de la base de datos, como `tablas`, `columnas`, `restricciones`, `privilegios` y más.
 
 Dentro del esquema `information_schema`, la **tabla `schemata`** es una **tabla estándar que almacena información sobre los esquemas** (bases de datos) presentes en el sistema. La columna `schema_name` de esta tabla contiene los nombres de los esquemas. 
@@ -14,7 +16,7 @@ Es importante tener en cuenta que la disponibilidad y el contenido exacto de la 
 
 - `information_schema` **NO** es una base de datos en sí misma, sino un esquema especial que se encuentra en la mayoría de los sistemas de gestión de bases de datos. Es un componente estándar que proporciona información sobre los metadatos de la base de datos.
 
-Dentro del esquema `information_schema`, hay varias tablas que almacenan información sobre diferentes aspectos de la base de datos, como `tablas`, `columnas`, `restricciones`, `privilegios`, `rutinas almacenadas`, etc. Estas tablas tienen nombres como `schemata`, `tables`, `columns`, `constraints`, `privileges`, entre otros:
+- Dentro del esquema `information_schema`, hay varias tablas que almacenan información sobre diferentes aspectos de la base de datos, como `tablas`, `columnas`, `restricciones`, `privilegios`, `rutinas almacenadas`, etc. Estas tablas tienen nombres como `schemata`, `tables`, `columns`, `constraints`, `privileges`, entre otros:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/32909a84-ebfe-4ba7-87a4-42a708c6b8d5)
 
