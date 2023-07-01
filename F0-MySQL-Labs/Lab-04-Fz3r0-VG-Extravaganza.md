@@ -498,6 +498,7 @@ COMMIT;
 - Selecciona aleatoriamente un ID de juego o un ID de consola (pero no ambos) y los asigna a las columnas correspondientes en la tabla de ventas.
 - Elimina los registros donde tanto el ID de juego como el ID de consola son nulos.
 - Esto garantiza que al menos una de las columnas tenga un valor no nulo en cada registro de venta.
+- También elimina todas las ventas generadas por el usuario "admin" _(Ya que este simula el admin del sistema)_
 
 ````sql
 -- Creador de ventas automatizado
@@ -517,6 +518,10 @@ LIMIT 500;
 
 DELETE FROM ventas
 WHERE juego_id IS NULL AND consola_id IS NULL;
+
+DELETE FROM ventas
+WHERE usuario_id = 'admin';
+
 
 ````
 
