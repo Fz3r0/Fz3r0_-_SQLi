@@ -1,5 +1,9 @@
 ## Query 1
 
+````sql
+SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción');
+````
+
 - Este query **solo es para contar** así que es algo complejo sacar información, pero sirve para entender la inyección cuando solo se puede obtener una linea de resultado. 
 - Se debe poner `LIMIT` ya que este tipo de query solo arroja un resultado, en caso de poner únicamente el `or 1 = 1`
 
