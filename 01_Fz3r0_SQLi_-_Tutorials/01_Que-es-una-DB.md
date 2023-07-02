@@ -31,6 +31,8 @@
 - PostgreSQL
 - SQLite
 
+### DMBS No Relacionales _(más comunes)_:
+
 ---
 
 ### Estructura de DBMS Relacionales
@@ -50,11 +52,24 @@ Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propi
 
 ---
 
-### Tablas / Tables
+### Tablas / `Tables`
 
 - Una tabla(`table`) está compuesta por columnas(`columns`) y filas(`rows`).
 - Una forma útil de imaginar una tabla es como una cuadrícula, donde las columnas se encuentran en la parte superior, de izquierda a derecha, y contienen el nombre de cada celda, mientras que las filas van de arriba abajo y contienen los datos reales.
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/84aad70c-ee80-4c75-a919-70260711179a)
+
+---
+
+### Columnas AKA Campos / `Columns` AKA `Fields`:
+
+- Cada columna`Columns`, mejor conocida como campo`Fields`, tiene un nombre único por tabla. 
+- Al crear una columna, también se establece el tipo de datos que contendrá, siendo comunes los enteros (números), cadenas (texto estándar) o fechas.
+- Algunas bases de datos pueden contener datos mucho más complejos, como los geoespaciales, que contienen información de ubicación.
+- Establecer el tipo de datos también garantiza que no se almacene información incorrecta, como la cadena "hello world" en una columna destinada a las fechas. Si esto sucede, el servidor de la base de datos generalmente mostrará un mensaje de error.
+- Una columna que contiene un número entero también puede tener habilitada la función de **autoincremento**; esto asigna a cada fila de datos un número único que aumenta (se incrementa) con cada fila posterior. Al hacerlo, se crea lo que se llama un **campo clave**, el cual debe ser único para cada fila de datos y se puede utilizar para encontrar esa fila exacta en consultas SQL.
+
+---
+
 
 
