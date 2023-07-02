@@ -11,6 +11,12 @@
 
 ### `select * from usuarios;`
 
+- La consulta `SELECT * FROM usuarios` se utiliza para seleccionar(SELECT) y mostrar todos(*) los datos de la tabla "usuarios"(FROM usuarios) en una base de datos. 
+   
+   - `SELECT" indica que queremos seleccionar datos de la tabla.
+   - El asterisco `*` se utiliza como comodín y significa `todos`. En este caso, seleccionará todas las columnas de la tabla.
+  - `FROM` especifica la tabla de la que queremos seleccionar los datos. En este caso, es la tabla `usuarios`.
+
 ````py
 +------------+-------------------+---------------------------------+---------------------------+---------------------------+-------------+--------------------------------+-------------+---------------------+
 | usuario_id | username          | password                        | nombre                    | direccion                 | telefono    | email                          | tipo_cuenta | creado_en           |
