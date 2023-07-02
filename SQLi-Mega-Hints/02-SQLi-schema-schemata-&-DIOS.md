@@ -39,11 +39,11 @@ Es importante tener en cuenta que la disponibilidad y el contenido exacto de la 
 SELECT schema_name FROM information_schema.schemata;
 
 ## Table Name AKA Tables Names Dump
-SELECT table_name FROM information_schema.tables WHERE table_schema=database();
-SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_videogame_extravaganza';
+SELECT table_name FROM information_schema.tables WHERE table_schema=database(); -- Opción 1
+SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_videogame_extravaganza'; -- Opción 2
 
-## Schema Name AKA Databases Names Dump
-SELECT column_name FROM information_schema.schemata;
+## Column Name AKA Column Names Dump
+SELECT column_name FROM information_schema.columns WHERE table_name='usuarios';
 ````
 
 ---
