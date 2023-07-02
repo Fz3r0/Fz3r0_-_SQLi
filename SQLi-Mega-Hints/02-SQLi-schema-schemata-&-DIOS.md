@@ -40,7 +40,7 @@ SELECT schema_name FROM information_schema.schemata;
 
 ## Table Name AKA Tables Names Dump
 SELECT table_name FROM information_schema.tables WHERE table_schema=database(); -- Opción 1
-SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_videogame_extravaganza'; -- Opción 2
+SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_gaming_extravaganza'; -- Opción 2
 
 ## Column Name AKA Column Names Dump
 SELECT column_name FROM information_schema.columns WHERE table_name='usuarios';
