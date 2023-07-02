@@ -55,48 +55,8 @@ En general, la base de datos "fz3r0_gaming_extravaganza" está bien estructurada
 
 ## Diagrama de Base de Datos
 
-````py
-+------------+       +-------------+         +-----------------+       +------------+
-|  usuarios  |       |   ventas    |         |    juegos       |       |  generos   |
-+------------+       +-------------+         +-----------------+       +------------+
-|PK usuario_id|      | PK venta_id |         |PK juego_id      |       |PK genero_id|
-|   username |------>|FK usuario_id|<------  |   genero_id     |<------|   nombre   |
-|   password |       |FK juego_id  |         |   tipo_id       |       +------------+
-|   nombre   |       |FK consola_id|         |    nombre       |
-|  direccion |       | fecha_venta |         | desarrollador   |
-|  telefono  |       +-----------+           |   publicador    |
-|    email   |                               |  plataforma     |
-|tipo_cuenta |                               |fecha_lanzamiento|
-|  creado_en |                               |     costo       |
-+------------+                               |en_tienda_desde  |
-                                             |    stock        |
-                                             +-----------------+
-                                                    |
-                                                    |
-                                             +--------------+
-                                            |  tipos_juegos |
-                                            +---------------+
-                                            |  PK tipo_id   |
-                                            |    nombre     |
-                                            +---------------+
-                                                    |
-                                                  |
-                                          +--------------+
-                                          |   consolas   |
-                                          +--------------+
-                                          |PK consola_id |
-                                          |   nombre     |
-                                          |  fabricante  |
-                                          |  generacion  |
-                                          |   codigo     |
-                                          |fecha_lanzamien|
-                                          |     to       |
-                                          |    costo     |
-                                          |en_tienda_desde|
-                                          |    stock     |
-                                          +--------------+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/9f5016a1-8cd8-438c-8f3c-d2d7a58cfba5)
 
-````
 
 ## Instalar MySQL Linux
 
