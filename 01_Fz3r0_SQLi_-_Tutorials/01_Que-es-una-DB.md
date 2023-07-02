@@ -16,7 +16,7 @@
 
 <br>
 
-## Base de Datos: DBMS Relacional
+## Base de Datos: DBMS `Relacional`
 
 - Una base de datos relacional es un tipo de base de datos que organiza los datos en tablas con filas y columnas.
 - Se llama "relacional" porque establece relaciones entre las tablas utilizando claves primarias y claves externas para mantener la integridad y coherencia de los datos.
@@ -74,8 +74,15 @@ Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propi
 - Las filas`Rows` o registros`Records` son lo que contiene las líneas individuales de datos.
 - Cuando **agregas datos** a una tabla, se **crea** una nueva `Row/Record`, y cuando **eliminas datos**, se **elimina** una `Row/Record`.
 
+---
 
-## Base de Datos: DBMS No-Relacional
+<br>
+
+<br>
+
+<br>
+
+## Base de Datos: DBMS `No-Relacional`
 
 - Una base de datos no relacional es un tipo de base de datos que NO sigue el modelo relacional de tablas y relaciones.
 - En lugar de utilizar tablas con filas y columnas, las bases de datos no relacionales utilizan diferentes estructuras de datos, como documentos, gráficos o clave-valor, para almacenar y organizar la información. Se llaman "no relacionales" porque no establecen relaciones explícitas entre los datos almacenados.
