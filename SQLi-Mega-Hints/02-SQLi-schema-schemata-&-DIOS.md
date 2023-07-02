@@ -41,11 +41,14 @@ SELECT schema_name FROM information_schema.schemata;
 ## Table Name AKA Tables Names Dump
 SELECT table_name FROM information_schema.tables WHERE table_schema=database(); -- Opción 1
 SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_gaming_extravaganza'; -- Opción 2
+SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_gaming_extravaganza' ORDER BY table_name ASC LIMIT 0,1; -- Opción 3 LIMIT & ORDER
 
 ## Column Name AKA Column Names Dump
 SELECT column_name FROM information_schema.columns WHERE table_name='usuarios'; -- Tabla "usuarios" de TODAS las DB
 SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' and table_schema=database(); -- Tabla "usuarios" de database() opt1
 SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' and table_schema='fz3r0_gaming_extravaganza'; -- Tabla "usuarios" de database() opt2
+SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' and table_schema='fz3r0_gaming_extravaganza' ORDER BY 'usuarios' ASC LIMIT 0,1; -- Tabla "usuarios" de 
+
 
 ````
 
