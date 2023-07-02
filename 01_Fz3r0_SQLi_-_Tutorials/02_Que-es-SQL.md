@@ -15,7 +15,7 @@
 +------------+-------------------+---------------------------------+---------------------------+---------------------------+-------------+--------------------------------+-------------+---------------------+
 | usuario_id | username          | password                        | nombre                    | direccion                 | telefono    | email                          | tipo_cuenta | creado_en           |
 +------------+-------------------+---------------------------------+---------------------------+---------------------------+-------------+--------------------------------+-------------+---------------------+
-|          1 | admin             | admin12345                      | Admin General del Sistema | Fz3r0 Gaming Extravaganza | 666-666-666 | noob_admin@fz3r0_gaming.net    | premium     | 1998-07-11 00:00:00 |
+|          1 | Admin             | AdMiN12345                      | Admin General del Sistema | Fz3r0 Gaming Extravaganza | 666-666-666 | noob_admin@fz3r0_gaming.net    | premium     | 1998-07-11 00:00:00 |
 |          2 | Mario             | ItsaMeM@rio!                    | Mario                     | 123 Mushroom Kingdom      | 555-1234    | mario_plumber@nintendo.jp      | premium     | 1985-09-13 00:00:00 |
 |          3 | Luigi             | Lu1g1Time!                      | Luigi                     | 456 Mushroom Kingdom      | 555-5678    | luigi_plumber@nintendo.jp      | normal      | 1983-07-14 00:00:00 |
 |          4 | Peach             | Pr1nc3ssPeach                   | Princess Peach            | 789 Mushroom Kingdom      | 555-9012    | peach@nintendo.jp              | premium     | 1985-09-13 00:00:00 |
