@@ -3,7 +3,7 @@
 - Una base de datos es una forma organizada de almacenar colecciones de datos electrónicamente.
 - Una base de datos está controlada por un Sistema de Gestión de Bases de Datos o Data Base Management System (DBMS).
 
-## Tipos principales de DBMS: 
+### Tipos principales de DBMS: 
 
 1. Relacionales.
 2. No relacionales.
