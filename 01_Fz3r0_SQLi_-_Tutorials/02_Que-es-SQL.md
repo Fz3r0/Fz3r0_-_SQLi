@@ -25,4 +25,5 @@
 |          8 | Zelda             | Pr1nc3ssZelda                   | Princess Zelda            | 852 Hyrule Castle         | 555-6789    | zelda@nintendo.jp              | premium     | 1986-02-21 00:00:00 |
 |          9 | Samus             | M3troidHunt3r                   | Samus Aran                | 963 Zebes                 | 555-0123    | samus@nintendo.jp              | normal      | 1986-08-06 00:00:00 |
 |         10 | Kirby             | P1nkFluff                       | Kirby                     | 369 Dream Land            | 555-4567    | kirby@nintendo.jp              | premium     | 1992-04-27 00:00:00 |
++------------+-------------------+---------------------------------+---------------------------+---------------------------+-------------+--------------------------------+-------------+---------------------+
 ````
