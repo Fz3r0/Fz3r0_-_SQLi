@@ -1874,3 +1874,12 @@ allintitle:*.php?filename=*
 allintitle:*.php?page=*
 allintitle:*.php?logon=*
 ````
+
+- `mx`
+
+````
+inurl:index.php?= inurl:.mx
+inurl:index.php?= inurl:.gob.mx
+````
+
+
