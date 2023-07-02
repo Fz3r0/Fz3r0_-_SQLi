@@ -13,6 +13,7 @@
 - [Bypassing WAF to do advanced Error-Based SQL Injection - From Dorking to DIOS & Data Dump!](https://kleiton0x00.github.io/posts/Bypassing-WAF-to-do-advanced-Error-based-SQL-Injection/)
 - [SQL Injection - MySQL comment: the double dash mystery](https://blog.raw.pm/en/sql-injection-mysql-comment/)
 - [Google Dorks & SQL Injection on Real Websites](https://www.youtube.com/watch?v=2cm1jYtRXAc)
+- [Dork Sql Injection](https://www.youtube.com/watch?v=Eq8GNOnx2Rw)
 
 ---
 
