@@ -1,4 +1,9 @@
-## Instroducción
+# `Lab`: MySQL Database - `Fz3r0 Gaming Extravaganza`
+_Laboratorio de MySQL diseñado para realizar pruebas en laboratorios de MySQL y laboratorios de pentesting de SQLi basado en una Base de datos "real"._
+
+## Índice
+
+## Introducción
 
 La base de datos "fz3r0_gaming_extravaganza" está diseñada para realizar pruebas en laboratorios de MySQL y laboratorios de pentesting de SQLi. 
 
