@@ -52,6 +52,64 @@ Tipos de caracteres adecuados:La base de datos utiliza el conjunto de caracteres
 
 En general, la base de datos "fz3r0_gaming_extravaganza" está bien estructurada en términos de relaciones, índices y detalles técnicos. Ha sido diseñada con el objetivo de permitir pruebas y experimentos en entornos de laboratorio de MySQL y pentesting de MySQL, brindando una base sólida y eficiente para trabajar con información de usuarios, géneros, tipos de juegos, detalles de juegos, consolas y registros de ventas.
 
+## Diagrama de Base de Datos
+
+````py
+        +-----------------+           +--------------+            +--------------+
+        |     usuarios    |           |    ventas    |            |     juegos   |
+        +-----------------+           +--------------+            +--------------+
+        | usuario_id (PK) |<----------| venta_id (PK)|            | juego_id (PK)|
+        | username        |           | usuario_id   |<-----------| nombre       |
+        | password        |           | juego_id     |<-----------| desarrollador|
+        | nombre          |           | consola_id   |<-----------| publicador   |
+        | direccion       |           | fecha_venta  |            | plataforma   |
+        | telefono        |           +--------------+            | fecha_lanzam.|
+        | email           |                                        | genero_id    |
+        | tipo_cuenta     |                                        | tipo_id      |
+        | creado_en       |                                        | costo        |
+        +-----------------+                                        | en_tienda_desde|
+                                                                  | stock        |
+                                                                  +--------------+
+                                                                          ^
+                                                                          |
+                                                                          |
+                                                                          |
+                                                                    +-----------------+
+                                                                    |     generos     |
+                                                                    +-----------------+
+                                                                    | genero_id (PK)  |
+                                                                    | nombre          |
+                                                                    +-----------------+
+                                                                          ^
+                                                                          |
+                                                                          |
+                                                                          |
+                                                                    +-----------------+
+                                                                    |  tipos_juegos   |
+                                                                    +-----------------+
+                                                                    | tipo_id (PK)    |
+                                                                    | nombre          |
+                                                                    +-----------------+
+                                                                          ^
+                                                                          |
+                                                                          |
+                                                                          |
+                                                                          |
+                                                                    +-----------------+
+                                                                    |    consolas     |
+                                                                    +-----------------+
+                                                                    | consola_id (PK) |
+                                                                    | nombre          |
+                                                                    | fabricante      |
+                                                                    | generacion      |
+                                                                    | codigo          |
+                                                                    | fecha_lanzam.   |
+                                                                    | costo           |
+                                                                    | en_tienda_desde |
+                                                                    | stock           |
+                                                                    +-----------------+
+
+````
 
 ## Instalar MySQL Linux
 
