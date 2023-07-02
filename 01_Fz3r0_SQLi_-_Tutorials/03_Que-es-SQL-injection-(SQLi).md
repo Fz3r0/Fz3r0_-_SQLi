@@ -55,4 +55,4 @@ Este fue solo un ejemplo de una vulnerabilidad de inyección SQL de un tipo llam
 
     1. In-Band
     2. Blind
-    3. Out Of Band, los cuales se discutirán en las próximas tareas.
+    3. Out Of Band
