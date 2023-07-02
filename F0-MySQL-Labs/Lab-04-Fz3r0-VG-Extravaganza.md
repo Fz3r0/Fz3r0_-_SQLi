@@ -55,65 +55,45 @@ En general, la base de datos "fz3r0_gaming_extravaganza" está bien estructurada
 ## Diagrama de Base de Datos
 
 ````py
-        +-----------------+           +--------------+            +--------------+
-        |     usuarios    |           |    ventas    |            |     juegos   |
-        +-----------------+           +--------------+            +--------------+
-        | usuario_id (PK) |<----------| venta_id (PK)|            | juego_id (PK)|
-        | username        |           | usuario_id (FK)|<--------| nombre       |
-        | password        |           | juego_id (FK)  |<--------| desarrollador|
-        | nombre          |           | consola_id (FK)|<--------| publicador   |
-        | direccion       |           | fecha_venta    |            | plataforma   |
-        | telefono        |           +--------------+            | fecha_lanzam.|
-        | email           |                                        | genero_id (FK)|
-        | tipo_cuenta     |                                        | tipo_id (FK)  |
-        | creado_en       |                                        | costo        |
-        +-----------------+                                        | en_tienda_desde|
-                                                                  | stock        |
-                                                                  +--------------+
-                                                                        ^      |
-                                                                        |      |
-                                                                        |      |
-                                                                        |      |
-                                                                        |      |
-                                                                        |      |
-                                                                +-----------------+
-                                                                |     generos     |
-                                                                +-----------------+
-                                                                | genero_id (PK)  |
-                                                                | nombre          |
-                                                                +-----------------+
-                                                                      ^
-                                                                      |
-                                                                      |
-                                                                      |
-                                                                      |
-                                                                      |
-                                                                +-----------------+
-                                                                |  tipos_juegos   |
-                                                                +-----------------+
-                                                                | tipo_id (PK)    |
-                                                                | nombre          |
-                                                                +-----------------+
-                                                                      ^
-                                                                      |
-                                                                      |
-                                                                      |
-                                                                      |
-                                                                      |
-                                                                +-----------------+
-                                                                |    consolas     |
-                                                                +-----------------+
-                                                                | consola_id (PK) |
-                                                                | nombre          |
-                                                                | fabricante      |
-                                                                | generacion      |
-                                                                | codigo          |
-                                                                | fecha_lanzam.   |
-                                                                | costo           |
-                                                                | en_tienda_desde |
-                                                                | stock           |
-                                                                +-----------------+
-
++------------+       +-------------+         +-----------------+       +------------+
+|  usuarios  |       |   ventas    |         |    juegos       |       |  generos   |
++------------+       +-------------+         +-----------------+       +------------+
+|PK usuario_id|      | PK venta_id |         |PK juego_id      |       |PK genero_id|
+|   username |------>|FK usuario_id|<------  |   genero_id     |<------|   nombre   |
+|   password |       |FK juego_id  |         |   tipo_id       |       +------------+
+|   nombre   |       |FK consola_id|         |    nombre       |
+|  direccion |       | fecha_venta |         | desarrollador   |
+|  telefono  |       +-----------+           |   publicador    |
+|    email   |                               |  plataforma     |
+|tipo_cuenta |                               |fecha_lanzamiento|
+|  creado_en |                               |     costo       |
++------------+                               |en_tienda_desde  |
+                                             |    stock        |
+                                             +-----------------+
+                                                    |
+                                                    |
+                                             +--------------+
+                                            |  tipos_juegos |
+                                            +---------------+
+                                            |  PK tipo_id   |
+                                            |    nombre     |
+                                            +---------------+
+                                                    |
+                                                  |
+                                          +--------------+
+                                          |   consolas   |
+                                          +--------------+
+                                          |PK consola_id |
+                                          |   nombre     |
+                                          |  fabricante  |
+                                          |  generacion  |
+                                          |   codigo     |
+                                          |fecha_lanzamien|
+                                          |     to       |
+                                          |    costo     |
+                                          |en_tienda_desde|
+                                          |    stock     |
+                                          +--------------+
 
 ````
 
