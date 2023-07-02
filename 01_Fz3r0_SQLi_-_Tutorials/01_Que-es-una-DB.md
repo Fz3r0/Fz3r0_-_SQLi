@@ -31,8 +31,6 @@
 - PostgreSQL
 - SQLite
 
-### DMBS No Relacionales _(más comunes)_:
-
 ---
 
 ### Estructura de DBMS Relacionales
@@ -73,3 +71,21 @@ Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propi
 
 
 
+## Base de Datos: DBMS No-Relacional
+
+- Una base de datos no relacional es un tipo de base de datos que NO sigue el modelo relacional de tablas y relaciones.
+- En lugar de utilizar tablas con filas y columnas, las bases de datos no relacionales utilizan diferentes estructuras de datos, como documentos, gráficos o clave-valor, para almacenar y organizar la información. Se llaman "no relacionales" porque no establecen relaciones explícitas entre los datos almacenados.
+- Estas bases de datos son adecuadas para situaciones donde la estructura y los tipos de datos pueden variar mucho y no se requiere una estructura rígida de tablas. Además, suelen ser escalables y flexibles en términos de almacenamiento y recuperación de datos.
+- Es importante destacar que el término "no relacional" no implica que este tipo de base de datos sea inferior o inferior a las bases de datos relacionales, simplemente siguen un enfoque diferente para almacenar y gestionar la información.
+
+---
+
+### DMBS No Relacionales _(más comunes)_:
+
+- MongoDB
+- Cassandra
+- ElasticSearch
+
+---
+
+### DBMS No-Relacional: Información que cura
