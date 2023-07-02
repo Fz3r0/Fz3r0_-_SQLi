@@ -52,6 +52,9 @@ Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propi
 
 ### Tablas / Tables
 
-- Una tabla está compuesta por columnas y filas.
+- Una tabla(`table`) está compuesta por columnas(`columns`) y filas(`rows`).
 - Una forma útil de imaginar una tabla es como una cuadrícula, donde las columnas se encuentran en la parte superior, de izquierda a derecha, y contienen el nombre de cada celda, mientras que las filas van de arriba abajo y contienen los datos reales.
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/84aad70c-ee80-4c75-a919-70260711179a)
+
 
