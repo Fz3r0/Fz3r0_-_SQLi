@@ -69,6 +69,10 @@ Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propi
 
 ---
 
+### Filas AKA Registros / `Rows` AKA `Records`
+
+- Las filas`Rows` o registros`Records` son lo que contiene las líneas individuales de datos.
+- Cuando **agregas datos** a una tabla, se **crea** una nueva `Row/Record`, y cuando **eliminas datos**, se **elimina** una `Row/Record`.
 
 
 ## Base de Datos: DBMS No-Relacional
@@ -88,4 +92,20 @@ Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propi
 
 ---
 
-### DBMS No-Relacional: Información que cura
+### DBMS Relacional VS No-Relacional: Información que cura
+
+- Una base de datos relacional almacena información en tablas y a menudo las tablas tienen información compartida entre ellas. Utilizan columnas para especificar y definir los datos que se almacenan y filas para almacenar realmente los datos. Las tablas suelen contener una columna con un ID único (clave primaria) que se utiliza en otras tablas para hacer referencia a ella y establecer una relación entre las tablas, de ahí el nombre de base de datos relacional.
+
+- Por otro lado, las bases de datos no relacionales, a veces llamadas `NoSQL`, son cualquier tipo de base de datos que no utiliza tablas, columnas y filas para almacenar los datos. No es necesario construir un diseño de base de datos específico, por lo que cada fila de datos puede contener información diferente, lo que proporciona más flexibilidad que una base de datos relacional. Algunas bases de datos populares de este tipo son MongoDB, Cassandra y ElasticSearch.
+
+---
+
+<br>
+
+<br>
+
+<br>
+
+## Recursos
+
+- [THM - SQL Injection](https://tryhackme.com/room/sqlinjectionlm)
