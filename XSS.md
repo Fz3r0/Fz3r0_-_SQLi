@@ -1,4 +1,4 @@
-````
+````js
 <script>alert(1);</script>
 <script>alert('XSS');</script>
 <IMG SRC=javascript:alert(&quot;XSS&quot;)>
