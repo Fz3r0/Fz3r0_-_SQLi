@@ -45,6 +45,14 @@ El **punto y coma `;`** en la URL indica el final de la declaración SQL, y **lo
 SELECT * FROM blog WHERE id=2;-- 
 ````
 
-Lo cual devolverá el artículo con un identificador de 2, sin importar si está configurado como público o no.
+- **Lo cual devolverá el artículo con un identificador de 2, sin importar si está configurado como público o no.**
 
-Este fue solo un ejemplo de una vulnerabilidad de inyección SQL de un tipo llamado In-Band SQL Injection. En total, hay 3 tipos de inyección SQL: In-Band, Blind y Out Of Band, los cuales se discutirán en las próximas tareas.
+Este fue solo un ejemplo de una vulnerabilidad de inyección SQL de un tipo llamado In-Band SQL Injection. 
+
+## Tipos de SQLi
+
+- En total, hay 3 tipos de inyección SQL:
+
+    1. In-Band
+    2. Blind
+    3. Out Of Band, los cuales se discutirán en las próximas tareas.
