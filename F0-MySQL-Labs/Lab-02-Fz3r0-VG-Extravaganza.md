@@ -84,7 +84,6 @@ sudo apt-get install mariadb-server
 2. Habiliar `Apache Server` y `MySQL` para visualizar localhost /var/www/html (opcional)
 
 ````sh
-# - Habilitar Apache y MySQL
 service apache2 start && service mysql start  
 ````
 
