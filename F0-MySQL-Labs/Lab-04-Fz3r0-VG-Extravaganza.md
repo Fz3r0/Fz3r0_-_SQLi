@@ -5,7 +5,8 @@ _Laboratorio de MySQL diseñado para realizar pruebas en laboratorios de MySQL y
 
 ## Introducción
 
-La base de datos "fz3r0_gaming_extravaganza" está diseñada para realizar pruebas en laboratorios de MySQL y laboratorios de pentesting de SQLi. 
+- La base de datos **`fz3r0_gaming_extravaganza`** está diseñada para realizar pruebas en laboratorios de **`MySQL`** y laboratorios de **`pentesting SQLi`**.
+- No se recomienda el uso de esta base de datos en producción, está diseñada exclusivamente para pruebas de laboratorio con fines científicos y educativos. 
 
 ## Estructura de Base de Datos
 
