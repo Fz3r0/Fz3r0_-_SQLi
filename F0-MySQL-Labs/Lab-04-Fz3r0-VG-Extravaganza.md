@@ -8,11 +8,20 @@ _Laboratorio de MySQL diseñado para realizar pruebas en laboratorios de MySQL y
 - La base de datos **`fz3r0_gaming_extravaganza`** está diseñada para realizar pruebas en laboratorios de **`MySQL`** y laboratorios de **`pentesting SQLi`**.
 - No se recomienda el uso de esta base de datos en producción, está diseñada exclusivamente para pruebas de laboratorio con fines científicos y educativos. 
 
-## Estructura de Base de Datos
+## Tablas de Base de Datos
 
-La base de datos consta de las siguientes tablas: usuarios, generos, tipos_juegos, juegos, consolas y ventas.
+La base de datos consta de las siguientes tablas: 
 
-La tabla "usuarios" almacena información sobre los usuarios, como su nombre de usuario, contraseña, nombre completo, dirección, teléfono, correo electrónico y tipo de cuenta. El campo "usuario_id" se utiliza como clave primaria y se genera automáticamente mediante el incremento automático. Además, hay un índice creado en el campo "username" para mejorar la eficiencia de las consultas de búsqueda por nombre de usuario.
+1. usuarios
+4. juegos
+2. generos
+3. tipos_juegos
+6. consolas
+7. ventas.
+
+### Tabla "usuarios" 
+
+Almacena información sobre los usuarios, como su nombre de usuario, contraseña, nombre completo, dirección, teléfono, correo electrónico y tipo de cuenta. El campo "usuario_id" se utiliza como clave primaria y se genera automáticamente mediante el incremento automático. Además, hay un índice creado en el campo "username" para mejorar la eficiencia de las consultas de búsqueda por nombre de usuario.
 
 La tabla "generos" almacena los géneros de los juegos. Cada género tiene un identificador único ("genero_id") y un nombre asociado.
 
@@ -26,30 +35,32 @@ La tabla "ventas" registra las transacciones de venta realizadas por los usuario
 
 En resumen, la base de datos "fz3r0_gaming_extravaganza" proporciona una estructura adecuada para realizar pruebas y experimentos relacionados con la administración de usuarios, géneros y tipos de juegos, información detallada de juegos, consolas y registros de ventas. Los índices y las relaciones entre tablas están presentes para mejorar el rendimiento y garantizar la integridad de los datos.
 
-## Descripción de la Base de Datos
+## Detalles de la Base de Datos
 
 La base de datos "fz3r0_gaming_extravaganza" ha sido diseñada teniendo en cuenta la estructura relacional y la eficiencia en el acceso a los datos. Aquí hay más detalles técnicos sobre las relaciones y los índices utilizados en la base de datos:
 
-Relaciones:
+### Relaciones:
 
 La tabla "juegos" tiene una relación de muchos a uno con la tabla "generos" a través del campo "genero_id". Esto permite que un juego esté asociado a un solo género, mientras que un género puede tener múltiples juegos.
 La tabla "juegos" también tiene una relación de muchos a uno con la tabla "tipos_juegos" a través del campo "tipo_id". Esto permite que un juego esté asociado a un solo tipo de juego, mientras que un tipo de juego puede tener múltiples juegos.
 La tabla "ventas" tiene relaciones de muchos a uno con las tablas "usuarios", "juegos" y "consolas" a través de los campos "usuario_id", "juego_id" y "consola_id" respectivamente. Esto permite que una venta esté asociada a un usuario, un juego y una consola específicos, mientras que un usuario, un juego o una consola pueden tener múltiples ventas.
-Índices:
+
+### Índices:
 
 Se han creado índices en los campos clave y de búsqueda frecuente para mejorar el rendimiento de las consultas. Por ejemplo, se han creado índices en los campos "username" de la tabla "usuarios", "genero_id" y "tipo_id" de la tabla "juegos", "fabricante" y "generacion" de la tabla "consolas", y en los campos de relación de la tabla "ventas" como "usuario_id", "juego_id" y "consola_id".
 Los índices ayudan a acelerar las consultas al permitir una búsqueda más rápida y eficiente en los datos. Mejoran el rendimiento al reducir la cantidad de registros que se deben examinar durante la ejecución de una consulta.
+
+---
+
+### Diseño:
+
 La base de datos "fz3r0_gaming_extravaganza" está bien diseñada desde el punto de vista técnico debido a las siguientes razones:
 
-Normalización: Las tablas están diseñadas siguiendo los principios de normalización para garantizar la integridad de los datos y evitar la duplicación innecesaria de información. Se han identificado entidades y relaciones adecuadas, y los campos están organizados de manera lógica.
-
-Relaciones definidas: Las relaciones entre las tablas se han establecido utilizando claves foráneas para garantizar la coherencia y consistencia de los datos. Esto permite mantener la integridad referencial y facilita el mantenimiento de la base de datos.
-
-Índices adecuados: Se han creado índices en los campos clave y de búsqueda frecuente para mejorar el rendimiento de las consultas. Esto permite un acceso más rápido a los datos y reduce la carga en el sistema.
-
-Tipos de datos adecuados: Se han seleccionado los tipos de datos adecuados para cada campo en función de su propósito y contenido. Esto ayuda a optimizar el almacenamiento y garantiza la precisión de los datos almacenados.
-
-Tipos de caracteres adecuados:La base de datos utiliza el conjunto de caracteres "utf8mb4" y el cotejamiento "utf8mb4_unicode_ci" para admitir caracteres multibyte y asegurar la compatibilidad con diferentes idiomas.
+- Normalización: Las tablas están diseñadas siguiendo los principios de normalización para garantizar la integridad de los datos y evitar la duplicación innecesaria de información. Se han identificado entidades y relaciones adecuadas, y los campos están organizados de manera lógica.
+- Relaciones definidas: Las relaciones entre las tablas se han establecido utilizando claves foráneas para garantizar la coherencia y consistencia de los datos. Esto permite mantener la integridad referencial y facilita el mantenimiento de la base de datos.
+- Índices adecuados: Se han creado índices en los campos clave y de búsqueda frecuente para mejorar el rendimiento de las consultas. Esto permite un acceso más rápido a los datos y reduce la carga en el sistema.
+- Tipos de datos adecuados: Se han seleccionado los tipos de datos adecuados para cada campo en función de su propósito y contenido. Esto ayuda a optimizar el almacenamiento y garantiza la precisión de los datos almacenados.
+- Tipos de caracteres adecuados:La base de datos utiliza el conjunto de caracteres "utf8mb4" y el cotejamiento "utf8mb4_unicode_ci" para admitir caracteres multibyte y asegurar la compatibilidad con diferentes idiomas.
 
 En general, la base de datos "fz3r0_gaming_extravaganza" está bien estructurada en términos de relaciones, índices y detalles técnicos. Ha sido diseñada con el objetivo de permitir pruebas y experimentos en entornos de laboratorio de MySQL y pentesting de MySQL, brindando una base sólida y eficiente para trabajar con información de usuarios, géneros, tipos de juegos, detalles de juegos, consolas y registros de ventas.
 
