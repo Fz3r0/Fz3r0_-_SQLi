@@ -43,7 +43,10 @@ SELECT table_name FROM information_schema.tables WHERE table_schema=database(); 
 SELECT table_name FROM information_schema.tables WHERE table_schema='fz3r0_gaming_extravaganza'; -- Opción 2
 
 ## Column Name AKA Column Names Dump
-SELECT column_name FROM information_schema.columns WHERE table_name='usuarios';
+SELECT column_name FROM information_schema.columns WHERE table_name='usuarios'; -- Tabla "usuarios" de TODAS las DB
+SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' and table_schema=database(); -- Tabla "usuarios" de database() opt1
+SELECT column_name FROM information_schema.columns WHERE table_name='usuarios' and table_schema='fz3r0_gaming_extravaganza'; -- Tabla "usuarios" de database() opt2
+
 ````
 
 ---
