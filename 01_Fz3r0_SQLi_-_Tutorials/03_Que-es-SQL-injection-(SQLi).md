@@ -42,7 +42,7 @@ SELECT * FROM blog WHERE id=2;-- AND private=0 LIMIT 1;
 El **punto y coma `;`** en la URL indica el final de la declaración SQL, y **los dos guiones hacen que todo lo que sigue se trate como un `comentario`**. Al hacer esto, en realidad estás ejecutando la consulta:
 
 ````sql
-SELECT * FROM blog WHERE id=2;-- AND private=0 LIMIT 1;
+SELECT * FROM blog WHERE id=2;-- 
 ````
 
 Lo cual devolverá el artículo con un identificador de 2, sin importar si está configurado como público o no.
