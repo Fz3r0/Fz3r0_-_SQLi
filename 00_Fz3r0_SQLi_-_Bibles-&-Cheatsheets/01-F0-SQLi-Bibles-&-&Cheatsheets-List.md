@@ -5,6 +5,11 @@
 - [HackTricks @ SQLi - Full](https://book.hacktricks.xyz/pentesting-web/sql-injection)
 - [deephacking.tech @ SQLi - Full](https://deephacking.tech/sql-injection/#in-band-sql-injection)
 
+## SQLi Tools
+
+- [Hackbar](https://github.com/PhHitachi/HackBar/blob/master/HackBar%20v2.9.md)
+- [SQL Map](https://github.com/sqlmapproject/sqlmap)  
+
 ## Payloads 
 
 ### DIOS
