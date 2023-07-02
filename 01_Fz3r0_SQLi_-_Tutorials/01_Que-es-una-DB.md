@@ -1,14 +1,27 @@
 # Bases de Datos
 
+## Base de Datos
+
 - Una base de datos es una forma organizada de almacenar colecciones de datos electrónicamente.
 - Una base de datos está controlada por un Sistema de Gestión de Bases de Datos o Data Base Management System (DBMS).
 
-### Hay dos tipos principales de DBMS: 
+---
+
+### Tipos principales de DBMS: 
 
 1. Relacionales.
 2. No relacionales.
 
-### Bases de datos relacionales (más comunes):
+---
+
+## Base de Datos: DBMS Relacional
+
+- Una base de datos relacional es un tipo de base de datos que organiza los datos en tablas con filas y columnas.
+- Se llama "relacional" porque establece relaciones entre las tablas utilizando claves primarias y claves externas para mantener la integridad y coherencia de los datos.
+
+---
+
+### DMBS Relacionales _(más comunes)_:
 
 - MySQL
 - Microsoft SQL Server
@@ -16,7 +29,9 @@
 - PostgreSQL
 - SQLite
 
-### Estructura de Base de Datos Relacional
+---
+
+### Estructura de DBMS Relacionales
 
 Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propio conjunto de datos relacionados. Esto debido a que las empresas pueden tener bases de datos adicionales para otros fines, como almacenar información del personal o del equipo de cuentas.
 
@@ -31,4 +46,10 @@ Dentro de un DBMS, puedes tener múltiples bases de datos, cada una con su propi
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/c1165108-d820-4e06-8acf-a582db463a7e)
 
+---
+
+### Tablas / Tables
+
+- Una tabla está compuesta por columnas y filas.
+- Una forma útil de imaginar una tabla es como una cuadrícula, donde las columnas se encuentran en la parte superior, de izquierda a derecha, y contienen el nombre de cada celda, mientras que las filas van de arriba abajo y contienen los datos reales.
 
