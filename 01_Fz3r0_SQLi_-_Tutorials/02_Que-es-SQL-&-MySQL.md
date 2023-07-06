@@ -1,4 +1,8 @@
-## SQL
+## Biblia Completa
+
+- [W3 Schools MySQL](https://www.w3schools.com/mysql/default.asp)
+
+## `SQL`
 
 - `SQL (Structured Query Language)` es un lenguaje rico en funciones utilizado para consultar bases de datos.
 - Estas `consultas en SQL` o `SQL Querys` se conocen mejor como declaraciones o `statements`.
@@ -6,8 +10,24 @@
 - Aunque son algo similares, algunos `BDSM` tienen su propia sintaxis y pequeñas variaciones en cómo funcionan las cosas.
 - Normalmente los ejemplos y las bases de datos reales son en `MySQL` ya que es el `BDSM` más utilizado.
 - La sintaxis de SQL no distingue entre mayúsculas y minúsculas.
+- Uno de los RBDSM más utilizados actualmente que utiliza el lenguaje `SQL` es `MySQL`
 
-## Ejemplos de `statements`
+## `MySQL`
+
+- MySQL es un sistema de gestión de bases de datos relacionales.
+- MySQL es de código abierto.
+- MySQL es gratuito.
+- MySQL es ideal tanto para aplicaciones pequeñas como grandes.
+- MySQL es muy rápido, confiable, escalable y fácil de usar.
+- MySQL es multiplataforma.
+- MySQL cumple con el estándar ANSI SQL.
+- MySQL fue lanzado por primera vez en 1995.
+- MySQL es desarrollado, distribuido y respaldado por Oracle Corporation.
+- MySQL lleva el nombre de la hija del cofundador Monty Widenius: My.
+
+## `SQL` para mostrar datos en `Web`
+
+## Ejemplos de `statements` en `MySQL`
 
 ### `select * from usuarios;`
 
