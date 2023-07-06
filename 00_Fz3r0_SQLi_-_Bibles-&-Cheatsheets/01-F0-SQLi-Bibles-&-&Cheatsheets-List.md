@@ -1,5 +1,9 @@
 ## SQLi Bibles & Cheatsheets
 
+### `MySQL` Databases Courses & Bibles
+
+- [W3 Schools - MySQL Tutorial & Bible](https://www.w3schools.com/mysql/default.asp)
+
 ### `Full` SQLi Bibles & Cheatsheets
 
 - [Portswigger @ SQLi Cheatsheet - Full](https://portswigger.net/web-security/sql-injection/cheat-sheet)
