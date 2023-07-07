@@ -3,8 +3,11 @@
 
 ## ¿Qué es la inyección SQL o SQLi?
 
+- La inyección de SQL (SQLi) es una vulnerabilidad de seguridad web que permite a un atacante interferir con las consultas que una aplicación realiza a su base de datos.
 - La inyección SQL ocurre cuando los datos proporcionados por el usuario se incluyen en una `consulta SQL` de una aplicación web.
-- Esto puede llevar a que se ejecuten comandos no deseados o maliciosos en la base de datos.
+- Esto puede llevar a que se ejecuten comandos no deseados o maliciosos en la base de datos o exfiltrar información privada.
+- En muchos casos, un atacante puede modificar o eliminar estos datos, lo que causa cambios persistentes en el contenido o comportamiento de la aplicación.
+- En algunas situaciones, un atacante puede escalar un ataque de inyección de SQL para comprometer el servidor subyacente u otra infraestructura de back-end (RCI), o llevar a cabo un ataque de denegación de servicio (DOS)
 
 ### ¿Cómo se ve?
 
@@ -34,7 +37,6 @@ https://website.thm/blog?id=2;--
 
 Lo cual produciría la siguiente declaración SQL:
 
-
 ````sql
 SELECT * FROM blog WHERE id=2;-- AND private=0 LIMIT 1;
 ````
@@ -56,3 +58,8 @@ Este fue solo un ejemplo de una vulnerabilidad de inyección SQL de un tipo llam
     1. In-Band
     2. Blind
     3. Out Of Band
+
+ ## Recursos
+
+ - [PortSwigger - What is SQL injection (SQLi)?](https://portswigger.net/web-security/sql-injection#what-is-sql-injection-sqli)
+ - [PortSwigger - What is SQL injection? - Web Security Academy](https://www.youtube.com/watch?v=wX6tszfgYp4)
