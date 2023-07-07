@@ -25,7 +25,13 @@ Enviar `OAST payloads` diseñados para desencadenar una interacción de red fuer
 
 ---
 
-### Payloads para buscar vulnerabilidad SQLi
+<br>
+
+<br>
+
+<br>
+
+## Payloads para buscar vulnerabilidad SQLi
 
 ```http://domain.com/index.php?id=1```  
 Website original: Carga exitosamente de manera normal  
