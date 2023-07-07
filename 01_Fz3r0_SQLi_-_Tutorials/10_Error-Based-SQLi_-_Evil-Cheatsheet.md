@@ -1,14 +1,19 @@
-# Error Based SQL Injection (SQLi) Cheatsheet
+# Error Based SQL Injection (SQLi): Evil Cheatsheet
 Esta es probablemente la vulnerabilidad más fácil en un ataque SQLi. Un atacante puede enumerar y volcar la base de datos utilizando los mensajes de error de SQL a su favor.
 
 ## Detectar Vulnerabilidad SQLi
 
-### Vulnerabilidad SQLi Automatizado
+Existen básicamente 2 métodos para encontrar vulnerabilidades en aplicaciones web que utilicen bases de datos:
+
+1. Vulnerabilidad SQLi Automatizado
+2. Vulnerabilidad SQLi Manual
+   
+### 1. Vulnerabilidad SQLi Automatizado
 
 - Muchas vulnerabilidades de inyección de SQL se pueden encontrar de manera rápida utilizando el escáner de vulnerabilidades web de `Burp Suite` o con herramientas automatizadas como `SQL-Map`.
 - Sin embargo, en muchas ocasiones no se podría encontrar o explotar las vulnerabilidades a menos que sea de manera manual. Por otro lado, es difícil saber cómo utilizar y automatizar estas herramientas sin saber realizar SQLi manual. 
 
-### Vulnerabilidad SQLi Manual
+### 2. Vulnerabilidad SQLi Manual
 
 La inyección de SQL se puede detectar manualmente utilizando un conjunto sistemático de pruebas en cada punto de entrada de la aplicación. Esto generalmente implica:
 
@@ -18,7 +23,9 @@ La inyección de SQL se puede detectar manualmente utilizando un conjunto sistem
 - Enviar `SQL payloads` diseñados para desencadenar retrasos temporales (`time based`) cuando se ejecutan dentro de una consulta SQL y buscar diferencias en el tiempo que tarda en responder.
 Enviar `OAST payloads` diseñados para desencadenar una interacción de red fuera de banda cuando se ejecutan dentro de una consulta SQL, y monitorear cualquier interacción resultante.
 
-### Payloads para buscar vulnerabilidad
+---
+
+### Payloads para buscar vulnerabilidad SQLi
 
 ```http://domain.com/index.php?id=1```  
 Website original: Carga exitosamente de manera normal  
