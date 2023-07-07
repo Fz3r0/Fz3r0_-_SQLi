@@ -18,33 +18,6 @@ Este laboratiorio es exactamente igual al mismo, en realidad "la diferencia" es 
 
 - OJO!!! A diferencia del laboratorio anterior, este escenario no permite mostrar resultados en columna `'1'`, es por eso que inyecto los querys en `'2'` únicamente
 
-#### Query original:
-
-````sql
-
-````
-
-#### Query inyectada:
-
-````sql
-
-````
-
----
-
-### Explicación con Lab:
-
-1.
-
-````sql
-
-````
-````py
-
-````
-
-
-
 ## Solución:
 
 ````py
