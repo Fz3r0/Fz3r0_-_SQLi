@@ -33,8 +33,15 @@ Enviar `OAST payloads` diseñados para desencadenar una interacción de red fuer
 
 ## Payloads para buscar vulnerabilidad SQLi
 
-```http://domain.com/index.php?id=1```  
-Website original: Carga exitosamente de manera normal  
+### Ejemplo de URL otiginal:
+
+```py
+# Website original: Carga exitosamente de manera normal  
+http://domain.com/index.php?id=1
+```  
+
+### SQLi Payloads:
+
 
 ```http://domain.com/index.php?id=1'```   
 Error message shows up: ```You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near...```  
