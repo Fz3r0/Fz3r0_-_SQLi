@@ -1,10 +1,27 @@
-# MSSQL Error Based SQL Injection Cheatsheet
-This is probably the easiest vulnerability along the SQL Injection attack. An attacker can enumerate and dump the PostgreSQL database by using the SQL error messages to his advantage.
+# Error Based SQL Injection (SQLi) Cheatsheet
+Esta es probablemente la vulnerabilidad más fácil en un ataque SQLi. Un atacante puede enumerar y volcar la base de datos utilizando los mensajes de error de SQL a su favor.
 
-## Detecting the vulnerability
+## Detectar Vulnerabilidad SQLi
+
+### Vulnerabilidad SQLi Automatizado
+
+- Muchas vulnerabilidades de inyección de SQL se pueden encontrar de manera rápida utilizando el escáner de vulnerabilidades web de `Burp Suite` o con herramientas automatizadas como `SQL-Map`.
+- Sin embargo, en muchas ocasiones no se podría encontrar o explotar las vulnerabilidades a menos que sea de manera manual. Por otro lado, es difícil saber cómo utilizar y automatizar estas herramientas sin saber realizar SQLi manual. 
+
+### Vulnerabilidad SQLi Manual
+
+La inyección de SQL se puede detectar manualmente utilizando un conjunto sistemático de pruebas en cada punto de entrada de la aplicación. Esto generalmente implica:
+
+- Enviar el carácter de comilla simple `'` y buscar errores u otras anomalías.
+- Enviar alguna sintaxis específica de SQL que se evalúe como el valor base (original) del punto de entrada y como un valor diferente, y buscar diferencias sistemáticas en las respuestas resultantes de la aplicación.
+- Enviar condiciones booleanas como `OR 1=1` y `OR 1=2`, y buscar diferencias en las respuestas de la aplicación.
+- Enviar `SQL payloads` diseñados para desencadenar retrasos temporales (`time based`) cuando se ejecutan dentro de una consulta SQL y buscar diferencias en el tiempo que tarda en responder.
+Enviar `OAST payloads` diseñados para desencadenar una interacción de red fuera de banda cuando se ejecutan dentro de una consulta SQL, y monitorear cualquier interacción resultante.
+
+### Payloads para buscar vulnerabilidad
 
 ```http://domain.com/index.php?id=1```  
-Website loads successfully  
+Website original: Carga exitosamente de manera normal  
 
 ```http://domain.com/index.php?id=1'```   
 Error message shows up: ```You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near...```  
