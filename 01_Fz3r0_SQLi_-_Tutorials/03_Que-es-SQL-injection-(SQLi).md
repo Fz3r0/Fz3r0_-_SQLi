@@ -7,11 +7,13 @@
 - La inyección SQL ocurre cuando los datos proporcionados por el usuario se incluyen en una `consulta SQL` de una aplicación web.
 - Esto puede llevar a que se ejecuten comandos no deseados o maliciosos en la base de datos o exfiltrar información privada.
 - En muchos casos, un atacante puede modificar o eliminar estos datos, lo que causa cambios persistentes en el contenido o comportamiento de la aplicación.
-- En algunas situaciones, un atacante puede escalar un ataque de inyección de SQL para comprometer el servidor subyacente u otra infraestructura de back-end (RCI), o llevar a cabo un ataque de denegación de servicio (DOS)
+- En algunas situaciones, un atacante puede escalar un ataque de inyección de SQL para comprometer el servidor subyacente u otra infraestructura de back-end, realizar ataques de ejecución de comados remoto (RCE), o llevar a cabo un ataque de denegación de servicio (DOS)
 
 ### ¿Cómo se ve?
 
-Tomemos el siguiente escenario: te encuentras con un blog en línea, y cada entrada del blog tiene un número de identificación único. Las entradas del blog pueden ser públicas o privadas, dependiendo de si están listas para ser publicadas. 
+Tomemos el siguiente escenario: 
+
+- Te encuentras con un blog en línea, y cada entrada del blog tiene un número de identificación único o `id`. Las entradas del blog pueden ser públicas o privadas, dependiendo de si están listas para ser publicadas. 
 
 La URL de cada entrada del blog puede ser algo así:
 
