@@ -8,10 +8,12 @@
 
 - [s4vitar - SQL Injection (SQLI) - Explicado desde Cero](https://youtu.be/C-FiImhUviM)
 - [Cybr - SQL Injections: The Full Course](https://www.youtube.com/watch?v=fiq59DuhY68)
+- [OWASP Juice Shop - Injection](https://pwning.owasp-juice.shop/part2/injection.html)
 
 ### `Full` SQLi Bibles & Cheatsheets
 
 - [Portswigger @ SQLi Cheatsheet - Full](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+- [Invicti - SQLi MASTER LIST](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/)
 - [Advanced SQLi Cheatsheet AIO - Full](https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet)
 - [Pentest Monkey - MS-SQL & SQLi Cheatsheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet)
 - [Admiral Gaust - SQL Injection cheat sheet](https://github.com/AdmiralGaust/SQL-Injection-cheat-sheet)
