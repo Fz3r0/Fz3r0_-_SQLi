@@ -4,6 +4,11 @@
 
 - [W3 Schools - MySQL Tutorial & Bible](https://www.w3schools.com/mysql/default.asp)
 
+### SQLi Courses
+
+- [s4vitar - SQL Injection (SQLI) - Explicado desde Cero](https://youtu.be/C-FiImhUviM)
+- [Cybr - SQL Injections: The Full Course](https://www.youtube.com/watch?v=fiq59DuhY68)
+
 ### `Full` SQLi Bibles & Cheatsheets
 
 - [Portswigger @ SQLi Cheatsheet - Full](https://portswigger.net/web-security/sql-injection/cheat-sheet)
