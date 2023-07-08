@@ -48,7 +48,8 @@ Pero si `--+` está codificado (por ejemplo, codificado en URL) como `--%2B`, cu
 
 ## Conclusión
 
-- **Uno podría querer utilizar `-- -` como el comentario SQL en línea más interoperable y seguro, ya que `--` no funciona con MySQL y `--+` se romperá si se codifica.**
+- **El string `-- -` es el comentario SQL en línea más interoperable y seguro entre todas las BDSM, ya que `--` no funciona con MySQL y `--+` se romperá si se codifica.**
+  
 - **Ya sea `-- -` o `--+-`, serían las opciones más eficientes para enfrentar la mayoría de DBMS, incluyendo las más comunes como MySQL**
 
 ## Recursos
