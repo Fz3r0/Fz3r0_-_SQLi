@@ -1,5 +1,7 @@
 ## Lists
 
+- [Exploit DB](https://www.exploit-db.com/google-hacking-database)
+
 ## Google Dorks for SQLi
 
 ### List 1
