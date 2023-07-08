@@ -66,3 +66,4 @@ Este fue solo un ejemplo de una vulnerabilidad de inyección SQL de un tipo llam
  - [PortSwigger - What is SQL injection (SQLi)?](https://portswigger.net/web-security/sql-injection#what-is-sql-injection-sqli)
  - [PortSwigger - What is SQL injection? - Web Security Academy](https://www.youtube.com/watch?v=wX6tszfgYp4)
  - [Laboratorio - Crear Vulnerabilidad y Protegerse de SQLi](https://www.youtube.com/watch?v=NWciLHrNaMc)
+ - [Cybr - SQL Injections: The Full Course](https://www.youtube.com/watch?v=fiq59DuhY68)
