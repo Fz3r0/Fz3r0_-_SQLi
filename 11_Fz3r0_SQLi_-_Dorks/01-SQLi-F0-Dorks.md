@@ -2,6 +2,13 @@
 
 - [Exploit DB](https://www.exploit-db.com/google-hacking-database)
 
+## Elite
+
+````
+# Inyección directa
+inurl:"php?sql=select" ext:php
+````
+
 ## Google Dorks for SQLi
 
 ### List 1
