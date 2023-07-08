@@ -1,0 +1,1 @@
+- [Beginner's Guide to sqlmap - Full Course](https://www.youtube.com/watch?v=nVj8MUKkzQk)
