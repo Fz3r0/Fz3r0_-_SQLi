@@ -8,6 +8,7 @@
 
 - [Portswigger @ SQLi Cheatsheet - Full](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 - [Advanced SQLi Cheatsheet AIO - Full](https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet)
+- [Pentest Monkey - MS-SQL & SQLi Cheatsheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet)
 - [Admiral Gaust - SQL Injection cheat sheet](https://github.com/AdmiralGaust/SQL-Injection-cheat-sheet)
 - [HackTricks @ SQLi - Full](https://book.hacktricks.xyz/pentesting-web/sql-injection)
 - [OWASP Org @ SQL_ Injection Bypassing WAF](https://owasp.org/www-community/attacks/SQL_Injection_Bypassing_WAF)
