@@ -61,9 +61,13 @@ Este fue solo un ejemplo de una vulnerabilidad de inyección SQL de un tipo llam
     2. Blind
     3. Out Of Band
 
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/bdabe632-580e-4b84-8227-859729f634d9)
+
+
  ## Recursos
 
  - [PortSwigger - What is SQL injection (SQLi)?](https://portswigger.net/web-security/sql-injection#what-is-sql-injection-sqli)
  - [PortSwigger - What is SQL injection? - Web Security Academy](https://www.youtube.com/watch?v=wX6tszfgYp4)
  - [Laboratorio - Crear Vulnerabilidad y Protegerse de SQLi](https://www.youtube.com/watch?v=NWciLHrNaMc)
  - [Cybr - SQL Injections: The Full Course](https://www.youtube.com/watch?v=fiq59DuhY68)
+ - [Rana Khalil - SQL Injection | Complete Guide](https://www.youtube.com/watch?v=1nJgupaUPEQ)
