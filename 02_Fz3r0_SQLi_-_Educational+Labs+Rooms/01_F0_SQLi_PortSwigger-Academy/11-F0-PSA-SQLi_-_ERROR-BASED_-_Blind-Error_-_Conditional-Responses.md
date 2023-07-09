@@ -1,4 +1,4 @@
-# `LAB`: Visible error-based SQL injection
+# `LAB`: Blind SQL injection with conditional responses
 
 ## Descripción:
 
@@ -10,6 +10,10 @@ The database contains a different table called `users`, with columns called `use
 
 To solve the lab, log in as the `administrator` user.  
 
+## Hint:
+
+You can assume that the password only contains **lowercase, alphanumeric characters**. 
+
 ### PortSwigger Cheastsheet:
 
 - [PortSwigger - SQL injection cheat sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
@@ -19,7 +23,13 @@ To solve the lab, log in as the `administrator` user.
 
 ### Explicación:
 
-- 
+- Este tipo de vulnerabilidad es cuando no se muestra el error en pantalla y no sabemos bien cuál es el error que arroja SQL.
+- Cuando escribo payloads como `'` o `-- -` o `' or 1 = 1 -- -` veo que regresa una página en blanco, pero sin errores (solo un `welcome back`). Esto quiere decir que posiblemente exista un error por detrás que yo no vea.
+- Para este tipo de vulnerabilidades se utiliza `Burpsuite`
+
+**IMPORTANTE:** Aquí la vulnerabilidad está en una `tracking cookie` la cual también contiene el SQL query. 
+
+
 
 ---
 
