@@ -9,6 +9,7 @@
 - [s4vitar - SQL Injection (SQLI) - Explicado desde Cero](https://youtu.be/C-FiImhUviM)
 - [Cybr - SQL Injections: The Full Course](https://www.youtube.com/watch?v=fiq59DuhY68)
 - [OWASP Juice Shop - Injection](https://pwning.owasp-juice.shop/part2/injection.html)
+- [Basics of SQL Injection - Penetration Testing for Ethical Hackers](https://www.youtube.com/watch?v=2nXOxLpeu80)
 
 ### `Full` SQLi Bibles & Cheatsheets
 
