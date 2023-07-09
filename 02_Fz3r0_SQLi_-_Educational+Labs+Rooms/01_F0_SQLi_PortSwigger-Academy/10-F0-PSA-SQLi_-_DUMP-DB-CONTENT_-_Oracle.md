@@ -27,9 +27,9 @@ There is a built-in table on Oracle called `dual` which you can use for this pur
 - En este caso es llegar hasta el login con `adminsitrador`
 - Es un poco diferente a MySQL el dump de información de Oracle, así que pondré el proceso completo:
 
-### Explicación para enumerar `Tablas`, `Columnas` y `Data` Oracle
+### Explicación para enumerar `DB Info`, `Tablas`, `Columnas` y `Data` Oracle
 
-Enumerar en Oracle Base de Datos, versión, etc:
+**`DB Info`:** Enumerar en Oracle Base de Datos, versión, etc:
 
 ````sql
 # Banner:
@@ -38,7 +38,7 @@ SELECT banner FROM v$version
 SELECT version FROM v$instance
 ````
 
-En Oracle se pone originalmente para mostrar todas las tables:
+**`Tablas`:** En Oracle se pone originalmente para mostrar todas las tables:
 
 ````sql
 # Enumerar nombres de tablas:
@@ -51,6 +51,11 @@ Para seleccionar solo la base de datos que estamos usando en Oracle es más fác
 # Enumerar propietarios de tablas:
 SELECT table_name FROM all_tables WHERE owner = 'PETER';
 ````
+
+**`Columnas`:** En Oracle se pone originalmente para mostrar las columnas
+
+
+
 
 ## Solución:
 
