@@ -7,9 +7,10 @@
 
 Alcanza para 2 porciones:
 
-- 200g Avena (harina)
+- 200g Avena (hecha harina en licuadora)
 - 2 plátanos
-- 6 a 7 fresas congeladas
+- 7 a 8 fresas congeladas
+- 1/2 manzana
 - 2 huevos
 - 300ml leche
 - 1 cucharada de crema de maní natural 100%
