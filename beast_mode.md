@@ -26,5 +26,7 @@ Alcanza para 2 porciones:
 | **TOTALES**               |              |                       |    **1,692** |            **80** |               **216** |         **56** |                                            |                                                         |
 
 
-[Cacahuate / 100g](https://fen.org.es/MercadoAlimentosFEN/pdfs/cacahuete.pdf) - 27g prote / 49g Grasas  / 8.5g Carbs 
+
+- [Fresas Congeladas / 100g](https://www.myfitnesspal.com/es/food/calories/fresas-congeladas-754225712) - 24.4g Carbs / 1g Grasas / 0.3g Prote
+- [Cacahuate / 100g](https://fen.org.es/MercadoAlimentosFEN/pdfs/cacahuete.pdf) - 27g prote / 49g Grasas  / 8.5g Carbs 
 
