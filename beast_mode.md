@@ -27,6 +27,7 @@ Alcanza para 2 porciones:
 
 
 
-- [Fresas Congeladas / 100g](https://www.myfitnesspal.com/es/food/calories/fresas-congeladas-754225712) - 24.4g Carbs / 1g Grasas / 0.3g Prote
-- [Cacahuate / 100g](https://fen.org.es/MercadoAlimentosFEN/pdfs/cacahuete.pdf) - 27g prote / 49g Grasas  / 8.5g Carbs 
+- [Fresas Congeladas / 100g](https://www.myfitnesspal.com/es/food/calories/fresas-congeladas-754225712) - Cals = 108 (24.4g Carbs / 1g Grasas / 0.3g Prote)
+- [Cacahuate / 100g](https://fen.org.es/MercadoAlimentosFEN/pdfs/cacahuete.pdf) - Cals = 599 (27g prote / 49g Grasas  / 8.5g Carbs)
+- [Plátano / 100g](https://www.fatsecret.com.mx/calor%C3%ADas-nutrici%C3%B3n/gen%C3%A9rico/pl%C3%A1tano?portionid=54068&portionamount=100,000) - Cals = 89 (1.1g Prote / 22.8g Carbs / 0.33g Grasas)
 
