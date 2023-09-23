@@ -2,7 +2,7 @@ En el umbral del crepúsculo se oculta el susurro del viejo lobo, quien despiert
 
 En los laberintos de lo incomprensible vagan almas en la búsqueda de respuestas... y en el eco de sus propios pensamientos se encuentra la senda hacia la sabiduría.
 
-**El hombre en su patética ignorancia pasa la vida buscando respuestas, y cuando las encuentra... desea nunca haberse formulado la pregunta...**
+**El hombre en su patética ignorancia pasa la vida buscando respuestas, y cuando las encuentra... desea nunca haberse formulado la pregunta... ¡¿Qué es un hombre?! ¡Una miserable pila de secretos!**
 
 No olvides disfrutar de tus días, se está tornando oscuro... muy oscuro
 
