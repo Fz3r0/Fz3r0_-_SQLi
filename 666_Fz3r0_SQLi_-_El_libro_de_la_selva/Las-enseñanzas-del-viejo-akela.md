@@ -1,10 +1,12 @@
-En el umbral del crepúsculo se oculta el susurro del viejo lobo Akela, quien despierta las sombras del saber. Encriptado en los pliegues del viento, sus palabras se desvanecen como ecos olvidados, danzando entre fragmentos de una realidad incierta. 
+En el umbral del crepúsculo se oculta el susurro del viejo lobo Akela, quien despierta las sombras del saber. Entre los pliegues del viento, sus palabras se desvanecen como ecos olvidados, danzando entre fragmentos de una realidad oculta. 
 
-En los laberintos de lo incomprensible vagan las almas, y en esas almas se encuentran las respuestas. 
-
-En los enigmas cifrados en las miradas de las estrellas, y en el eco de tus propios pensamientos se encuentra la senda hacia la sabiduría elusiva.
+En los laberintos de lo incomprensible vagan almas en la búsqueda de respuestas... y en el eco de tus propios pensamientos se encuentra la senda hacia la sabiduría elusiva.
 
 **El hombre en su patética ignorancia pasa la vida buscando respuestas, y cuando las encuentra... desea nunca haberse formulado la pregunta...**
+
+No olvides disfrutar de tus días, se está tornando oscuro... muy oscuro
+
+Soy Fz3r0 y el Sol no saldrá nunca más
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/54b3239c-abc6-40f8-94de-fd83169eb62f)
 
