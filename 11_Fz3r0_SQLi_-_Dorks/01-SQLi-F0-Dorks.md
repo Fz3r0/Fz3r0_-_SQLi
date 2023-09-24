@@ -1889,6 +1889,8 @@ allintitle:*.php?logon=*
 ````
 inurl:index.php?= inurl:.mx
 inurl:index.php?= inurl:.gob.mx
+inurl:"php?" & inurl:".gob.mx" & inurl:"="
+inurl:"php?=" & inurl:".gob.mx"
 ````
 
 
