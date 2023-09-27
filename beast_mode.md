@@ -24,6 +24,23 @@ Alcanza para 6 porciones:
 | Semillas de lino          | Otros         | 1 cucharada (10g)     | 55           | 2                 | 3                     | 4              | Fibra, omega-3, lignanos           | Rica en fibra, omega-3 y antioxidantes                  |
 | **Totales**               |               |                       | **1632**     | **90**            | **220**               | **42**         |                                      |                                                       |
 
+## Sangre del Prícnipe Vegito 
+
+Cuando bebes la 'Sangre del Príncipe Vegito', estás fortaleciendo tu cuerpo y tu espíritu, como si estuvieras en el camino hacia el Super Saiyan. Cada sorbo es un paso más hacia la grandeza, cada nutriente es una pieza del poder que te llevará a alcanzar nuevas alturas.
+
+| Alimento         | Cantidad (gr) | Calorías | Proteínas (gr) | Grasas (gr) | Carbos (gr) | Micronutrientes                     | Beneficios Sayayin         |
+|------------------|---------------|----------|----------------|-------------|-------------|------------------------------------|-----------------------------|
+| Espinacas        | 60            | 12       | 1.2            | 0.12        | 1.92        | Vitamina K, Vitamina A, Ácido Fólico | Fortalece el sistema inmune |
+| Remolacha        | 100           | 44       | 2              | 0.4         | 10.2        | Vitamina C, Hierro, Folato         | Mejora la circulación       |
+| Fresas congeladas| 70            | 22.4     | 0.56           | 0.28        | 5.46        | Vitamina C, Antioxidantes          | Refuerza el sistema inmune  |
+| Brócoli          | 60            | 20       | 1.8            | 0.3         | 5.4         | Vitamina C, Vitamina K, Fibra      | Promueve la salud celular  |
+| Nopal            | 50            | 8        | 0.5            | 0.1         | 1.8         | Vitamina C, Fibra                  | Regula el azúcar en sangre  |
+| Apio             | 50            | 6        | 0.3            | 0.1         | 1.2         | Vitamina K, Potasio                | Ayuda a la digestión        |
+| Naranjas (3)     | 3 piezas      | 75       | 1.6            | 0.3         | 19.05       | Vitamina C, Vitamina A, Fibra      | Fortalece el sistema inmune |
+| Semillas de Chía | Pizca         | 10       | 0.3            | 0.6         | 0.5         | Fibra, Omega-3                     | Promueve la saciedad        |
+| Sal del Himalaya  | Pizca         | 0        | 0              | 0           | 0           | Sodio                              | Regula la hidratación        |
+| **Totales**      | -             | 155.4    | 9.16           | 1.18        | 43.06       | -                                  | -                           |
+
 
 ## Dieta Diaria
 
