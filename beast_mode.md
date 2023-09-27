@@ -23,3 +23,25 @@ Alcanza para 6 porciones:
 | Nueces                    | Frutos secos  | 4 nueces (aprox. 20g) | 130          | 3                 | 4                     | 12             | Grasas saludables, antioxidantes   | Fuente de grasas saludables y antioxidantes             |
 | Semillas de lino          | Otros         | 1 cucharada (10g)     | 55           | 2                 | 3                     | 4              | Fibra, omega-3, lignanos           | Rica en fibra, omega-3 y antioxidantes                  |
 | **Totales**               |               |                       | **1632**     | **90**            | **220**               | **42**         |                                      |                                                       |
+
+
+## Dieta Diaria
+
+| Alimento              | Cantidad (gr) | Calorías | Proteínas (gr) | Grasas (gr) | Carbos (gr) | Micronutrientes |
+|-----------------------|---------------|----------|----------------|-------------|-------------|-----------------|
+| **Almuerzo**          |               |          |                |             |             |                 |
+| Pechuga de pollo      | 150           | 165      | 38             | 3.6         | 0           | Vitaminas A, C  |
+| Papas cocidas         | 100           | 86       | 2              | 0.2         | 20          | Vitamina C, B6  |
+| Aguacate              | 1/4           | 80       | 1              | 7.5         | 4           | Vitamina K, E   |
+| **Snack de la Tarde** |               |          |                |             |             |                 |
+| Frutas (manzana)      | 1 pieza       | 95       | 0.5            | 0.3         | 25          | Vitamina C, K  |
+| Espinacas             | 50g           | 11       | 1.4            | 0.3         | 1.4         | Vitamina K, A, C|
+| **Cena**              |               |          |                |             |             |                 |
+| Proteína en polvo     | 1 scoop       | 110      | 25             | 2           | 2           | Varía           |
+| Queso Gouda           | 60g           | 220      | 12             | 18          | 0           | Calcio, Vitamina D|
+| **Snack Nocturno**    |               |          |                |             |             |                 |
+| Proteína en polvo     | 1 scoop       | 110      | 25             | 2           | 2           | Varía           |
+| Avena                 | 30g           | 120      | 4              | 2           | 20          | Fibra, Vitaminas |
+| Beast Cake (porción diaria) | 1/6 de Beast Cake | 272  | 15 | 36 | 7 | Varía  | Varios ingredientes nutritivos |
+| **Totales**           |               | Aprox. 1609   | Aprox. 141.9  | Aprox. 76.9  | Aprox. 184.6 |                 |
+| **Porcentaje de Macros** |            |          | 40%            | 35%         | 25%         |                 |
