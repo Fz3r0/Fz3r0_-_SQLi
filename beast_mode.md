@@ -1,11 +1,40 @@
-## Beast Mode
+## Dieta Beast Mode (Déficit calórico)
 
-- `05.27.'23` = `93cm` = `80.0 kg`
-- `06.01.'23` = `92cm` = `79.6 kg`
+Esta dieta se ha diseñado meticulosamente para alcanzar objetivos de pérdida de peso mientras se preserva la masa muscular. Se ha establecido un riguroso control de macronutrientes con un enfoque en un equilibrio específico: 40% de proteínas, 35% de carbohidratos y 25% de grasas. Además, se han incluido alimentos ricos en micronutrientes para promover la salud general.
+
+La dieta también permite la inclusión de alimentos placenteros como el "Beast Cake" y la "Sangre del Príncipe Vegito" sin comprometer el cumplimiento a largo plazo. Este enfoque nutricional es un aliado en la búsqueda de la excelencia física y mental.
+
+"Como un lobo solitario subiendo la colina, esta dieta te guiará hacia tus objetivos con determinación y disciplina."
+
+- NOTA: _Esta es una dieta personalizada realizada exactamente para mi edad, estatura, peso y nivel de ejercicio diario._
+
+
+## Dieta Diaria
+
+| Alimento              | Cantidad (gr) | Calorías | Proteínas (gr) | Grasas (gr) | Carbos (gr) | Micronutrientes  | Beneficios y Descripción                   |
+|-----------------------|---------------|----------|----------------|-------------|-------------|-----------------|-----------------------------------------|
+| **Almuerzo**          |               |          |                |             |             |                 |                                         |
+| Pechuga de pollo      | 150           | 165      | 38             | 3.6         | 0           | Vitaminas A, C  | Fuente magra de proteína.               |
+| Papas cocidas         | 100           | 86       | 2              | 0.2         | 20          | Vitamina C, B6  | Carbohidratos de digestión lenta.     |
+| Aguacate              | 1/4           | 80       | 1              | 7.5         | 4           | Vitamina K, E   | Grasas saludables y antioxidantes.    |
+| **Snack de la Tarde** |               |          |                |             |             |                 |                                         |
+| Frutas (manzana)      | 1 pieza       | 95       | 0.5            | 0.3         | 25          | Vitamina C, K  | Carbohidratos naturales y fibra.      |
+| Sangre del Príncipe Vegito (porción diaria) | 1/6 de Sangre del Príncipe Vegito | 25.9  | 1.53 | 0.2 | 7.18 | Varía  | Varios ingredientes nutritivos.      |
+| **Cena**              |               |          |                |             |             |                 |                                         |
+| Proteína en polvo     | 1 scoop       | 110      | 25             | 2           | 2           | Varía           | Recuperación muscular y desarrollo.    |
+| Queso Gouda           | 60g           | 220      | 12             | 18          | 0           | Calcio, Vitamina D| Proteína y calcio para la cena.      |
+| **Snack Nocturno**    |               |          |                |             |             |                 |                                         |
+| Proteína en polvo     | 1 scoop       | 110      | 25             | 2           | 2           | Varía           | Suplemento de proteína nocturna.       |
+| Avena                 | 30g           | 120      | 4              | 2           | 20          | Fibra, Vitaminas | Carbohidratos de liberación lenta.    |
+| Beast Cake (porción diaria) | 1/6 de Beast Cake | 272  | 15 | 36 | 7 | Varía  | Delicioso placer culposo.           |
+| **Totales**           |               | Aprox. 1693   | Aprox. 138.03  | Aprox. 75.05  | Aprox. 164.18 |                 |                                         |
+| **Porcentaje de Macros** |            |          | 40%            | 35%         | 25%         |                 |                                         |
 
 
 
 ## Beast Cakes
+
+Cada porción de Beast Cakes es como un bocado de poder en tu búsqueda de la grandeza, ¡porque los héroes también merecen un postre épico! 🍰💪
 
 - NOTA: Son 6 porciones en total, 1 para cada día. 
 
@@ -43,24 +72,3 @@ Cuando bebes la 'Sangre del Príncipe Vegito', estás fortaleciendo tu cuerpo y 
 | Sal del Himalaya  | Pizca         | 0        | 0              | 0           | 0           | Sodio                              | Regula la hidratación        |
 | **Totales**      | -             | 155.4    | 9.16           | 1.18        | 43.06       | -                                  | -                           |
 
-
-## Dieta Diaria
-
-| Alimento              | Cantidad (gr) | Calorías | Proteínas (gr) | Grasas (gr) | Carbos (gr) | Micronutrientes |
-|-----------------------|---------------|----------|----------------|-------------|-------------|-----------------|
-| **Almuerzo**          |               |          |                |             |             |                 |
-| Pechuga de pollo      | 150           | 165      | 38             | 3.6         | 0           | Vitaminas A, C  |
-| Papas cocidas         | 100           | 86       | 2              | 0.2         | 20          | Vitamina C, B6  |
-| Aguacate              | 1/4           | 80       | 1              | 7.5         | 4           | Vitamina K, E   |
-| **Snack de la Tarde** |               |          |                |             |             |                 |
-| Frutas (manzana)      | 1 pieza       | 95       | 0.5            | 0.3         | 25          | Vitamina C, K  |
-| Espinacas             | 50g           | 11       | 1.4            | 0.3         | 1.4         | Vitamina K, A, C|
-| **Cena**              |               |          |                |             |             |                 |
-| Proteína en polvo     | 1 scoop       | 110      | 25             | 2           | 2           | Varía           |
-| Queso Gouda           | 60g           | 220      | 12             | 18          | 0           | Calcio, Vitamina D|
-| **Snack Nocturno**    |               |          |                |             |             |                 |
-| Proteína en polvo     | 1 scoop       | 110      | 25             | 2           | 2           | Varía           |
-| Avena                 | 30g           | 120      | 4              | 2           | 20          | Fibra, Vitaminas |
-| Beast Cake (porción diaria) | 1/6 de Beast Cake | 272  | 15 | 36 | 7 | Varía  | Varios ingredientes nutritivos |
-| **Totales**           |               | Aprox. 1609   | Aprox. 141.9  | Aprox. 76.9  | Aprox. 184.6 |                 |
-| **Porcentaje de Macros** |            |          | 40%            | 35%         | 25%         |                 |
