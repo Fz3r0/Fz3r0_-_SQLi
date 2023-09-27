@@ -19,7 +19,7 @@ La dieta también permite la inclusión de alimentos placenteros como el "Beast 
 | Aguacate              | 1/4           | 80       | 1              | 7.5         | 4           | Vitamina K, E   | Grasas saludables y antioxidantes.    |
 | **Snack de la Tarde** |               |          |                |             |             |                 |                                         |
 | Frutas (manzana)      | 1 pieza       | 95       | 0.5            | 0.3         | 25          | Vitamina C, K  | Carbohidratos naturales y fibra.      |
-| Sangre del Príncipe Vegito (porción diaria) | 1/6 de Sangre del Príncipe Vegito | 25.9  | 1.53 | 0.2 | 7.18 | Varía  | Varios ingredientes nutritivos.      |
+| Sangre del Príncipe Vegito  | 1 vaso | 155.4  | 9.16 | 1.18 | 43.06 | Varía  | Varios ingredientes nutritivos.      |
 | **Cena**              |               |          |                |             |             |                 |                                         |
 | Proteína en polvo     | 1 scoop       | 110      | 25             | 2           | 2           | Varía           | Recuperación muscular y desarrollo.    |
 | Queso Gouda           | 60g           | 220      | 12             | 18          | 0           | Calcio, Vitamina D| Proteína y calcio para la cena.      |
@@ -29,6 +29,7 @@ La dieta también permite la inclusión de alimentos placenteros como el "Beast 
 | Beast Cake (porción diaria) | 1/6 de Beast Cake | 272  | 15 | 36 | 7 | Varía  | Delicioso placer culposo.           |
 | **Totales**           |               | Aprox. 1693   | Aprox. 138.03  | Aprox. 75.05  | Aprox. 164.18 |                 |                                         |
 | **Porcentaje de Macros** |            |          | 40%            | 35%         | 25%         |                 |                                         |
+
 
 
 
