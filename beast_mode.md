@@ -18,7 +18,8 @@ La dieta también permite la inclusión de alimentos placenteros como el "Beast 
 
 ## Vegito's Blood
 
-![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/48c57178-e8b9-4e6e-a0ae-a09760006f8a)
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/8d7bf350-2854-45be-8567-398c7f737e0c)
+
 
 
 
