@@ -8,6 +8,38 @@ La dieta también permite la inclusión de alimentos placenteros como el "Beast 
 
 - NOTA: _Esta es una dieta personalizada realizada exactamente para mi edad, estatura, peso y nivel de ejercicio diario._
 
+## Dieta Diaria
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/7c2d4ccd-c830-468c-9739-47777ee7ddc8)
+
+## Beast Cakes
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/c1b36f55-9fd9-4d9a-875f-b27c4ca35f60)
+
+## Vegito's Blood
+
+![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/48c57178-e8b9-4e6e-a0ae-a09760006f8a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Dieta Diaria
 
