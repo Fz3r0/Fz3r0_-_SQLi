@@ -1887,6 +1887,7 @@ allintitle:*.php?logon=*
 - `mx`
 
 ````
+inurl:.php?= inurl:.mx
 inurl:index.php?= inurl:.mx
 inurl:index.php?= inurl:.gob.mx
 inurl:"php?" & inurl:".gob.mx" & inurl:"="
