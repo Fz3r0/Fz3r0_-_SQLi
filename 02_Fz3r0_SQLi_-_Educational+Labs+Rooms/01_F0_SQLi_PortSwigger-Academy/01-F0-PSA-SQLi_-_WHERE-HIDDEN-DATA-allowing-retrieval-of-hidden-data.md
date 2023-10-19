@@ -16,7 +16,7 @@ To solve the lab, perform a SQL injection attack that causes the application to 
 
 ### Explicación:
 
-- Esta en la query original:
+- Esta es la query original:
 
 ````sql
 SELECT * FROM products WHERE category = 'Gifts' AND released = 1
