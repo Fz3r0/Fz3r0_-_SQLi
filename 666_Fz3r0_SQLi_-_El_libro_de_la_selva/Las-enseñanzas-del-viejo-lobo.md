@@ -10,7 +10,7 @@ Soy Fz3r0 y el Sol no saldrá nunca más
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_SQLi/assets/94720207/54b3239c-abc6-40f8-94de-fd83169eb62f)
 
-
+//****//
 
 
 
