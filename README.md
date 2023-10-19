@@ -2,6 +2,8 @@
 
 ### Por cada inyección que recibí, será una inyección que regresaré. <br><br> Desde el beso de Gaia que quedó marcado en mi ser, se escucharán los ecos de los gritos del Xibalba. <br><br>  La selva se defiende... 
 
+---
+
 204863﻿. <br>
 
 Look behind you. I said, look behind you. My voice, can you hear it? This sign, can you read it? I'll wait forever if you'll just come to me.
