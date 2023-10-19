@@ -1,9 +1,9 @@
 
 En el umbral de la noche se oculta el susurro del viejo lobo, quien despierta las sombras del saber. Entre los pliegues del viento, sus palabras se desvanecen como ecos olvidados, danzando entre fragmentos de una realidad aparte... 
 
-**El hombre en su patética ignorancia pasa la vida buscando respuestas, y cuando las encuentra... desea nunca haberse formulado la pregunta... 
+**El hombre en su patética ignorancia pasa la vida buscando respuestas, y cuando las encuentra... desea nunca haberse formulado la pregunta...** 
 
-¡¿Qué es un hombre?! ¡Una miserable pila de secretos!**
+¡¿Qué es un hombre?! ¡Una miserable pila de secretos!
 
 No olvidemos disfrutar de nuestros días, se está tornando oscuro... muy oscuro... 
 
