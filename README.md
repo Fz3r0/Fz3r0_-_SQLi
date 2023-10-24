@@ -4,6 +4,12 @@
 
 ---
 
+Convoco a las almas del macrocosmos, 
+ninguna época podrá escapar de mi ira
+Puedo viajar a travéz del tiempo y reunir sabiduría ahora perdida
+Yo soy los hechiceros oscuros, yo soy ellos, porque yo soy el espíritu de su existenica
+
+
 204863﻿. <br>
 
 Look behind you. I said, look behind you. My voice, can you hear it? This sign, can you read it? I'll wait forever if you'll just come to me.
@@ -34,7 +40,7 @@ All this shall change. <br>
 
 **Tonight, the sun sets forever. There shall never be another dawn.<br>**
 
-**In the mist of the night you may see me come, where shadows move and demons lie... ...I am Fz3r0 and the Sun no longer rises...".** <br>
+**In the mist of the night you may see me come, where the sun where shadows move and demons lie... ...I am Fz3r0 and the Sun no longer rises...".** <br>
 
 ... You've been chosen...<br>
 
