@@ -1,6 +1,8 @@
 ## Lists
 
 - [Exploit DB](https://www.exploit-db.com/google-hacking-database)
+- https://github.com/4t3nt4d0/Google-Dorks-Full_list
+- https://github.com/4t3nt4d0/SQL-injection-dorks-list
 
 ## Elite
 
