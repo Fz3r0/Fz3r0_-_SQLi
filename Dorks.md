@@ -2,6 +2,11 @@
 
 ````
 inurl:.page.php?id= site:.gob.mx
+ext:php inurl:? site:.gob.mx
+site:.mx inurl:index.php?page=
+
+### Juicy Extensions 
+ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess site:example[.]com
 ````
 
 ## Compi
