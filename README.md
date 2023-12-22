@@ -1,12 +1,12 @@
 # 💀 Fz3r0 - `SQLi` 💉
 
-Convoco a las almas del macrocosmos, 
-ninguna época podrá escapar de mi ira
-Puedo viajar a travéz del tiempo y reunir sabiduría ahora perdida
-Yo soy los hechiceros oscuros, yo soy ellos, porque yo soy el espíritu de su existenica
+Convoco a las almas del macrocosmos, <br>
+ninguna época podrá escapar de mi ira <br>
+Puedo viajar a travéz del tiempo y reunir sabiduría ahora perdida <br>
+Yo soy los hechiceros oscuros, yo soy ellos, porque yo soy el espíritu de su existenica <br>
 
-Look behind you. I said, look behind you. My voice, can you hear it? This sign, can you read it? I'll wait forever if you'll just come to me.
-Do you hear my voice? Can you hear your own soul's scream? Let us choose. My voice that tells the future. Or your tortured mind. Well, what do you choose? You can choose. Your life, your future....Wise as you are you might already have discovered it. 
+Look behind you. I said, look behind you. My voice, can you hear it? This sign, can you read it? I'll wait forever if you'll just come to me. <br>
+Do you hear my voice? Can you hear your own soul's scream? Let us choose. My voice that tells the future. Or your tortured mind. Well, what do you choose? You can choose. Your life, your future....Wise as you are you might already have discovered it. <br>
 
 Don't trust anyone.<br> 
 Only our best will prevail.<br>
