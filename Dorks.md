@@ -274,6 +274,8 @@ http[:]//www[.]fifonafe[.]gob[.]mx/gerenciamiento/sec2[.]php?id=56
 https[:]//apps[.]tlaquepaque[.]gob[.]mx/registro[.]php?id=5
 https://www.segobver.gob.mx/culturadepaz/evento.php?id=2thSVnv1FcziQRC
 https://iieg.gob.mx/general.php?id=-7+UNION+SELECT+1,2,3,4,5--+-
+
+http://bivicce.corteconstitucional.gob.ec/bases/central/bridge/config.inc.php
 ````
 
 ## Externals
