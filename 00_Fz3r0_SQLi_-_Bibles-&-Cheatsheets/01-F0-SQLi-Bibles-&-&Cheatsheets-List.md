@@ -2,6 +2,7 @@
 
 ### `MySQL` Databases Courses & Bibles
 
+- [SQL Injection with Sqlmap](https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-with-sqlmap/)
 - [W3 Schools - MySQL Tutorial & Bible](https://www.w3schools.com/mysql/default.asp)
 
 ### SQLi Courses
