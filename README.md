@@ -4,10 +4,9 @@ Convoco a las almas del macrocosmos, <br>
 ninguna época podrá escapar de mi ira <br>
 Puedo viajar a travéz del tiempo y reunir sabiduría ahora perdida <br>
 Yo soy los hechiceros oscuros, yo soy ellos, porque yo soy el espíritu de su existenica <br>
+Muy pronto las compuertas hacia una nueva dimensión se abrirán. 
 
 ---
-
-**Very soon the gates to a new dimension will open.**<br><br>
 
 **I walked. I could do nothing but walk... And then, I saw me walking in front of myself... But it wasn't really me...**<br>
 
