@@ -6,6 +6,7 @@ ext:php inurl:? site:.com.mx
 site:.mx inurl:index.php?page=
 inurl:"php?" & inurl:".com.mx"
 inurl:"php?" inurl:"=" & inurl:".com.mx"
+site:.com.mx inurl:"php?" (inurl:"id=" OR inurl:"photo=" OR inurl:"noticia=")
 
 
 ### Juicy Extensions 
