@@ -1,10 +1,12 @@
 ## Dorks del padre
 
 ````py
-inurl:.page.php?id= site:.gob.mx
-ext:php inurl:? site:.gob.mx
+inurl:.page.php?id= site:.com.mx
+ext:php inurl:? site:.com.mx
 site:.mx inurl:index.php?page=
-inurl:"php?" & inurl:".gob.ve"
+inurl:"php?" & inurl:".com.mx"
+inurl:"php?" inurl:"=" & inurl:".com.mx"
+
 
 ### Juicy Extensions 
 ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess site:example[.]com
